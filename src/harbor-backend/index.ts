@@ -37,7 +37,7 @@ if (isProduction && JWT_SECRET === 'change_me_in_production') {
 }
 
 app.use(cors({
-    origin: (origin, callback) => {
+    origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
         if (isAllowedOrigin(origin)) {
             callback(null, true);
         } else {
@@ -184,7 +184,7 @@ const getFavoriteIds = async (userId: number): Promise<number[]> => {
     return result.rows.map((row) => row.property_id as number);
 };
 
-app.get('/health', async (_req, res) => {
+app.get('/health', async (_req: Request, res: Response) => {
     try {
         await pool.query('SELECT 1');
         res.json({ status: 'ok', database: 'postgresql' });
@@ -194,7 +194,7 @@ app.get('/health', async (_req, res) => {
 });
 
 // --- ИЗБРАННОЕ ---
-app.get('/favorites', authenticateToken, async (req: AuthRequest, res) => {
+app.get('/favorites', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const propertyIds = await getFavoriteIds(req.userId!);
         res.json({ propertyIds });
@@ -204,7 +204,7 @@ app.get('/favorites', authenticateToken, async (req: AuthRequest, res) => {
     }
 });
 
-app.post('/favorites', authenticateToken, async (req: AuthRequest, res) => {
+app.post('/favorites', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const { propertyId } = req.body as { propertyId?: number };
 
@@ -225,7 +225,7 @@ app.post('/favorites', authenticateToken, async (req: AuthRequest, res) => {
     }
 });
 
-app.delete('/favorites/:propertyId', authenticateToken, async (req: AuthRequest, res) => {
+app.delete('/favorites/:propertyId', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const propertyId = Number(req.params.propertyId);
 
@@ -300,7 +300,7 @@ const hasBookingConflict = async (propertyId: number, checkIn: string, checkOut:
 };
 
 // --- БРОНИРОВАНИЯ ---
-app.get('/bookings', authenticateToken, async (req: AuthRequest, res) => {
+app.get('/bookings', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const result = await pool.query(
             `SELECT * FROM bookings
@@ -317,7 +317,7 @@ app.get('/bookings', authenticateToken, async (req: AuthRequest, res) => {
     }
 });
 
-app.get('/bookings/:id', authenticateToken, async (req: AuthRequest, res) => {
+app.get('/bookings/:id', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const bookingId = Number(req.params.id);
 
@@ -342,7 +342,7 @@ app.get('/bookings/:id', authenticateToken, async (req: AuthRequest, res) => {
     }
 });
 
-app.delete('/bookings/:id', authenticateToken, async (req: AuthRequest, res) => {
+app.delete('/bookings/:id', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const bookingId = Number(req.params.id);
 
@@ -369,7 +369,7 @@ app.delete('/bookings/:id', authenticateToken, async (req: AuthRequest, res) => 
     }
 });
 
-app.post('/bookings', authenticateToken, async (req: AuthRequest, res) => {
+app.post('/bookings', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const {
             propertyId,
@@ -470,7 +470,7 @@ app.post('/bookings', authenticateToken, async (req: AuthRequest, res) => {
 });
 
 // --- ЗАЯВКИ ХОЗЯЕВ ---
-app.post('/host-applications', async (req: AuthRequest, res) => {
+app.post('/host-applications', async (req: Request, res: Response) => {
     try {
         const authHeader = req.headers.authorization;
         const token = authHeader?.split(' ')[1];
@@ -547,7 +547,7 @@ app.post('/host-applications', async (req: AuthRequest, res) => {
 });
 
 // --- ПРОФИЛЬ ---
-app.get('/users/me', authenticateToken, async (req: AuthRequest, res) => {
+app.get('/users/me', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const result = await pool.query(
             'SELECT id, first_name, last_name, email, phone, created_at FROM users WHERE id = $1',
@@ -565,7 +565,7 @@ app.get('/users/me', authenticateToken, async (req: AuthRequest, res) => {
     }
 });
 
-app.patch('/users/me', authenticateToken, async (req: AuthRequest, res) => {
+app.patch('/users/me', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const { firstName, lastName, email, phone } = req.body as {
             firstName?: string;
@@ -606,7 +606,7 @@ app.patch('/users/me', authenticateToken, async (req: AuthRequest, res) => {
     }
 });
 
-app.put('/users/me/password', authenticateToken, async (req: AuthRequest, res) => {
+app.put('/users/me/password', authenticateToken, async (req: AuthRequest, res: Response) => {
     try {
         const { currentPassword, newPassword } = req.body as {
             currentPassword?: string;
@@ -654,7 +654,7 @@ app.put('/users/me/password', authenticateToken, async (req: AuthRequest, res) =
 });
 
 // --- РЕГИСТРАЦИЯ ---
-app.post('/register', async (req, res) => {
+app.post('/register', async (req: Request, res: Response) => {
     try {
         const { firstName, lastName, email, password } = req.body as {
             firstName?: string;
@@ -702,7 +702,7 @@ app.post('/register', async (req, res) => {
 });
 
 // --- ВХОД ---
-app.post('/login', async (req, res) => {
+app.post('/login', async (req: Request, res: Response) => {
     try {
         const { email, password } = req.body as { email?: string; password?: string };
         const trimmedEmail = email?.trim().toLowerCase();
