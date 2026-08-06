@@ -1,0 +1,132 @@
+﻿@import '../../variables.scss';
+
+.tabContainer {
+    animation: fadeIn 0.3s ease;
+}
+
+.sectionTitle {
+    font-size: $fs-h1;
+    line-height: $lh-h1;
+    font-weight: $fw-bold;
+    margin-bottom: 40px;
+    color: $color-text-black;
+}
+
+.cardBlock {
+    padding: $padding-lg;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    margin-bottom: $gap-xl;
+    background-color: $color-white;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+
+    h3 {
+        font-size: $fs-lg;
+        font-weight: $fw-semibold;
+        margin: 0;
+    }
+}
+
+.descriptionText {
+    color: $color-text-main;
+    font-size: $fs-base;
+    margin-top: 0;
+    margin-bottom: $gap-xl;
+}
+
+// --- ФОРМЫ ---
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: $gap-lg;
+}
+
+.label {
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+// --- ТРЕБОВАНИЯ К ПАРОЛЮ ---
+.passwordReqs {
+    list-style: none;
+    margin: 4px 0 0 0;
+    padding: 0;
+    font-size: 12px;
+    color: $color-text-main;
+
+    li {
+        margin-bottom: 4px;
+        transition: color 0.2s;
+
+        &::before {
+            content: '○ ';
+        }
+
+        &.valid {
+            color: $color-success;
+
+            &::before {
+                content: '✓ ';
+            }
+        }
+    }
+}
+
+.errorText {
+    color: $color-danger;
+    font-size: 12px;
+    font-weight: $fw-medium;
+    margin-top: 4px;
+    animation: fadeIn 0.2s ease;
+}
+
+// --- СТИЛИ ДЛЯ ПАРОЛЕЙ (С ГЛАЗИКОМ) ---
+.passwordWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.eyeButton {
+    position: absolute;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: $color-text-main;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $color-text-black;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

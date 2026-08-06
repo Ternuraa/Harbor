@@ -1,0 +1,144 @@
+$container-padding: 48px; // legacy alias → $page-padding-tablet
+
+// Layout
+$content-max-width: 1440px;
+$content-narrow-max-width: 960px;
+$content-footer-max-width: 1200px;
+$layout-column-gap: 80px;
+$layout-column-gap-tablet: 32px;
+$layout-column-gap-mobile: 24px;
+$layout-sidebar-width: 280px;
+$layout-booking-sidebar-width: 400px;
+
+// Главные цвета
+$color-main: #2CB2FA; // Color/Main (Синий цвет кнопки поиска)
+$color-text: #313131; // Color/Text (Основной темный цвет текста)
+$color-white: #FFFFFF; // Color/White (Белый цвет фонов)
+$color-background: #F6F6F6;
+$color-text-black: #222222;
+$color-border: #F2F2F2;
+$color-heart: #22222280;
+$color-heart-hover: #FF4848;
+$color-text-main: #8F8F8F;
+$color-text-secondary: #717171;
+$color-text-disabled: #666666;
+$color-black: #000000;
+$color-link: #38BDF8;
+$color-accent-red: #FF385C;
+$color-border-subtle: #ebebeb;
+$color-border-muted: #e4e4e4;
+$color-border-light: #dddddd;
+$color-surface-hover: #EAEAEA;
+$color-overlay: rgba(0, 0, 0, 0.4);
+// Фоны и обводки
+$color-bg-search: #2CB2FA; // Цвет фона поиска
+//$color-border: #EFEFEF; // Stroke (Цвет разделителей и рамок)
+$color-bg-hover: #07A9F6; // Цвет при наведении мышки на кнопки
+$color-bg-diveder: #E5E6E7;
+
+$color-success: #10B981; // Зеленый для галочек и успешного текста
+$color-success-bg: #D1FAE5; // Светло-зеленый фон для бейджей (например, "Подтверждено")
+$color-danger: #FF4848; // Красный для кнопок "Завершить сеанс" или "Отменить"
+
+// Header
+$header-padding-x: 48px; // Боковые отступы всего экрана
+$header-padding-top: 24px; // Отступ сверху
+$header-padding-bottom: 24px; // Отступ снизу
+
+// Search Bar
+$search-width: 765px; // Ширина блока (W: 765)
+$search-height: 58px; // Высота блока (H: 58)
+$search-radius: 32px; // Скругление (Corner radius: 32)
+$search-padding-x: 34px; // Внутренний отступ слева/справа (Padding: 34)
+$search-bg: #FFFFFF;
+$search-dropdown-gap: 16px; // Отступ выпадающих окон поиска от строки
+
+// Input
+$input-bg: #F1F1F1;
+
+// User Menu
+$icon-btn-size: 40px; // Размер круглых кнопок (W: 40, H: 40)
+$icon-btn-radius: 20px; // Скругление кнопок меню
+$menu-gap: 12px; // Расстояние между иконками
+
+// Badge
+$text-on-success-subtle: #2E7D32;
+$bg-success: #E8F5E9;
+$bg-surface-stroke: #2E7D32;
+$bg-surface-variant: #F7F7F7;
+$bg-white: rgba(255, 255, 255, 0.6);
+
+// Размеры шрифтов (FontSize)
+$fs-h1: 32px;
+$fs-h2: 24px;
+$fs-h3: 20px;
+$fs-lg: 16px;
+$fs-base: 14px;
+$fs-caption: 12px;
+
+// Межстрочные интервалы (LineHeight)
+$lh-h1: 40px;
+$lh-h2: 32px;
+$lh-h3: 28px;
+$lh-lg: 24px;
+$lh-base: 20px;
+$lh-caption: 16px;
+
+// Толщина шрифтов (Weights)
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+// Отступы (Spacing / Gaps)
+//Крупные отступы (Макет страницы)
+$gap-section: 64px; // Расстояние между крупными независимыми блоками
+$gap-subsection: 48px; // Средний отступ между подсекциями
+$gap-block: 32px; // Расстояние внутри крупных секций
+
+//Мелкие отступы (Внутри компонентов)
+$gap-xl: 24px; // Отступ между средними элементами
+$gap-lg: 16px; // Внутренние отступы контейнеров
+$gap-md: 12px; // Идеально для padding'ов внутри карточек
+$gap-sm: 8px; // Между заголовком и текстом
+$gap-xxs: 4px; // Самые мелкие элементы (например, иконка звезды и цифра рейтинга)
+
+
+// Внутренние отступы (Paddings)
+$padding-xxs: 4px; // Микро-отступы (например, внутри мелких бейджей сверху/снизу)
+$padding-xs: 8px; // Отступы для небольших тегов или кнопок
+$padding-sm: 12px; // Идеально для padding'ов внутри карточек (как наш блок .info)
+$padding-md: 16px; // Стандартные внутренние отступы для контейнеров и модалок
+$padding-lg: 24px; // Просторные внутренние блоки
+$padding-xl: 32px; // Очень крупные внутренние отступы
+$padding-section: 48px; // Глобальные отступы для больших секций сайта
+$padding-block: 64px;
+
+// Состояния (States)
+$hover-button: #EDEDED;
+
+// Скругления (Border Radius)
+$radius-sm: 8px; // Мелкие элементы (инпуты, небольшие кнопки, теги)
+$radius-md: 12px; // Средние элементы (выпадающие меню, маленькие карточки)
+$radius-lg: 16px; // Крупные элементы (карточки жилья, модальные окна)
+$radius-xl: 24px; // Большие контейнеры или секции на фоне
+$radius-pill: 100px; // Абсолютно круглые края-пилюли (бейджи "Без комиссии", кнопки)
+$radius-circle: 50%; // Идеальный круг (аватарки профиля, круглые кнопки-стрелки)
+
+// Главная страница
+$home-property-cards-visible: 4; // Карточек жилья в видимой зоне секции
+$host-earn-banner-height: 420px; // Высота баннера «Стать хозяином»
+$host-earn-content-ratio: 52%; // Доля ширины баннера для текстового блока
+$host-benefit-columns: 4; // Колонок в блоке преимуществ для хозяев
+$host-benefit-card-height: 224px; // Высота карточки преимущества
+$host-benefit-icon-size: 40px; // Размер иконки в карточке преимущества
+
+// Цвета баннера хозяев
+$host-earn-bg: #111111;
+$host-earn-income: #4ade80;
+
+// Карточка результатов поиска
+$search-result-card-width: 935px;
+$search-result-card-height: 240px;
+$search-result-card-image-width: 280px;
+$search-result-card-image-height: 200px;

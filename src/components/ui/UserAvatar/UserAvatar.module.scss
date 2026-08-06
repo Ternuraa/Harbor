@@ -1,0 +1,78 @@
+@import '../../../variables.scss';
+
+.avatar {
+    border-radius: $radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+    font-weight: $fw-bold;
+    line-height: 1;
+    user-select: none;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sizeSm {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+}
+
+.sizeMd {
+    width: 56px;
+    height: 56px;
+    font-size: $fs-h2;
+}
+
+.sizeLg {
+    width: 96px;
+    height: 96px;
+    font-size: 36px;
+}
+
+.interactive {
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    }
+
+    &:focus-visible {
+        outline: 2px solid $color-main;
+        outline-offset: 2px;
+    }
+}
+
+.editBadge {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.42);
+    color: $color-white;
+    font-size: 11px;
+    font-weight: $fw-semibold;
+    line-height: 1.2;
+    text-align: center;
+    padding: 6px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.interactive:hover .editBadge,
+.interactive:focus-visible .editBadge {
+    opacity: 1;
+}

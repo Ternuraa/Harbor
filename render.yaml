@@ -1,0 +1,47 @@
+# Blueprint: Render.com — Postgres + API + статический фронт
+# https://render.com/docs/blueprint-spec
+#
+# После деплоя:
+# 1. Скопируй URL API (harbor-api) → VITE_API_URL во фронте
+# 2. Скопируй URL фронта (harbor-web) → CORS_ORIGINS в API
+# 3. Пересобери оба сервиса (Manual Deploy)
+
+databases:
+  - name: harbor-db
+    plan: free
+    databaseName: harbor_db
+    user: harbor
+
+services:
+  - type: web
+    name: harbor-api
+    runtime: node
+    rootDir: src/harbor-backend
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: harbor-db
+          property: connectionString
+      - key: PGSSL
+        value: "true"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false
+      - key: PORT
+        value: "5001"
+
+  - type: web
+    name: harbor-web
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        sync: false

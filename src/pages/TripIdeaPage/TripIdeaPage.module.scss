@@ -1,0 +1,15 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.page {
+    width: 100%;
+    box-sizing: border-box;
+    @include page-padding-x;
+    margin-top: $gap-section;
+    padding-bottom: $gap-section;
+
+    @include respond-to(mobile) {
+        margin-top: $gap-block;
+        padding-bottom: $gap-block;
+    }
+}

@@ -1,0 +1,54 @@
+@import '../../../variables.scss';
+
+.monthCard {
+    min-width: 120px;
+    height: 130px;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    background-color: $color-white;
+    transition: all 0.2s ease;
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        opacity: 0.5;
+        transition: opacity 0.2s;
+        color: $color-text-black;
+    }
+
+    .monthName {
+        font-size: $fs-base;
+        font-weight: $fw-medium;
+        color: $color-text-black;
+        text-transform: capitalize;
+    }
+
+    .yearName {
+        font-size: $fs-caption;
+        color: #999;
+    }
+
+    &:hover {
+        border-color: $color-text-black;
+
+        .icon {
+            opacity: 0.8;
+        }
+    }
+
+    &.active {
+        border-color: $color-text-black;
+        border-width: 2px;
+        background-color: #f9f9f9;
+
+        .icon {
+            opacity: 1;
+        }
+    }
+}

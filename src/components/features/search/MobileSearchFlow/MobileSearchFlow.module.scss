@@ -1,0 +1,313 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    background: $color-main;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    gap: $gap-md;
+    padding: $padding-md $page-padding-mobile;
+    padding-top: calc($padding-md + env(safe-area-inset-top, 0px));
+    flex-shrink: 0;
+}
+
+.backBtn {
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+    border: none;
+    background: transparent;
+    color: $color-white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.headerText {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+    padding-right: 40px;
+}
+
+.title {
+    margin: 0;
+    font-size: $fs-h3;
+    line-height: $lh-h3;
+    font-weight: $fw-semibold;
+    color: $color-white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.subtitle {
+    margin: 4px 0 0;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    font-weight: $fw-semibold;
+    color: rgba($color-white, 0.92);
+}
+
+.content {
+    flex: 1;
+    min-height: 0;
+    background: $color-white;
+    border-radius: $radius-xl $radius-xl 0 0;
+    padding: $home-mobile-block-gap $page-padding-mobile;
+    padding-bottom: calc($home-mobile-block-gap + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.contentScrollable {
+    overflow-y: auto;
+}
+
+.locationInput {
+    width: 100%;
+    height: 52px;
+    padding: 0 $padding-md;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-lg;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-text-black;
+    background: $color-white;
+    outline: none;
+
+    &::placeholder {
+        color: $color-text-main;
+    }
+
+    &:focus {
+        border-color: $color-main;
+    }
+}
+
+.sectionTitle {
+    margin: $home-mobile-block-gap 0 $home-mobile-element-gap;
+    font-size: $fs-caption;
+    line-height: $lh-caption;
+    font-weight: $fw-medium;
+    color: $color-text-main;
+}
+
+.destinationList {
+    display: flex;
+    flex-direction: column;
+    gap: $home-mobile-element-gap;
+}
+
+.destinationItem {
+    display: flex;
+    align-items: flex-start;
+    gap: $gap-md;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+}
+
+.destinationIcon {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    color: $color-text-black;
+}
+
+.destinationText {
+    min-width: 0;
+}
+
+.destinationCity {
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-text-black;
+}
+
+.destinationCountry {
+    margin-top: 2px;
+    font-size: $fs-caption;
+    line-height: $lh-caption;
+    color: $color-text-main;
+}
+
+.dateFields {
+    display: flex;
+    align-items: stretch;
+    border: 1px solid $color-border-light;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.dateField {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: $padding-md;
+    border: none;
+    background: $color-white;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dateFieldActive {
+    background: rgba($color-main, 0.08);
+}
+
+.dateFieldLabel {
+    font-size: $fs-caption;
+    line-height: $lh-caption;
+    color: $color-text-main;
+}
+
+.dateFieldValue {
+    font-size: $fs-base;
+    line-height: $lh-base;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.dateFieldPlaceholder {
+    font-weight: $fw-regular;
+    color: $color-text-black;
+}
+
+.dateFieldDivider {
+    width: 1px;
+    background: $color-border-light;
+    flex-shrink: 0;
+}
+
+.dateFieldClear {
+    align-self: center;
+    margin-right: $padding-md;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: $radius-circle;
+    background: $color-background;
+    color: $color-text-black;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.calendarWrap {
+    flex: 1;
+    min-height: 0;
+    margin-top: $home-mobile-block-gap;
+    overflow-y: auto;
+    margin-left: -$page-padding-mobile;
+    margin-right: -$page-padding-mobile;
+    padding-left: $page-padding-mobile;
+    padding-right: $page-padding-mobile;
+}
+
+.guestRows {
+    display: flex;
+    flex-direction: column;
+}
+
+.guestRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gap-md;
+    padding: $home-mobile-element-gap 0;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.guestText {
+    min-width: 0;
+}
+
+.guestTitle {
+    font-size: $fs-base;
+    line-height: $lh-base;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+}
+
+.guestHint {
+    margin-top: 4px;
+    font-size: $fs-caption;
+    line-height: $lh-caption;
+    color: $color-text-main;
+}
+
+.footer {
+    flex-shrink: 0;
+    padding: $padding-md $page-padding-mobile;
+    padding-bottom: calc($padding-md + env(safe-area-inset-bottom, 0px));
+    background: $color-white;
+    border-top: 1px solid $color-border;
+}
+
+.continueBtn,
+.findBtn {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: $radius-md;
+    background: $color-main;
+    color: $color-white;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    font-weight: $fw-semibold;
+    cursor: pointer;
+}
+
+.continueBtn {
+    &:hover:not(:disabled) {
+        background: $color-bg-hover;
+    }
+
+    &:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+.findBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-sm;
+
+    &:hover {
+        background: $color-bg-hover;
+    }
+}
+
+.findIcon {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,63 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.sidebar {
+    flex: 0 0 $layout-sidebar-width;
+    @include sticky-below-header;
+}
+
+.userCard {
+    display: flex;
+    align-items: center;
+    gap: $gap-lg;
+    margin-bottom: $gap-subsection;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: $radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+}
+
+.userInfo {
+    h2 {
+        font-size: $fs-lg;
+        font-weight: $fw-semibold;
+        margin: 0 0 4px 0;
+        color: $color-text-black;
+    }
+
+    p {
+        font-size: $fs-base;
+        color: $color-text-main;
+        margin: 0;
+    }
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+@include respond-to(tablet-down) {
+    .sidebar {
+        flex: none;
+        width: 100%;
+        position: static;
+    }
+
+    .userCard {
+        margin-bottom: $gap-xl;
+    }
+
+    .navMenu {
+        flex-direction: row;
+        @include profile-nav-scroll;
+    }
+}

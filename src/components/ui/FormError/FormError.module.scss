@@ -1,0 +1,8 @@
+@import '../../../styles/variables.scss';
+
+.error {
+    margin: 0;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-danger;
+}

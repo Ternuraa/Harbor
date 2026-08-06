@@ -1,0 +1,119 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.section {
+    width: 100%;
+    margin: 0;
+    scroll-margin-top: 100px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: $fs-h2;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+    margin-bottom: $gap-xl;
+    @include home-section-title-mobile;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap-lg;
+}
+
+.card {
+    position: relative;
+    height: 320px;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+        .image {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%);
+    pointer-events: none;
+}
+
+.cardBadge {
+    position: absolute;
+    top: $padding-md;
+    left: $padding-md;
+    z-index: 2;
+}
+
+.cardTitle {
+    position: absolute;
+    bottom: $padding-lg;
+    left: $padding-lg;
+    right: $padding-lg;
+    color: $color-white;
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    line-height: $lh-lg;
+    margin: 0;
+    white-space: pre-line;
+}
+
+@include respond-to(tablet-down) {
+    .sectionTitle {
+        margin-bottom: $gap-lg;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $gap-md;
+    }
+
+    .card {
+        height: 220px;
+    }
+}
+
+@include respond-to(mobile) {
+    .sectionTitle {
+        margin-bottom: $home-mobile-block-gap;
+    }
+
+    .grid {
+        @include home-mobile-carousel;
+        grid-template-columns: none;
+    }
+
+    .card {
+        @include home-mobile-carousel-card;
+    }
+
+    .cardTitle {
+        bottom: $padding-md;
+        left: $padding-md;
+        right: $padding-md;
+        font-size: $fs-base;
+        line-height: $lh-base;
+    }
+
+    .cardBadge {
+        top: $padding-sm;
+        left: $padding-sm;
+    }
+}

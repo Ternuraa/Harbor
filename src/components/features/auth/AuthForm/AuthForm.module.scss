@@ -1,0 +1,129 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include respond-to(mobile) {
+        gap: 12px;
+    }
+}
+
+.nameRow {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+
+    @include respond-to(mobile) {
+        gap: 12px;
+    }
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    font-size: $fs-base;
+    color: $color-text-disabled;
+
+    @include respond-to(mobile) {
+        margin-top: 4px;
+        margin-bottom: 24px;
+        font-size: $fs-caption;
+    }
+}
+
+.optionsColumn {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 8px;
+    margin-bottom: 32px;
+    font-size: $fs-base;
+    color: $color-text-disabled;
+
+    @include respond-to(mobile) {
+        margin-top: 4px;
+        margin-bottom: 24px;
+        font-size: $fs-caption;
+    }
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.termsLabel {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 12px;
+    color: $color-text-secondary;
+    line-height: 1.5;
+    cursor: pointer;
+
+    .checkbox {
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+
+    span {
+        flex: 1;
+    }
+
+    @include respond-to(mobile) {
+        font-size: $fs-caption;
+        line-height: 1.45;
+    }
+}
+
+.link {
+    color: $color-link;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include respond-to(mobile) {
+        color: $color-main;
+
+        &:hover {
+            color: $color-bg-hover;
+        }
+    }
+}
+
+.forgotLink {
+    color: $color-link;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include respond-to(mobile) {
+        color: $color-main;
+        font-size: $fs-caption;
+    }
+}
+
+.submitBtn {
+    @include respond-to(mobile) {
+        height: 52px;
+        border-radius: $radius-pill;
+        font-size: $fs-lg;
+    }
+}

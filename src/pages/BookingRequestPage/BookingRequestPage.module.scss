@@ -1,0 +1,293 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.bookingPage {
+    background: #f7f7f7;
+}
+
+.layout {
+    @include layout-grid-main-sidebar($layout-booking-sidebar-width);
+}
+
+.main {
+    min-width: 0;
+}
+
+.pageHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $gap-lg;
+    margin-bottom: $gap-section;
+}
+
+.backBtn {
+    flex-shrink: 0;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
+.title {
+    margin: 0;
+    width: 100%;
+    font-size: $fs-h2;
+    line-height: $lh-h2;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+}
+
+.stepCard {
+    border: 1px solid #ebebeb;
+    border-radius: $radius-lg;
+    background: $color-white;
+    overflow: hidden;
+}
+
+.stepCardDone {
+    .stepHeader {
+        cursor: pointer;
+    }
+}
+
+.stepHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: $gap-md;
+    padding: $padding-lg;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: default;
+
+    &:disabled {
+        cursor: default;
+    }
+}
+
+.stepNumber {
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-circle;
+    background: $color-text-black;
+    color: $color-white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $fs-caption;
+    font-weight: $fw-semibold;
+    flex-shrink: 0;
+}
+
+.stepCard:not(.stepCardActive):not(.stepCardDone) .stepNumber {
+    background: #717171;
+}
+
+.stepTitle {
+    flex: 1;
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.stepCheck {
+    color: $color-success;
+    font-weight: $fw-bold;
+}
+
+.stepBody {
+    padding: 0 $padding-lg $padding-lg;
+}
+
+.savedCardOptions {
+    margin-bottom: $gap-md;
+}
+
+.radioOption {
+    display: flex;
+    align-items: flex-start;
+    gap: $gap-md;
+    padding: $padding-md;
+    border: 1px solid #ebebeb;
+    border-radius: $radius-md;
+    margin-bottom: $gap-md;
+    cursor: pointer;
+
+    input {
+        margin-top: 4px;
+        accent-color: $color-text-black;
+    }
+}
+
+.radioOptionActive {
+    border-color: #b0b0b0;
+    background: #fafafa;
+}
+
+.optionTitle {
+    margin: 0 0 $gap-xxs;
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.optionHint {
+    margin: 0;
+    font-size: $fs-caption;
+    line-height: $lh-base;
+    color: $color-text-main;
+}
+
+.inlineLink {
+    border: none;
+    background: none;
+    padding: 0;
+    font: inherit;
+    color: $color-text-black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap-md;
+
+    @include respond-to(mobile) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.fieldLabel {
+    display: block;
+    margin-bottom: $gap-sm;
+    font-size: $fs-caption;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+}
+
+.messageArea {
+    width: 100%;
+    padding: $padding-md;
+    border: 1px solid #ddd;
+    border-radius: $radius-md;
+    font: inherit;
+    font-size: $fs-base;
+    resize: vertical;
+    min-height: 140px;
+
+    &:focus {
+        outline: none;
+        border-color: $color-text-black;
+    }
+}
+
+.messageHint {
+    margin: $gap-sm 0 0;
+    font-size: $fs-caption;
+    color: $color-text-main;
+}
+
+.reviewBlock {
+    padding: $padding-md 0;
+    border-bottom: 1px solid #ebebeb;
+
+    &:last-of-type {
+        border-bottom: none;
+        margin-bottom: $gap-md;
+    }
+}
+
+.reviewLabel {
+    margin: 0 0 $gap-xxs;
+    font-size: $fs-caption;
+    color: $color-text-main;
+}
+
+.reviewValue {
+    margin: 0;
+    font-size: $fs-base;
+    color: $color-text-black;
+}
+
+.stepActions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: $gap-lg;
+}
+
+.error {
+    margin: $gap-md 0 0;
+    color: $color-danger;
+    font-size: $fs-caption;
+}
+
+.loading {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-text-main;
+}
+
+.successCard {
+    max-width: 560px;
+    margin: 0 auto;
+    @include empty-state-box;
+    border: 1px solid $color-border-light;
+}
+
+.successIcon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto $gap-lg;
+    border-radius: $radius-circle;
+    background: $color-success-bg;
+    color: $color-success;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: $fw-bold;
+}
+
+.successTitle {
+    margin: 0 0 $gap-md;
+    font-size: $fs-h2;
+    color: $color-text-black;
+}
+
+.successText {
+    margin: 0 0 $gap-block;
+    color: $color-text-main;
+    line-height: $lh-lg;
+}
+
+.successActions {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+    align-items: center;
+}
+
+.textBtn {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+

@@ -1,0 +1,72 @@
+@import "../../../variables.scss";
+
+.badge {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 40px;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-caption;
+    font-weight: $fw-medium;
+    line-height: $lh-caption;
+}
+
+.verified {
+    background-color: $bg-white;
+    color: $color-text;
+    border: 1px solid $bg-surface-variant;
+}
+
+.success {
+    background-color: $bg-success;
+    color: $bg-surface-stroke;
+    border: 1px solid $bg-surface-variant;
+    width: 108px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $fs-caption;
+    font-weight: $fw-medium;
+    white-space: nowrap;
+    padding: 4px 12px;
+}
+
+.confirmed {
+    background-color: $color-success-bg;
+    color: $color-success;
+    border: none;
+    font-weight: $fw-semibold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.completed {
+    background-color: $color-background;
+    color: $color-text-main;
+    border: none;
+    font-weight: $fw-semibold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 1.2;
+}
+.ideas {
+    background-color: rgba(34, 34, 34, 0.4);
+    color: $color-white;
+    backdrop-filter: blur(4px);
+    border: none;
+}
+
+.ideasTag {
+    background-color: $bg-success;
+    color: $text-on-success-subtle;
+    border: 1px solid $bg-surface-variant;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: $fw-semibold;
+}

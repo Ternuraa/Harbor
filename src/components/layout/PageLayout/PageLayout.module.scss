@@ -1,0 +1,30 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.page {
+    flex: 1;
+    width: 100%;
+    background-color: $color-background;
+}
+
+.container {
+    @include page-container;
+}
+
+.containerNarrow {
+    @include page-container-narrow;
+}
+
+.containerFlush {
+    width: 100%;
+    box-sizing: border-box;
+    @include page-padding-x;
+}
+
+.twoColumn {
+    @include layout-two-column;
+}
+
+.stack {
+    @include page-stack;
+}

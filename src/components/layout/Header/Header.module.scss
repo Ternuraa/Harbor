@@ -1,0 +1,358 @@
+﻿@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+$motion-ease: cubic-bezier(0.4, 0, 0.2, 1);
+$motion-duration: 0.45s;
+$search-expanded-gap: 48px;
+$search-expanded-height: $search-height;
+$expanded-slot-height: $search-expanded-gap + $search-expanded-height;
+$morph-shift: -18px;
+$compact-row-height: 48px;
+
+.header {
+    position: relative;
+    z-index: 1000;
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    @include page-padding-x;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid $color-border;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.headerPinned {
+    position: sticky;
+    top: 0;
+}
+
+.topRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    min-height: 40px;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    flex-shrink: 0;
+}
+
+.logoText {
+    font-weight: $fw-semibold;
+    font-size: $fs-h2;
+    color: $color-text-black;
+    font-family: 'Liberation Sans', Arial, sans-serif;
+}
+
+.compactSearchWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    transform: translate3d(-50%, -50%, 0);
+    pointer-events: none;
+    visibility: hidden;
+    width: max-content;
+    max-width: min(420px, calc(100% - 220px));
+}
+
+.compactSearchWrapper[aria-hidden='false'] {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.compactSearchInner {
+    opacity: 0;
+    transform: scale(0.96);
+    transform-origin: center center;
+    transition:
+        opacity $motion-duration $motion-ease,
+        transform $motion-duration $motion-ease;
+    transition-delay: 0s;
+    backface-visibility: hidden;
+    max-width: 100%;
+}
+
+.expandedSlot {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    flex-shrink: 0;
+    transition:
+        height $motion-duration $motion-ease,
+        opacity $motion-duration $motion-ease;
+    transition-delay: 0s;
+}
+
+.expandedSlotVisible {
+    height: $expanded-slot-height;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.expandedSlotOpen {
+    overflow: visible;
+}
+
+.expandedLayer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: $search-expanded-gap;
+    box-sizing: border-box;
+}
+
+.expandedInner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    transform: translate3d(0, $morph-shift, 0);
+    transform-origin: center top;
+    transition:
+        opacity $motion-duration $motion-ease,
+        transform $motion-duration $motion-ease;
+    transition-delay: 0s;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.modeExpanded {
+    overflow: visible;
+
+    .compactSearchWrapper {
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .compactSearchInner {
+        opacity: 0;
+        transform: scale(0.96);
+        transition-delay: 0s;
+    }
+
+    .expandedSlot,
+    .expandedSlotVisible {
+        height: $expanded-slot-height;
+        opacity: 1;
+        pointer-events: auto;
+        overflow: visible;
+        transition:
+            height $motion-duration $motion-ease,
+            opacity $motion-duration $motion-ease;
+        transition-delay: 0.06s;
+    }
+
+    .expandedSlotOpen {
+        overflow: visible;
+    }
+
+    .expandedInner {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        pointer-events: auto;
+        transition-delay: 0.1s;
+    }
+}
+
+.modeCompact {
+    .topRow {
+        min-height: $compact-row-height;
+    }
+
+    .compactSearchWrapper {
+        pointer-events: auto;
+    }
+
+    .compactSearchInner {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+        transition-delay: 0s;
+    }
+
+    .expandedSlot {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: none;
+    }
+
+    .expandedInner {
+        opacity: 0;
+        transform: translate3d(0, $morph-shift, 0);
+        pointer-events: none;
+        transition: none;
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: $color-overlay;
+    z-index: 999;
+    animation: fadeIn 0.25s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .compactSearchInner,
+    .expandedSlot,
+    .expandedInner {
+        transition: none;
+    }
+}
+
+.searchStatic {
+    .compactSearchInner,
+    .expandedSlot,
+    .expandedInner {
+        transition: none;
+    }
+}
+
+@include respond-to(tablet-down) {
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .expandedLayer {
+        padding-top: 24px;
+    }
+
+    .modeExpanded {
+        overflow: visible;
+
+        .expandedSlot,
+        .expandedSlotVisible,
+        .expandedSlotOpen {
+            overflow: visible;
+        }
+    }
+
+    .compactSearchWrapper {
+        max-width: min(360px, calc(100% - 200px));
+    }
+
+    .modeExpanded .expandedSlotVisible {
+        height: auto;
+        min-height: $search-height;
+    }
+}
+
+@include respond-to(mobile) {
+    .header {
+        padding-top: $padding-md;
+        padding-bottom: $padding-md;
+    }
+
+    .topRow {
+        flex-wrap: nowrap;
+        gap: $home-mobile-element-gap;
+        min-height: 40px;
+    }
+
+    .logoText {
+        font-size: $fs-h3;
+    }
+
+    .compactSearchInner,
+    .expandedSlot,
+    .expandedInner {
+        transition: none;
+    }
+
+    .searchMobileStatic {
+        .compactSearchInner,
+        .expandedSlot,
+        .expandedSlotVisible,
+        .expandedInner {
+            transition: none;
+        }
+
+        &.modeExpanded {
+            .expandedSlot,
+            .expandedSlotVisible {
+                height: auto;
+                min-height: $search-height;
+                opacity: 1;
+                overflow: visible;
+                transition: none;
+            }
+
+            .expandedInner {
+                opacity: 1;
+                transform: none;
+                pointer-events: auto;
+                transition: none;
+            }
+
+            .compactSearchWrapper {
+                display: none;
+            }
+        }
+    }
+
+    .modeExpanded {
+        .compactSearchWrapper {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .expandedLayer {
+            padding-top: $home-mobile-block-gap;
+        }
+
+        .expandedInner {
+            width: 100%;
+            opacity: 1;
+            transform: none;
+            pointer-events: auto;
+        }
+    }
+
+    .compactSearchWrapper {
+        max-width: min(320px, calc(100% - 160px));
+    }
+
+    .expandedLayer {
+        padding-top: 16px;
+    }
+
+    .expandedSlot,
+    .expandedSlotVisible {
+        height: auto;
+        min-height: $search-height;
+        opacity: 1;
+        overflow: visible;
+        pointer-events: auto;
+    }
+
+    .modeExpanded .expandedSlotVisible {
+        height: auto;
+        min-height: $search-height;
+    }
+}

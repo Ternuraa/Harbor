@@ -1,0 +1,26 @@
+﻿@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 24px;
+    background-color: $color-main;
+    color: $color-white;
+    border: none;
+    border-radius: $radius-sm;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    cursor: pointer;
+
+    @include primary-cta-hover;
+
+    &:disabled {
+        background-color: $color-bg-diveder;
+        color: $color-text-main;
+        cursor: not-allowed;
+    }
+}

@@ -1,0 +1,23 @@
+@import '../../../variables.scss';
+
+.pill {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid $color-border;
+    background: $color-white;
+    color: $color-text;
+    font-size: $fs-caption;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+
+    &:hover {
+        border-color: $color-text-black;
+    }
+
+    &.active {
+        border-color: $color-text-black;
+        background: #f7f7f7;
+        color: $color-text-black;
+    }
+}

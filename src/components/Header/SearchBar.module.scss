@@ -1,0 +1,149 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.searchBar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: $search-width;
+    height: $search-height;
+    background-color: $search-bg;
+    border-radius: $search-radius;
+    border: 1px solid $color-border;
+    box-sizing: border-box;
+    padding-left: $search-padding-x;
+    padding-right: 8px;
+    z-index: 1;
+}
+
+.inputWrapper {
+    position: static;
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.locationDropdown {
+    position: absolute;
+    top: calc($search-height + $search-dropdown-gap);
+    left: 0;
+    z-index: 110;
+}
+
+.searchBtn {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: #999999;
+    cursor: pointer;
+    flex: 1;
+    text-align: left;
+    padding: 0 16px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+
+
+    &:hover {
+        color: $color-text-black;
+    }
+
+    &.hasData {
+        color: $color-text-black;
+    }
+}
+
+
+.divider {
+    width: 1px;
+    height: 32px;
+    background-color: $color-bg-diveder;
+}
+
+.searchSubmit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: $color-main;
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    .searchIcon {
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
+
+    &:hover {
+        background-color: $color-bg-hover;
+    }
+}
+
+@include respond-to(tablet-down) {
+    .searchBar {
+        width: 100%;
+        max-width: $search-width;
+        height: $search-height;
+        padding-left: 20px;
+        padding-right: 6px;
+    }
+
+    .searchBtn {
+        padding: 0 10px;
+        font-size: $fs-caption;
+        min-width: 0;
+    }
+
+    .divider {
+        height: 28px;
+        flex-shrink: 0;
+    }
+
+    .searchSubmit {
+        width: 44px;
+        height: 44px;
+        flex-shrink: 0;
+    }
+
+    .locationDropdown {
+        left: 0;
+        right: 0;
+        width: auto;
+    }
+}
+
+@include respond-to(mobile) {
+    .searchBar {
+        padding-left: 16px;
+        border-radius: 28px;
+    }
+
+    .searchBtn {
+        padding: 0 8px;
+        font-size: 11px;
+    }
+
+    .divider {
+        height: 24px;
+    }
+
+    .searchSubmit {
+        width: 40px;
+        height: 40px;
+
+        .searchIcon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

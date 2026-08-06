@@ -1,0 +1,159 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-lg;
+    animation: fadeIn 0.2s ease;
+}
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    background-color: $color-white;
+    border-radius: $radius-xl;
+    padding: $padding-xl $padding-lg $padding-lg;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+    animation: slideUp 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: $radius-circle;
+    background: transparent;
+    color: $color-text-black;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+}
+
+.title {
+    margin: 0;
+    font-size: $fs-h3;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: $fs-base;
+    color: $color-text-main;
+    line-height: $lh-base;
+}
+
+.preview {
+    display: flex;
+    gap: $gap-md;
+    padding: $padding-sm;
+    border-radius: $radius-md;
+    background-color: $color-background;
+}
+
+.previewImage {
+    width: 88px;
+    height: 68px;
+    border-radius: $radius-sm;
+    object-fit: cover;
+}
+
+.previewTitle {
+    margin: 0 0 $gap-xxs 0;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+}
+
+.previewMeta {
+    margin: 0;
+    font-size: $fs-caption;
+    color: $color-text-main;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+}
+
+.detailRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: $fs-base;
+    color: $color-text-black;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    padding-top: $gap-sm;
+    border-top: 1px solid $color-border;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+}
+
+.secondaryLink {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@include respond-to(mobile) {
+    .overlay {
+        padding: $padding-md;
+        align-items: flex-end;
+    }
+
+    .modal {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}

@@ -1,0 +1,397 @@
+@import '../../variables.scss';
+
+.tabContainer {
+    animation: fadeIn 0.3s ease;
+}
+
+.sectionTitle {
+    font-size: $fs-h1;
+    line-height: $lh-h1;
+    font-weight: $fw-bold;
+    margin-bottom: 40px;
+    color: $color-text-black;
+}
+
+.cardBlock {
+    padding: $padding-lg;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    margin-bottom: $gap-xl;
+    background-color: $color-white;
+    // Этот класс убирает белую рамку, когда появляется темная карта
+    &.noBorder {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $gap-lg;
+
+    h3 {
+        font-size: $fs-lg;
+        font-weight: $fw-semibold;
+        margin: 0;
+    }
+}
+
+.btnText {
+    color: $color-main;
+    font-weight: $fw-semibold;
+    font-size: $fs-base;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    padding: 0;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+// ПУСТОЕ СОСТОЯНИЕ ДЛЯ БОНУСОВ
+.emptyState {
+    p {
+        font-size: $fs-base;
+        color: $color-text-main;
+        margin: 0;
+    }
+}
+
+.demoBtn {
+    background: none;
+    border: none;
+    color: $color-main;
+    font-size: 13px;
+    font-weight: $fw-semibold;
+    padding: 0;
+    margin-top: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.premiumLoyaltyCard {
+    background: linear-gradient(135deg, #1C1C1E 0%, #2C2C2E 100%);
+    border-radius: $radius-md;
+    padding: $padding-lg;
+    color: $color-white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeIn 0.4s ease; // Плавное появление карты
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        top: -40px;
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+}
+
+.loyaltyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1;
+}
+
+.loyaltyBrand {
+    font-size: 18px;
+    font-weight: $fw-bold;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    span {
+        font-weight: 400;
+        color: #A1A1AA;
+    }
+}
+
+.loyaltyTier {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: $fw-semibold;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(4px);
+}
+
+.loyaltyBalanceArea {
+    z-index: 1;
+}
+
+.loyaltyPoints {
+    font-size: 40px;
+    font-weight: $fw-bold;
+    line-height: 1;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+
+    span {
+        font-size: $fs-lg;
+        font-weight: 400;
+        color: #A1A1AA;
+    }
+}
+
+.loyaltyFiat {
+    font-size: $fs-base;
+    color: #E4E4E7;
+    opacity: 0.8;
+}
+
+.loyaltyProgressArea {
+    z-index: 1;
+}
+
+.loyaltyProgressText {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #A1A1AA;
+    margin-bottom: 8px;
+
+    strong {
+        color: $color-white;
+        font-weight: 500;
+    }
+}
+
+.loyaltyBarBg {
+    height: 4px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.loyaltyBarFill {
+    height: 100%;
+    background: $color-white;
+    border-radius: 2px;
+    transition: width 1s ease-in-out;
+}
+
+
+.promoList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.promoCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding-lg;
+    border: 1px solid $color-bg-diveder;
+    border-radius: $radius-md;
+    background: $color-white;
+}
+
+.promoText {
+    h4 {
+        font-size: $fs-lg;
+        font-weight: $fw-semibold;
+        color: $color-text-black;
+        margin: 0 0 6px 0;
+    }
+
+    p {
+        font-size: $fs-base;
+        color: $color-text-main;
+        margin: 0 0 12px 0;
+    }
+}
+
+.promoDate {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: $color-text-black;
+    background: $color-background;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.promoAction {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.promoCodeVal {
+    background: $color-background;
+    padding: 8px 12px;
+    border-radius: $radius-sm;
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+    letter-spacing: 1px;
+}
+
+.btnOutline {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: $color-text-black;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: $color-background;
+    }
+
+    &.copied {
+        background-color: $color-text-black;
+        color: $color-white;
+        border-color: $color-text-black;
+    }
+}
+
+
+/* =========================================
+   СПОСОБЫ ОПЛАТЫ И ФОРМА
+   ========================================= */
+.addCardForm {
+    margin-top: 24px;
+    max-width: 480px;
+    animation: fadeIn 0.3s ease;
+}
+
+.formRow {
+    display: flex;
+    gap: $gap-lg;
+    margin-bottom: $gap-lg;
+}
+
+.formGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.btnCancel {
+    background-color: transparent !important;
+    border: 1px solid $color-border !important;
+    color: $color-text-black !important;
+
+    &:hover {
+        background-color: $color-background !important;
+    }
+}
+
+.savedCardsList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.paymentMethod {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: $padding-md;
+    background-color: $color-background;
+    border-radius: $radius-md;
+}
+
+.cardIcon {
+    width: 48px;
+    height: 32px;
+    background-color: #1A1F71;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: $fw-bold;
+    font-style: italic;
+}
+
+.cardNumberText {
+    font-weight: $fw-semibold;
+    font-size: $fs-base;
+    color: $color-text-black;
+}
+
+.cardMetaText {
+    font-size: 14px;
+    color: $color-text-main;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ... (все предыдущие стили остаются)
+
+.cardActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.defaultBadge {
+    font-size: 14px;
+    color: $color-text-main;
+}
+
+.deleteCardBtn {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: $fw-semibold;
+    color: $color-text-main;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: $color-danger; 
+    }
+}

@@ -1,0 +1,238 @@
+﻿@import '../../variables.scss';
+@import '../../mixins.scss';
+
+$motion-ease: cubic-bezier(0.4, 0, 0.2, 1);
+$motion-duration: 0.45s;
+$search-expanded-gap: 48px;
+$search-expanded-height: $search-height;
+$expanded-slot-height: $search-expanded-gap + $search-expanded-height;
+$morph-shift: -18px;
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 120px;
+    border-bottom: 1px solid $color-border;
+    overflow: visible;
+}
+
+.topRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    min-height: 40px;
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logoText {
+    font-weight: $fw-semibold;
+    font-size: $fs-h2;
+    color: $color-text-black;
+    font-family: 'Liberation Sans', Arial, sans-serif;
+}
+
+.compactSearchWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    transform: translate3d(-50%, -50%, 0);
+    pointer-events: none;
+}
+
+.compactSearchInner {
+    opacity: 0;
+    transform: scale(0.96);
+    transform-origin: center center;
+    transition:
+        opacity $motion-duration $motion-ease,
+        transform $motion-duration $motion-ease;
+    transition-delay: 0s;
+    backface-visibility: hidden;
+}
+
+.expandedSlot {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        height $motion-duration $motion-ease,
+        opacity $motion-duration $motion-ease;
+    transition-delay: 0s;
+}
+
+.expandedSlotOpen {
+    overflow: visible;
+}
+
+.expandedLayer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: $search-expanded-gap;
+    box-sizing: border-box;
+}
+
+.expandedInner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    opacity: 0;
+    transform: translate3d(0, $morph-shift, 0);
+    transform-origin: center top;
+    transition:
+        opacity $motion-duration $motion-ease,
+        transform $motion-duration $motion-ease;
+    transition-delay: 0s;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
+
+.modeExpanded {
+    .compactSearchInner {
+        opacity: 0;
+        transform: scale(0.96);
+        transition-delay: 0s;
+    }
+
+    .expandedSlot {
+        height: $expanded-slot-height;
+        opacity: 1;
+        pointer-events: auto;
+        transition-delay: 0.06s;
+    }
+
+    .expandedInner {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+        pointer-events: auto;
+        transition-delay: 0.1s;
+    }
+}
+
+.modeCompact {
+    .compactSearchWrapper {
+        pointer-events: auto;
+    }
+
+    .compactSearchInner {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+        transition-delay: 0.14s;
+    }
+
+    .expandedSlot {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition-delay: 0s;
+    }
+
+    .expandedInner {
+        opacity: 0;
+        transform: translate3d(0, $morph-shift, 0);
+        pointer-events: none;
+        transition-delay: 0s;
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    animation: fadeIn 0.25s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .compactSearchInner,
+    .expandedSlot,
+    .expandedInner {
+        transition: none;
+    }
+}
+
+.searchStatic {
+    .compactSearchInner,
+    .expandedSlot,
+    .expandedInner {
+        transition: none;
+    }
+}
+
+@include respond-to(tablet-down) {
+    .header {
+        padding: 20px $page-padding-tablet;
+    }
+
+    .expandedLayer {
+        padding-top: 24px;
+    }
+}
+
+@include respond-to(mobile) {
+    .header {
+        padding: 16px $page-padding-mobile;
+    }
+
+    .topRow {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logoText {
+        font-size: $fs-h3;
+    }
+
+    .compactSearchWrapper {
+        position: static;
+        left: auto;
+        top: auto;
+        transform: none;
+        width: 100%;
+        flex: 1 1 100%;
+        order: 3;
+        margin-top: 4px;
+        pointer-events: auto;
+    }
+
+    .compactSearchInner {
+        display: flex;
+        justify-content: stretch;
+        width: 100%;
+    }
+
+    .expandedLayer {
+        padding-top: 16px;
+    }
+
+    .modeExpanded .expandedSlot {
+        height: 74px;
+    }
+}

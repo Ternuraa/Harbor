@@ -1,0 +1,115 @@
+@import '../../variables.scss';
+
+.tabContainer {
+    animation: fadeIn 0.3s ease;
+}
+
+.sectionTitle {
+    font-size: $fs-h1;
+    line-height: $lh-h1;
+    font-weight: $fw-bold;
+    margin-bottom: 40px;
+    color: $color-text-black;
+}
+
+.emptyStateCard {
+    padding: $padding-lg;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 16px;
+}
+
+.emptyStateTitle {
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+    margin: 0;
+}
+
+.emptyStateText {
+    font-size: $fs-base;
+    color: $color-text-main;
+    margin: 0;
+}
+
+.buttonWrapper {
+    margin-top: 8px;
+    width: 180px;
+}
+
+.loadingText {
+    font-size: $fs-base;
+    color: $color-text-main;
+}
+
+.tripsList {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+}
+
+.tripCard {
+    display: flex;
+    gap: $gap-lg;
+    padding: $padding-md;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    background-color: $color-white;
+}
+
+.tripImage {
+    width: 180px;
+    height: 132px;
+    border-radius: $radius-md;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.tripContent {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+}
+
+.tripTitle {
+    margin: 0;
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.tripLocation,
+.tripDates,
+.tripMeta {
+    margin: 0;
+    font-size: $fs-base;
+    color: $color-text-main;
+}
+
+.tripLink {
+    margin-top: $gap-sm;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+    text-decoration: underline;
+
+    &:hover {
+        color: $color-main;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

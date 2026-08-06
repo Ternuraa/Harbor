@@ -1,0 +1,320 @@
+@import '../../../../variables.scss';
+@import '../../../../mixins.scss';
+
+.tabContainer {
+    animation: fadeIn 0.3s ease;
+}
+
+.sectionTitle {
+    font-size: $fs-h1;
+    line-height: $lh-h1;
+    font-weight: $fw-bold;
+    margin-bottom: $gap-block;
+    color: $color-text-black;
+}
+
+.emptyStateCard {
+    padding: $padding-lg;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $gap-lg;
+}
+
+.emptyStateTitle {
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+    margin: 0;
+}
+
+.emptyStateText {
+    font-size: $fs-base;
+    color: $color-text-main;
+    margin: 0;
+}
+
+.buttonWrapper {
+    margin-top: $gap-sm;
+    width: 180px;
+}
+
+.loadingText,
+.errorText {
+    font-size: $fs-base;
+    color: $color-text-main;
+}
+
+.tripsList {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xl;
+}
+
+.pastSection {
+    margin-top: $gap-section;
+}
+
+.pastSectionTitle {
+    margin: 0 0 $gap-xl;
+    font-size: $fs-h2;
+    line-height: $lh-h2;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+}
+
+.tripCard {
+    display: flex;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+        border-color: darken($color-border, 8%);
+    }
+}
+
+.imageWrap {
+    width: 240px;
+    flex-shrink: 0;
+    background-color: $color-background;
+}
+
+.tripImage {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.tripContent {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    padding: $padding-lg;
+}
+
+.tripHeaderRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: $gap-md;
+    margin-bottom: $gap-xxs;
+}
+
+.tripHeaderMain {
+    min-width: 0;
+}
+
+.tripTitle {
+    margin: 0 0 $gap-xxs 0;
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+}
+
+.tripLocation {
+    margin: 0;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-main;
+}
+
+.statusBadge {
+    flex-shrink: 0;
+}
+
+.datesLine {
+    margin: $gap-sm 0 0;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+}
+
+.tripMeta {
+    margin: 0;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-text-main;
+}
+
+.tripActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-md;
+    margin-top: auto;
+    padding-top: $gap-md;
+}
+
+.outlineBtn {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: $color-text-black;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    line-height: $lh-base;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $color-background;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@include respond-to(tablet) {
+    .sectionTitle {
+        font-size: $fs-h2;
+        line-height: $lh-h2;
+        margin-bottom: $gap-xl;
+    }
+
+    .tripsList {
+        gap: $gap-lg;
+    }
+
+    .tripCard {
+        align-items: stretch;
+    }
+
+    .imageWrap {
+        width: 168px;
+    }
+
+    .tripImage {
+        min-height: 148px;
+        height: 100%;
+    }
+
+    .tripContent {
+        padding: $padding-md;
+        gap: $gap-xxs;
+    }
+
+    .tripTitle {
+        font-size: $fs-base;
+        line-height: $lh-base;
+    }
+
+    .datesLine {
+        margin-top: $gap-xxs;
+        font-size: $fs-caption;
+        line-height: $lh-caption;
+    }
+
+    .tripMeta,
+    .tripLocation {
+        font-size: $fs-caption;
+        line-height: $lh-caption;
+    }
+
+    .tripActions {
+        padding-top: $gap-sm;
+    }
+
+    .outlineBtn {
+        padding: $padding-xs $padding-md;
+        font-size: $fs-caption;
+        line-height: $lh-caption;
+    }
+
+    .emptyStateCard {
+        padding: $padding-md;
+        gap: $gap-md;
+    }
+}
+
+@include respond-to(mobile) {
+    .tripCard {
+        flex-direction: column;
+    }
+
+    .imageWrap {
+        width: 100%;
+    }
+
+    .tripImage {
+        min-height: 180px;
+        height: auto;
+    }
+
+    .tripContent {
+        padding: $padding-lg;
+        gap: $gap-sm;
+    }
+
+    .tripTitle {
+        font-size: $fs-lg;
+        line-height: $lh-lg;
+    }
+
+    .datesLine,
+    .tripMeta,
+    .tripLocation {
+        font-size: $fs-base;
+        line-height: $lh-base;
+    }
+
+    .outlineBtn {
+        padding: 8px 16px;
+        font-size: $fs-base;
+        line-height: $lh-base;
+    }
+    .sectionTitle {
+        font-size: $fs-h2;
+        line-height: $lh-h2;
+        margin-bottom: $gap-xl;
+    }
+
+    .tabContainer {
+        padding: 0;
+    }
+
+    .buttonWrapper {
+        width: 100%;
+        max-width: none;
+    }
+
+    .tripHeaderRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tripActions {
+        flex-direction: column;
+        width: 100%;
+
+        button,
+        .outlineBtn {
+            width: 100%;
+        }
+    }
+
+    .outlineBtn {
+        text-align: center;
+    }
+}

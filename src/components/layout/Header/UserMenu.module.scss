@@ -1,0 +1,186 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.userMenu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    z-index: 4;
+    flex-shrink: 0;
+}
+
+.menuBtn {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: $color-text;
+    cursor: pointer;
+    padding: 10px 28px;
+    border-radius: 24px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $hover-button;
+    }
+}
+
+.iconButtons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.iconBtn {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    position: relative;
+
+    &:hover {
+        background-color: $hover-button;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+        display: block;
+        pointer-events: none;
+    }
+}
+
+.badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 9px;
+    background-color: $color-accent-red;
+    color: $color-white;
+    font-size: 11px;
+    font-weight: $fw-semibold;
+    line-height: 18px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.dropdownContainer {
+    position: relative;
+}
+
+.dropdown {
+    position: fixed;
+    width: 240px;
+    background-color: $color-white;
+    border-radius: 12px;
+    border: 1px solid $color-border;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 2000;
+    padding: 8px 0;
+    animation: slideDown 0.2s ease;
+}
+
+.menuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuItem {
+    padding: 12px 16px;
+    font-size: $fs-base;
+    color: $color-text-black;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    border: none;
+    background: none;
+    text-align: left;
+    font-family: inherit;
+    box-sizing: border-box;
+
+    &:hover {
+        background-color: $bg-surface-variant;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        width: 100%;
+    }
+}
+
+button.menuItem {
+    width: 100%;
+}
+
+.menuItemActive {
+    font-weight: $fw-semibold;
+}
+
+.divider {
+    height: 1px;
+    background-color: $color-border;
+    margin: 8px 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+}
+
+.userAvatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', 'Liberation Sans', sans-serif;
+    border: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@include respond-to(mobile) {
+    .userMenu {
+        gap: 8px;
+    }
+
+    .menuBtn {
+        display: none;
+    }
+
+    .iconBtn {
+        width: 36px;
+        height: 36px;
+    }
+
+    .dropdown {
+        width: min(240px, calc(100vw - 40px));
+    }
+}

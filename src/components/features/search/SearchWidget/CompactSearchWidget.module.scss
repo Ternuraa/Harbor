@@ -1,0 +1,124 @@
+@import '../../../../variables.scss';
+@import '../../../../mixins.scss';
+
+$compact-segment-font-size: $fs-base;
+$compact-segment-line-height: 1.25;
+$compact-segment-font-weight: $fw-medium;
+
+.widgetContainer {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $color-border;
+    border-radius: 40px;
+    padding: 8px 12px 8px 24px;
+    background-color: $color-white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+    }
+}
+
+.widgetBtn {
+    background: none;
+    border: none;
+    padding: 0 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: $compact-segment-font-size;
+    font-weight: $compact-segment-font-weight;
+    line-height: $compact-segment-line-height;
+    color: $color-text-black;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    flex: 1 1 0;
+    text-align: left;
+
+    &:first-child {
+        padding-left: 0;
+    }
+}
+
+.divider {
+    height: 24px;
+    width: 1px;
+    background-color: $color-border;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.searchIconBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $color-main;
+    color: $color-white;
+    margin-left: 8px;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+
+    .icon {
+        display: block;
+        fill: none;
+        height: 12px;
+        width: 12px;
+        stroke: currentcolor;
+        stroke-width: 5;
+        overflow: visible;
+    }
+
+    &:hover {
+        background-color: $color-bg-hover;
+    }
+}
+
+@include respond-to(tablet-down) {
+    .widgetContainer {
+        min-height: 48px;
+        padding: 0 10px 0 18px;
+    }
+
+    .widgetBtn {
+        padding: 0 10px;
+    }
+
+    .divider {
+        height: 20px;
+    }
+}
+
+@include respond-to(mobile) {
+    .widgetContainer {
+        min-height: 48px;
+        padding: 0 8px 0 16px;
+        border-radius: 28px;
+        gap: 0;
+    }
+
+    .widgetBtn {
+        padding: 0 8px;
+
+        &:first-child {
+            padding-left: 0;
+            flex: 1.05 1 0;
+        }
+    }
+
+    .guestsBtn {
+        flex: 0.9 1 0;
+        padding-right: $gap-xxs;
+    }
+
+    .searchIconBtn {
+        margin-left: 6px;
+    }
+}

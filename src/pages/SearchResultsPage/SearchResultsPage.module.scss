@@ -1,0 +1,166 @@
+﻿@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.layout {
+    @include layout-two-column;
+}
+
+.sidebarColumn {
+    width: $layout-sidebar-width;
+    flex-shrink: 0;
+    @include sticky-below-header;
+
+    @include respond-to(tablet-down) {
+        width: 100%;
+        position: static;
+    }
+
+    @include respond-to(mobile) {
+        display: none;
+    }
+}
+
+.resultsColumn {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.resultsHeader {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: $gap-md;
+    margin-bottom: $gap-xl;
+
+    @include respond-to(mobile) {
+        align-items: center;
+        margin-bottom: $gap-lg;
+    }
+}
+
+.pageTitle {
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+    line-height: $lh-h2;
+    color: $color-text-black;
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+
+    @include respond-to(mobile) {
+        font-size: $fs-h3;
+        line-height: $lh-h3;
+    }
+}
+
+.filtersButton {
+    display: none;
+    align-items: center;
+    gap: $gap-sm;
+    flex-shrink: 0;
+    height: 40px;
+    padding: 0 $padding-md;
+    border: 1px solid $color-border;
+    border-radius: $radius-pill;
+    background-color: $color-white;
+    color: $color-text-black;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        border-color: $color-text-black;
+    }
+
+    @include respond-to(mobile) {
+        display: inline-flex;
+    }
+}
+
+.filtersBadge {
+    width: 8px;
+    height: 8px;
+    border-radius: $radius-circle;
+    background-color: $color-main;
+    flex-shrink: 0;
+}
+
+.filtersOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1100;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0;
+    animation: fadeIn 0.2s ease;
+}
+
+.filtersPanel {
+    width: 100%;
+    max-height: 90vh;
+    background-color: $color-white;
+    border-radius: $radius-xl $radius-xl 0 0;
+    padding: $padding-lg $page-padding-mobile $padding-md;
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.12);
+    animation: slideUp 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xl;
+    width: 100%;
+
+    @include respond-to(mobile) {
+        gap: $home-mobile-element-gap;
+    }
+}
+
+.noResults {
+    @include loading-state-box;
+
+    h3 {
+        color: $color-text-black;
+        margin-bottom: $gap-sm;
+    }
+}
+
+.loadingState {
+    @include loading-state-box;
+    font-size: $fs-lg;
+    font-weight: $fw-medium;
+
+    @include respond-to(mobile) {
+        font-size: $fs-base;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

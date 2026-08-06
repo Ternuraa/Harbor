@@ -1,0 +1,327 @@
+@import '../../variables.scss';
+
+.pageContainer {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 64px 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.backButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: $color-background;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        color: $color-text-black;
+    }
+}
+
+.pageTitle {
+    font-size: 32px;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+    margin: 0;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 1fr 440px; // Чуть расширили правую колонку для пикеров
+    gap: 80px;
+    align-items: start;
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        flex-direction: column-reverse;
+        display: flex;
+    }
+}
+
+// --- ЛЕВАЯ КОЛОНКА (ШАГИ И КАРТА) ---
+.stepsColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.stepBlock {
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: 24px;
+    transition: all 0.3s ease;
+    background: transparent;
+
+    &.active {
+        border-color: $color-border;
+        background: $color-white;
+    }
+}
+
+.stepTitle {
+    font-size: 20px;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+    margin: 0;
+}
+
+.stepBody {
+    margin-top: 24px;
+    animation: fadeIn 0.3s ease;
+}
+
+.radioOption {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid $color-border;
+    cursor: pointer;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+
+    input[type="radio"] {
+        width: 24px;
+        height: 24px;
+        accent-color: $color-text-black;
+        cursor: pointer;
+    }
+}
+
+.radioInfo {
+    padding-right: 24px;
+}
+
+.radioTitle {
+    font-size: 16px;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+    margin-bottom: 4px;
+}
+
+.radioSubtitle {
+    font-size: 14px;
+    color: $color-text-main;
+    line-height: 1.4;
+}
+
+.taxNoteBlock {
+    margin-top: 8px;
+    font-size: 14px;
+    color: $color-success; // Зеленоватый/оттенок для информирования без комиссии
+    font-weight: $fw-medium;
+}
+
+.paymentMockup {
+    padding: 16px;
+    background-color: $color-background;
+    border-radius: $radius-sm;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        margin: 0;
+        font-weight: $fw-medium;
+    }
+
+    .secureText {
+        font-size: 12px;
+        color: $color-success;
+    }
+}
+
+.errorText {
+    color: $color-danger;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.nextBtnWrapper {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+        width: auto;
+        padding: 14px 32px;
+    }
+}
+
+// КАРТА
+//.mapBlock {
+//    margin-top: 16px;
+//    padding-bottom: 40px;
+//}
+
+.locationText {
+    font-size: 16px;
+    color: $color-text-main;
+    margin: 8px 0 24px 0;
+}
+
+.mapContainer {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    background-color: $color-background;
+    border: 1px solid $color-border;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// --- ПРАВАЯ КОЛОНКА (СВОДКА) ---
+.summaryColumn {
+    position: sticky;
+    top: 40px;
+}
+
+.summaryCard {
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-xl;
+    padding: 24px;
+}
+
+.propertyPreview {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    img {
+        width: 120px;
+        height: 100px;
+        border-radius: $radius-sm;
+        object-fit: cover;
+    }
+}
+
+.propInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.propTitle {
+    font-size: 14px;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+    margin-bottom: 8px;
+}
+
+.propRating {
+    font-size: 12px;
+    color: $color-text-black;
+}
+
+.divider {
+    height: 1px;
+    background-color: $color-border;
+    margin: 24px 0;
+}
+
+.summarySection {
+    margin-bottom: 24px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+
+    h3 {
+        font-size: 16px;
+        font-weight: $fw-bold;
+        margin: 0;
+    }
+}
+
+.pickerAnchor {
+    position: relative; // Важно, чтобы пикеры выпадали относительно этой кнопки
+}
+
+.editBtn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: $fw-medium;
+    text-decoration: underline;
+    color: $color-text-black;
+    cursor: pointer;
+}
+
+.sectionValue {
+    font-size: 16px;
+    color: $color-text-main;
+}
+
+.priceBreakdown {
+    h3 {
+        font-size: 16px;
+        font-weight: $fw-bold;
+        margin: 0 0 16px 0;
+    }
+}
+
+.priceRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: $color-text-main;
+    margin-bottom: 12px;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+    padding-top: 24px;
+    margin-top: 12px;
+    border-top: 1px solid $color-border;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

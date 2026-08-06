@@ -1,0 +1,132 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.footer {
+    background-color: #f7f7f7;
+    padding: $padding-section 0;
+    border-top: 2px solid $color-border;
+}
+
+.container {
+    max-width: $content-footer-max-width;
+    margin: 0 auto;
+    @include page-padding-x;
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $padding-section;
+}
+
+.section {
+    h3 {
+        font-size: $fs-base;
+        font-weight: $fw-semibold;
+        margin-bottom: $gap-lg;
+        color: $color-text-black;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        font-size: $fs-base;
+        color: $color-text-secondary;
+        margin-bottom: $gap-md;
+        cursor: pointer;
+        transition: color 0.2s;
+
+        &:hover {
+            color: $color-text-black;
+        }
+    }
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid $color-border-subtle;
+    padding-top: $padding-lg;
+    font-size: $fs-base;
+    color: $color-text-secondary;
+
+    .links {
+        display: flex;
+        gap: $gap-xl;
+    }
+}
+
+.sectionLink {
+    font-size: $fs-base;
+    color: $color-text-secondary;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-text-black;
+    }
+}
+
+.footerLink {
+    font-size: $fs-base;
+    color: $color-text-secondary;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-text-black;
+    }
+}
+
+@include respond-to(tablet-down) {
+    .sections {
+        flex-wrap: wrap;
+        gap: $gap-block;
+    }
+
+    .section {
+        flex: 1 1 40%;
+        min-width: 160px;
+    }
+}
+
+@include respond-to(mobile) {
+    .footer {
+        padding: $gap-block 0;
+    }
+
+    .sections {
+        flex-direction: column;
+        gap: $gap-block;
+        margin-bottom: $gap-block;
+    }
+
+    .section {
+        flex: none;
+        width: 100%;
+
+        h3 {
+            margin-bottom: $home-mobile-element-gap;
+        }
+
+        li {
+            margin-bottom: $home-mobile-element-gap;
+        }
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: $home-mobile-element-gap;
+        align-items: flex-start;
+        padding-top: $home-mobile-block-gap;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        gap: $home-mobile-element-gap;
+    }
+}

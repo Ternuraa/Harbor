@@ -1,0 +1,35 @@
+@import "../../../variables.scss";
+
+.button {
+    width: 32px; /* Ширина кружка (поправь на свой размер из Figma, например 40px) */
+    height: 32px; /* Высота кружка */
+    border-radius: 50%; /* Делает форму идеальным кругом */
+    background-color: #F3F4F6; /* Светло-серый фон (поправь на свой HEX) */
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-text-black;
+    cursor: pointer;
+    /* Плавность для изменения прозрачности и увеличения */
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    /* Если передали direction="left", переворачиваем иконку внутри на 180 градусов */
+    &.left .icon {
+        transform: rotate(180deg);
+    }
+    /* Состояние HOVER: Увеличиваем на 10%, только если кнопка активна */
+    &:hover:not(:disabled) {
+        transform: scale(1.1);
+        background-color: #E5E7EB; 
+    }
+    /* Состояние DISABLED: Как на твоем макете слева */
+    &:disabled {
+        opacity: 0.4; /* Делаем кнопку полупрозрачной (блеклой) */
+        cursor: not-allowed; /* Меняем курсор на "запрещено" */
+    }
+}
+
+.icon {
+    width: 16px; 
+    height: 16px;
+}

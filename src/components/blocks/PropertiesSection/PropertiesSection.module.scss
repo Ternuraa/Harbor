@@ -1,0 +1,96 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+        font-size: $fs-h2;
+        font-weight: $fw-semibold;
+        color: $color-text-black;
+        margin: 0;
+        @include home-section-title-mobile;
+    }
+
+    .controls {
+        display: flex;
+        gap: $gap-sm;
+        flex-shrink: 0;
+    }
+}
+
+$visible-cards: $home-property-cards-visible;
+
+.cardsContainer {
+    display: flex;
+    gap: $gap-lg;
+    overflow-x: auto;
+    padding-bottom: $padding-md;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.cardWrapper {
+    flex: 0 0 calc((100% - #{$gap-lg} * (#{$visible-cards} - 1)) / #{$visible-cards});
+    min-width: 0;
+    scroll-snap-align: start;
+    display: flex;
+}
+
+.cardLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+@include respond-to(tablet-down) {
+    .cardWrapper {
+        flex: 0 0 calc((100% - #{$gap-lg}) / 2);
+        min-width: 220px;
+    }
+}
+
+@include respond-to(mobile) {
+    .section {
+        gap: $home-mobile-block-gap;
+    }
+
+    .header {
+        .controls {
+            display: none;
+        }
+    }
+
+    .cardsContainer {
+        gap: $home-mobile-element-gap;
+        margin-right: -$page-padding-mobile;
+        padding-right: $page-padding-mobile;
+        padding-bottom: $padding-xs;
+    }
+
+    .cardWrapper {
+        flex: 0 0 $home-carousel-card-width;
+        max-width: 300px;
+        min-width: 0;
+        height: auto;
+        min-height: 0;
+    }
+}
