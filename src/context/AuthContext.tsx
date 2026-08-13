@@ -2,7 +2,6 @@ import React, {
     createContext,
     useCallback,
     useContext,
-    useEffect,
     useState,
     type ReactNode,
 } from 'react';
@@ -41,39 +40,39 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+const readAuthSnapshot = (): { user: AuthUser | null; avatarUrl: string | null } => {
+    const session = getAuthSession();
+    if (!session) return { user: null, avatarUrl: null };
+
+    try {
+        const parsedUser = JSON.parse(session.userJson) as AuthUser;
+        const normalizedId = normalizeUserId(parsedUser.id);
+
+        if (normalizedId === null) {
+            clearAuthSession();
+            return { user: null, avatarUrl: null };
+        }
+
+        const normalizedUser = { ...parsedUser, id: normalizedId };
+        return { user: normalizedUser, avatarUrl: getStoredAvatarUrl(normalizedId) };
+    } catch {
+        clearAuthSession();
+        return { user: null, avatarUrl: null };
+    }
+};
+
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-    const [user, setUser] = useState<AuthUser | null>(null);
-    const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
+    const [initialAuth] = useState(readAuthSnapshot);
+    const [user, setUser] = useState<AuthUser | null>(initialAuth.user);
+    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(initialAuth.user !== null);
+    const [avatarUrl, setAvatarUrl] = useState<string | null>(initialAuth.avatarUrl);
+    const userId = user?.id ?? null;
 
     const persistUser = useCallback((nextUser: AuthUser) => {
         const session = getAuthSession();
         if (!session) return;
 
         saveAuthSession(session.token, JSON.stringify(nextUser), session.remember);
-    }, []);
-
-    useEffect(() => {
-        const session = getAuthSession();
-
-        if (session) {
-            try {
-                const parsedUser = JSON.parse(session.userJson) as AuthUser;
-                const normalizedId = normalizeUserId(parsedUser.id);
-
-                if (normalizedId === null) {
-                    clearAuthSession();
-                    return;
-                }
-
-                const normalizedUser = { ...parsedUser, id: normalizedId };
-                setIsAuthenticated(true);
-                setUser(normalizedUser);
-                setAvatarUrl(getStoredAvatarUrl(normalizedId));
-            } catch {
-                clearAuthSession();
-            }
-        }
     }, []);
 
     const login = (token: string, userData: AuthUser, remember = true) => {
@@ -107,19 +106,19 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }, [persistUser]);
 
     const setAvatarFromFile = useCallback(async (file: File) => {
-        if (!user?.id) return;
+        if (userId === null) return;
 
         const dataUrl = await processAvatarFile(file);
-        saveStoredAvatarUrl(user.id, dataUrl);
+        saveStoredAvatarUrl(userId, dataUrl);
         setAvatarUrl(dataUrl);
-    }, [user?.id]);
+    }, [userId]);
 
     const removeAvatar = useCallback(() => {
-        if (!user?.id) return;
+        if (userId === null) return;
 
-        clearStoredAvatarUrl(user.id);
+        clearStoredAvatarUrl(userId);
         setAvatarUrl(null);
-    }, [user?.id]);
+    }, [userId]);
 
     return (
         <AuthContext.Provider

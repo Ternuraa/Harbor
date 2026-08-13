@@ -54,12 +54,12 @@ export const SearchProvider: React.FC<{ children: ReactNode }> = ({ children }) 
     const [state, setState] = useState<SearchState>(() => loadSearchState() ?? createDefaultSearchState());
     const [propertyBookedDates, setPropertyBookedDates] = useState<BookedDateRange[] | null>(null);
 
-    useEffect(() => {
+    const urlSnapshot = (() => {
         const shouldHydrateFromUrl =
             location.pathname === '/search'
             || location.pathname.startsWith('/property/');
 
-        if (!shouldHydrateFromUrl) return;
+        if (!shouldHydrateFromUrl) return null;
 
         const fromUrl = parseSearchParams(searchParams);
         const hasUrlData = Boolean(
@@ -69,10 +69,18 @@ export const SearchProvider: React.FC<{ children: ReactNode }> = ({ children }) 
             || fromUrl.guests,
         );
 
-        if (!hasUrlData) return;
+        return hasUrlData ? fromUrl : null;
+    })();
 
-        setState((current) => mergeSearchState(current, fromUrl));
-    }, [location.pathname, searchParams]);
+    const urlKey = `${location.pathname}?${searchParams.toString()}`;
+    const [hydratedUrlKey, setHydratedUrlKey] = useState<string | null>(null);
+
+    if (urlKey !== hydratedUrlKey) {
+        setHydratedUrlKey(urlKey);
+        if (urlSnapshot) {
+            setState((current) => mergeSearchState(current, urlSnapshot));
+        }
+    }
 
     useEffect(() => {
         saveSearchState(state);
