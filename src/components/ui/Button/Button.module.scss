@@ -1,5 +1,5 @@
-﻿@import '../../../variables.scss';
-@import '../../../styles/mixins.scss';
+@use '../../../variables.scss' as *;
+@use '../../../styles/mixins.scss' as *;
 
 .button {
     display: inline-flex;

@@ -1,5 +1,6 @@
-@import '../../../../variables.scss';
-@import '../../../../mixins.scss';
+@use '../../../../variables.scss' as *;
+@use '../../../../mixins.scss' as *;
+@use 'sass:color';
 
 .tabContainer {
     animation: fadeIn 0.3s ease;
@@ -75,7 +76,7 @@
     transition: border-color 0.2s ease;
 
     &:hover {
-        border-color: darken($color-border, 8%);
+        border-color: color.adjust($color-border, $lightness: -8%);
     }
 }
 

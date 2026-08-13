@@ -1,5 +1,6 @@
-@import '../../../variables.scss';
-@import '../../../mixins.scss';
+@use '../../../variables.scss' as *;
+@use '../../../mixins.scss' as *;
+@use 'sass:color';
 
 .card {
     position: relative;
@@ -22,7 +23,7 @@
     transition: box-shadow 0.2s ease, border-color 0.2s ease;
 
     &:hover {
-        border-color: darken($color-border, 8%);
+        border-color: color.adjust($color-border, $lightness: -8%);
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     }
 }

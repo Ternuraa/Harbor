@@ -3,11 +3,12 @@
     "",
     "\\public",
     "\\src",
-    "\\src\\components\\blocks",
-    "\\src\\components\\blocks\\HostBenefits",
+    "\\src\\components",
     "\\src\\components\\blocks\\HostEarnBanner",
-    "\\src\\layouts"
+    "\\src\\components\\Input",
+    "\\src\\components\\ui",
+    "\\src\\components\\ui\\Input"
   ],
-  "SelectedNode": "\\scripts",
+  "SelectedNode": "\\src\\components\\Input\\Input.module.scss",
   "PreviewInSolutionExplorer": false
 }

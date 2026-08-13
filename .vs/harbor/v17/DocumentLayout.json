@@ -1,69 +1,85 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\",
+  "WorkspaceRootPath": "D:\\harbor_github\\harbor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\add-moscow-properties.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\components\\ui\\Input\\Input.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\ui\\Input\\Input.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\components\\Input\\Input.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Input\\Input.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\components\\Input\\Input.module.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Input\\Input.module.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\components\\ui\\Input\\Input.module.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\ui\\Input\\Input.module.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\scripts\\add-moscow-properties.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\add-moscow-properties.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\update-db-images.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\scripts\\update-db-images.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\update-db-images.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\merge-db.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\scripts\\merge-db.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\merge-db.mjs||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\variables.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\variables.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\variables.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\mixins.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\mixins.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\mixins.scss||{181FE41B-5A5D-479F-9F8F-BF665F4EBC2A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\apiError.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\utils\\apiError.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\apiError.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\bookingsApi.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\utils\\bookingsApi.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\bookingsApi.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\cityMatch.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\utils\\cityMatch.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\cityMatch.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\searchFilters.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\utils\\searchFilters.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\searchFilters.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\searchParams.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\utils\\searchParams.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\searchParams.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\travelIdeasScroll.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\utils\\travelIdeasScroll.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\travelIdeasScroll.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\userAvatarStorage.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\utils\\userAvatarStorage.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\userAvatarStorage.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\config\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\config\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\config\\api.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\harbor-backend\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\harbor-backend\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\harbor-backend\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\db.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\db.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\db.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\harbor_github\\harbor\\src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
@@ -74,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,37 +98,87 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "update-db-images.mjs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\update-db-images.mjs",
-              "RelativeDocumentMoniker": "scripts\\update-db-images.mjs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\update-db-images.mjs",
-              "RelativeToolTip": "scripts\\update-db-images.mjs",
+              "DocumentIndex": 2,
+              "Title": "Input.module.scss",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\components\\Input\\Input.module.scss",
+              "RelativeDocumentMoniker": "src\\components\\Input\\Input.module.scss",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\components\\Input\\Input.module.scss",
+              "RelativeToolTip": "src\\components\\Input\\Input.module.scss",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-06-28T16:41:00.171Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2026-08-13T13:48:30.431Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "merge-db.mjs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\merge-db.mjs",
-              "RelativeDocumentMoniker": "scripts\\merge-db.mjs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\merge-db.mjs",
-              "RelativeToolTip": "scripts\\merge-db.mjs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-06-28T16:40:52.212Z",
+              "DocumentIndex": 1,
+              "Title": "Input.tsx",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\components\\Input\\Input.tsx",
+              "RelativeDocumentMoniker": "src\\components\\Input\\Input.tsx",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\components\\Input\\Input.tsx",
+              "RelativeToolTip": "src\\components\\Input\\Input.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-13T13:48:28.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Input.module.scss",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\components\\ui\\Input\\Input.module.scss",
+              "RelativeDocumentMoniker": "src\\components\\ui\\Input\\Input.module.scss",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\components\\ui\\Input\\Input.module.scss",
+              "RelativeToolTip": "src\\components\\ui\\Input\\Input.module.scss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2026-08-13T13:45:44.497Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Input.tsx",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\components\\ui\\Input\\Input.tsx",
+              "RelativeDocumentMoniker": "src\\components\\ui\\Input\\Input.tsx",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\components\\ui\\Input\\Input.tsx",
+              "RelativeToolTip": "src\\components\\ui\\Input\\Input.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-08-13T13:45:37.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "update-db-images.mjs",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\scripts\\update-db-images.mjs",
+              "RelativeDocumentMoniker": "scripts\\update-db-images.mjs",
+              "ToolTip": "D:\\harbor_github\\harbor\\scripts\\update-db-images.mjs",
+              "RelativeToolTip": "scripts\\update-db-images.mjs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-28T16:41:00.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "merge-db.mjs",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\scripts\\merge-db.mjs",
+              "RelativeDocumentMoniker": "scripts\\merge-db.mjs",
+              "ToolTip": "D:\\harbor_github\\harbor\\scripts\\merge-db.mjs",
+              "RelativeToolTip": "scripts\\merge-db.mjs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-06-28T16:40:52.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "add-moscow-properties.mjs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\add-moscow-properties.mjs",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\scripts\\add-moscow-properties.mjs",
               "RelativeDocumentMoniker": "scripts\\add-moscow-properties.mjs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\scripts\\add-moscow-properties.mjs",
+              "ToolTip": "D:\\harbor_github\\harbor\\scripts\\add-moscow-properties.mjs",
               "RelativeToolTip": "scripts\\add-moscow-properties.mjs",
               "ViewState": "AgIAAK4AAAAAAAAAAAAAAL8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
@@ -121,172 +187,159 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "variables.scss",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\variables.scss",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\variables.scss",
               "RelativeDocumentMoniker": "src\\variables.scss",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\variables.scss",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\variables.scss",
               "RelativeToolTip": "src\\variables.scss",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2026-06-28T16:40:38.397Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "mixins.scss",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\mixins.scss",
-              "RelativeDocumentMoniker": "src\\mixins.scss",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\mixins.scss",
-              "RelativeToolTip": "src\\mixins.scss",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
-              "WhenOpened": "2026-06-28T16:40:33.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "apiError.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\apiError.ts",
-              "RelativeDocumentMoniker": "src\\utils\\apiError.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\apiError.ts",
-              "RelativeToolTip": "src\\utils\\apiError.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T16:40:28.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "bookingsApi.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\bookingsApi.ts",
-              "RelativeDocumentMoniker": "src\\utils\\bookingsApi.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\bookingsApi.ts",
-              "RelativeToolTip": "src\\utils\\bookingsApi.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T16:40:26.862Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "cityMatch.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\cityMatch.ts",
-              "RelativeDocumentMoniker": "src\\utils\\cityMatch.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\cityMatch.ts",
-              "RelativeToolTip": "src\\utils\\cityMatch.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T16:40:25.707Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-28T16:40:38.397Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "searchFilters.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\searchFilters.ts",
-              "RelativeDocumentMoniker": "src\\utils\\searchFilters.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\searchFilters.ts",
-              "RelativeToolTip": "src\\utils\\searchFilters.ts",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T16:40:21.698Z",
-              "EditorCaption": ""
+              "Title": "mixins.scss",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\mixins.scss",
+              "RelativeDocumentMoniker": "src\\mixins.scss",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\mixins.scss",
+              "RelativeToolTip": "src\\mixins.scss",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002663|",
+              "WhenOpened": "2026-06-28T16:40:33.658Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "searchParams.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\searchParams.ts",
-              "RelativeDocumentMoniker": "src\\utils\\searchParams.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\searchParams.ts",
-              "RelativeToolTip": "src\\utils\\searchParams.ts",
+              "Title": "apiError.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\utils\\apiError.ts",
+              "RelativeDocumentMoniker": "src\\utils\\apiError.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\utils\\apiError.ts",
+              "RelativeToolTip": "src\\utils\\apiError.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T16:40:17.587Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-28T16:40:28.476Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "travelIdeasScroll.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\travelIdeasScroll.ts",
-              "RelativeDocumentMoniker": "src\\utils\\travelIdeasScroll.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\travelIdeasScroll.ts",
-              "RelativeToolTip": "src\\utils\\travelIdeasScroll.ts",
+              "Title": "bookingsApi.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\utils\\bookingsApi.ts",
+              "RelativeDocumentMoniker": "src\\utils\\bookingsApi.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\utils\\bookingsApi.ts",
+              "RelativeToolTip": "src\\utils\\bookingsApi.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T16:40:13.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-28T16:40:26.862Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "userAvatarStorage.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\userAvatarStorage.ts",
-              "RelativeDocumentMoniker": "src\\utils\\userAvatarStorage.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\utils\\userAvatarStorage.ts",
-              "RelativeToolTip": "src\\utils\\userAvatarStorage.ts",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "cityMatch.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\utils\\cityMatch.ts",
+              "RelativeDocumentMoniker": "src\\utils\\cityMatch.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\utils\\cityMatch.ts",
+              "RelativeToolTip": "src\\utils\\cityMatch.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T16:40:09.767Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-28T16:40:25.707Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "api.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\config\\api.ts",
-              "RelativeDocumentMoniker": "src\\config\\api.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\config\\api.ts",
-              "RelativeToolTip": "src\\config\\api.ts",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Title": "searchFilters.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\utils\\searchFilters.ts",
+              "RelativeDocumentMoniker": "src\\utils\\searchFilters.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\utils\\searchFilters.ts",
+              "RelativeToolTip": "src\\utils\\searchFilters.ts",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T16:39:48.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-28T16:40:21.698Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "index.ts",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\harbor-backend\\index.ts",
-              "RelativeDocumentMoniker": "src\\harbor-backend\\index.ts",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\harbor-backend\\index.ts",
-              "RelativeToolTip": "src\\harbor-backend\\index.ts",
+              "Title": "searchParams.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\utils\\searchParams.ts",
+              "RelativeDocumentMoniker": "src\\utils\\searchParams.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\utils\\searchParams.ts",
+              "RelativeToolTip": "src\\utils\\searchParams.ts",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-28T15:29:20.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-28T16:40:17.587Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "db.json",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\db.json",
-              "RelativeDocumentMoniker": "src\\db.json",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\db.json",
-              "RelativeToolTip": "src\\db.json",
-              "ViewState": "AgIAAC8IAAAAAAAAAAAmwDYIAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-28T09:11:06.397Z",
-              "EditorCaption": ""
+              "Title": "travelIdeasScroll.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\utils\\travelIdeasScroll.ts",
+              "RelativeDocumentMoniker": "src\\utils\\travelIdeasScroll.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\utils\\travelIdeasScroll.ts",
+              "RelativeToolTip": "src\\utils\\travelIdeasScroll.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-06-28T16:40:13.826Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "userAvatarStorage.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\utils\\userAvatarStorage.ts",
+              "RelativeDocumentMoniker": "src\\utils\\userAvatarStorage.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\utils\\userAvatarStorage.ts",
+              "RelativeToolTip": "src\\utils\\userAvatarStorage.ts",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-06-28T16:40:09.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "api.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\config\\api.ts",
+              "RelativeDocumentMoniker": "src\\config\\api.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\config\\api.ts",
+              "RelativeToolTip": "src\\config\\api.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-06-28T16:39:48.312Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "index.ts",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\harbor-backend\\index.ts",
+              "RelativeDocumentMoniker": "src\\harbor-backend\\index.ts",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\harbor-backend\\index.ts",
+              "RelativeToolTip": "src\\harbor-backend\\index.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-06-28T15:29:20.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "db.json",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\db.json",
+              "RelativeDocumentMoniker": "src\\db.json",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\db.json",
+              "RelativeToolTip": "src\\db.json",
+              "ViewState": "AgIAAC8IAAAAAAAAAAAmwDYIAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-28T09:11:06.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "HostEarnBanner.tsx",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx",
+              "DocumentMoniker": "D:\\harbor_github\\harbor\\src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx",
               "RelativeDocumentMoniker": "src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\harbor\\src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx",
+              "ToolTip": "D:\\harbor_github\\harbor\\src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx",
               "RelativeToolTip": "src\\components\\blocks\\HostEarnBanner\\HostEarnBanner.tsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-06-27T18:40:28.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-27T18:40:28.447Z"
             }
           ]
         }
