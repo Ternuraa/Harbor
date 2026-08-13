@@ -1,5 +1,5 @@
-@use '../../variables.scss' as *;
-@use '../../mixins.scss' as *;
+﻿@import '../../variables.scss';
+@import '../../mixins.scss';
 
 .tabContainer {
     animation: fadeIn 0.3s ease;

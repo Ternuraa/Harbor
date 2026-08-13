@@ -1,6 +1,6 @@
-@use '../../variables.scss' as *;
-@use '../../mixins.scss' as *;
-@use '../auth/authMobile' as *;
+@import '../../variables.scss';
+@import '../../mixins.scss';
+@import '../auth/authMobile';
 
 .registerPage {
     display: flex;

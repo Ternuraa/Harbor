@@ -1,17 +1,14 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 
-interface LegacyAuthContextValue {
-    isAuthenticated: boolean;
-    login: (token: string) => void;
-    logout: () => void;
-}
-
-const AuthContext = createContext<LegacyAuthContextValue | null>(null);
+const AuthContext = createContext<any>(null);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(
-        () => typeof localStorage !== 'undefined' && Boolean(localStorage.getItem('token')),
-    );
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+        // Проверяем наличие токена при старте приложения
+        if (localStorage.getItem('token')) setIsAuthenticated(true);
+    }, []);
 
     const login = (token: string) => {
         localStorage.setItem('token', token);

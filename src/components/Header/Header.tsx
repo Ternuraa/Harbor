@@ -48,9 +48,7 @@ export const Header: React.FC<HeaderProps> = ({ showSearch = true }) => {
 
 
 
-    const [scrollCompact, setScrollCompact] = useState(
-        () => typeof window !== 'undefined' && window.scrollY >= SCROLL_COMPACT_AT,
-    );
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -58,67 +56,90 @@ export const Header: React.FC<HeaderProps> = ({ showSearch = true }) => {
 
     const isCompactRef = useRef(false);
 
+
+
     const [searchSummary, setSearchSummary] = useState({
+
         location: defaultLocation,
+
         dates: defaultDates,
+
         guests: defaultGuests,
+
     });
 
-    const [prevDefaults, setPrevDefaults] = useState({
-        defaultLocation,
-        defaultDates,
-        defaultGuests,
-    });
 
-    if (
-        defaultLocation !== prevDefaults.defaultLocation
-        || defaultDates !== prevDefaults.defaultDates
-        || defaultGuests !== prevDefaults.defaultGuests
-    ) {
-        setPrevDefaults({ defaultLocation, defaultDates, defaultGuests });
-        setSearchSummary((prev) => ({
-            location: prev.location === prevDefaults.defaultLocation ? defaultLocation : prev.location,
-            dates: prev.dates === prevDefaults.defaultDates ? defaultDates : prev.dates,
-            guests: prev.guests === prevDefaults.defaultGuests ? defaultGuests : prev.guests,
-        }));
-    }
-
-    const [wasFixedCompact, setWasFixedCompact] = useState(fixedCompactSearch);
-
-    if (fixedCompactSearch !== wasFixedCompact) {
-        setWasFixedCompact(fixedCompactSearch);
-        if (fixedCompactSearch) {
-            isCompactRef.current = true;
-            setIsExpanded(false);
-            setAllowDropdownOverflow(false);
-        }
-    }
-
-    const isScrolled = fixedCompactSearch || scrollCompact;
-
-    const setCompactMode = useCallback((compact: boolean) => {
-        if (isCompactRef.current === compact) return;
-        isCompactRef.current = compact;
-        setScrollCompact(compact);
-        if (compact) setIsExpanded(false);
-    }, []);
 
     useEffect(() => {
+
+        setSearchSummary((prev) => ({
+
+            location: prev.location === defaultLocation ? defaultLocation : prev.location,
+
+            dates: prev.dates === defaultDates ? defaultDates : prev.dates,
+
+            guests: prev.guests === defaultGuests ? defaultGuests : prev.guests,
+
+        }));
+
+    }, [defaultLocation, defaultDates, defaultGuests]);
+
+
+
+    const setCompactMode = useCallback((compact: boolean) => {
+
+        if (isCompactRef.current === compact) return;
+
+        isCompactRef.current = compact;
+
+        setIsScrolled(compact);
+
+        if (compact) setIsExpanded(false);
+
+    }, []);
+
+
+
+    useEffect(() => {
+
         if (fixedCompactSearch) {
+
             isCompactRef.current = true;
+
+            setIsScrolled(true);
+
+            setIsExpanded(false);
+
+            setAllowDropdownOverflow(false);
+
             return;
+
         }
 
+
+
+        const initialCompact = window.scrollY >= SCROLL_COMPACT_AT;
+
+        isCompactRef.current = initialCompact;
+
+        setIsScrolled(initialCompact);
+
+        setAllowDropdownOverflow(!initialCompact);
+
+
+
         const handleScroll = () => {
+
             setCompactMode(window.scrollY >= SCROLL_COMPACT_AT);
+
         };
 
+
+
         window.addEventListener('scroll', handleScroll, { passive: true });
-        const frame = window.requestAnimationFrame(handleScroll);
-        return () => {
-            window.cancelAnimationFrame(frame);
-            window.removeEventListener('scroll', handleScroll);
-        };
+
+        return () => window.removeEventListener('scroll', handleScroll);
+
     }, [fixedCompactSearch, setCompactMode]);
 
 
@@ -127,18 +148,30 @@ export const Header: React.FC<HeaderProps> = ({ showSearch = true }) => {
 
     const showCompactSearch = fixedCompactSearch ? !isExpanded : isScrolled && !isExpanded;
 
-    if (!showBigSearch && allowDropdownOverflow) {
-        setAllowDropdownOverflow(false);
-    }
+
 
     useEffect(() => {
-        if (!showBigSearch) return;
+
+        if (!showBigSearch) {
+
+            setAllowDropdownOverflow(false);
+
+            return;
+
+        }
+
+
 
         const timer = window.setTimeout(() => {
+
             setAllowDropdownOverflow(true);
+
         }, SEARCH_MOTION_MS);
 
+
+
         return () => window.clearTimeout(timer);
+
     }, [showBigSearch]);
 
 

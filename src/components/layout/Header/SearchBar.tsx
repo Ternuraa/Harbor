@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useCallback, useMemo } from 'react';
+﻿import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './SearchBar.module.scss';
 import searchIcon from '../../ui/icons/Search.svg';
@@ -47,15 +47,9 @@ export const SearchBar: React.FC<SearchBarProps> = ({
     } = useSearch();
 
     const [searchValue, setSearchValue] = useState(city);
-    const [prevCity, setPrevCity] = useState(city);
-    if (city !== prevCity) {
-        setPrevCity(city);
-        setSearchValue(city);
-    }
-
     const debouncedSearch = useDebounce(searchValue, 300);
-    const [remoteResults, setRemoteResults] = useState<SearchItem[] | null>(null);
-    const [recentSearches, setRecentSearches] = useState<SearchItem[]>(getRecentSearches);
+    const [searchResults, setSearchResults] = useState<SearchItem[]>([]);
+    const [recentSearches, setRecentSearches] = useState<SearchItem[]>([]);
 
     const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
     const [flexibility, setFlexibility] = useState<string>('exact');
@@ -65,29 +59,31 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
     const [isGuestPickerOpen, setIsGuestPickerOpen] = useState(false);
 
+    useEffect(() => {
+        setSearchValue(city);
+    }, [city]);
+
     const refreshRecentSearches = useCallback(() => {
         setRecentSearches(getRecentSearches());
     }, []);
+
+    useEffect(() => {
+        refreshRecentSearches();
+    }, [refreshRecentSearches]);
 
     const rememberCity = useCallback((cityName: string, country = t('common.russia')) => {
         addRecentSearch(cityName, country);
         refreshRecentSearches();
     }, [refreshRecentSearches, t]);
 
-    const query = debouncedSearch.trim();
-    const localMatches = useMemo(() => filterLocalCities(query), [query]);
-    const [resultsQuery, setResultsQuery] = useState(query);
-    if (query !== resultsQuery) {
-        setResultsQuery(query);
-        setRemoteResults(null);
-    }
-
-    const searchResults = !query ? [] : remoteResults ?? localMatches;
-
     useEffect(() => {
-        if (!query) return;
+        const query = debouncedSearch.trim();
+        const localMatches = filterLocalCities(query);
 
-        let cancelled = false;
+        if (!query) {
+            setSearchResults([]);
+            return;
+        }
 
         const fetchCities = async () => {
             try {
@@ -97,26 +93,25 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 if (!response.ok) throw new Error('API error');
 
                 const data = await response.json();
-                const remote: SearchItem[] = data.results
+                const remoteResults: SearchItem[] = data.results
                     ? data.results.map((item: { name: string; country?: string }) => ({
                           city: item.name,
                           country: item.country || t('common.unknown'),
                       }))
                     : [];
 
-                if (!cancelled) setRemoteResults(mergeSearchResults(localMatches, remote));
+                setSearchResults(mergeSearchResults(localMatches, remoteResults));
             } catch {
-                if (!cancelled) {
-                    setRemoteResults(localMatches.length > 0 ? localMatches : RECOMMENDED_CITIES);
-                }
+                setSearchResults(localMatches.length > 0 ? localMatches : RECOMMENDED_CITIES);
             }
         };
 
-        void fetchCities();
-        return () => {
-            cancelled = true;
-        };
-    }, [query, language, t, localMatches]);
+        if (localMatches.length > 0) {
+            setSearchResults(localMatches);
+        }
+
+        fetchCities();
+    }, [debouncedSearch, language, t]);
 
     const datesText = isMobile
         ? formatDatesRangeCompact(checkIn, checkOut, language)

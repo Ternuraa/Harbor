@@ -55,9 +55,7 @@ export const Header: React.FC<HeaderProps> = ({ showSearch = true }) => {
 
 
 
-    const [scrollCompact, setScrollCompact] = useState(
-        () => typeof window !== 'undefined' && window.scrollY >= SCROLL_COMPACT_AT,
-    );
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -70,67 +68,85 @@ export const Header: React.FC<HeaderProps> = ({ showSearch = true }) => {
 
     const isCompactRef = useRef(false);
 
+
+
     const [searchSummary, setSearchSummary] = useState({
+
         location: defaultLocation,
+
         dates: defaultDates,
+
         guests: defaultGuests,
+
     });
 
-    const [prevDefaults, setPrevDefaults] = useState({
-        defaultLocation,
-        defaultDates,
-        defaultGuests,
-    });
 
-    if (
-        defaultLocation !== prevDefaults.defaultLocation
-        || defaultDates !== prevDefaults.defaultDates
-        || defaultGuests !== prevDefaults.defaultGuests
-    ) {
-        setPrevDefaults({ defaultLocation, defaultDates, defaultGuests });
+
+    useEffect(() => {
+
         setSearchSummary((prev) => ({
-            location: prev.location === prevDefaults.defaultLocation ? defaultLocation : prev.location,
-            dates: prev.dates === prevDefaults.defaultDates ? defaultDates : prev.dates,
-            guests: prev.guests === prevDefaults.defaultGuests ? defaultGuests : prev.guests,
+
+            location: prev.location === defaultLocation ? defaultLocation : prev.location,
+
+            dates: prev.dates === defaultDates ? defaultDates : prev.dates,
+
+            guests: prev.guests === defaultGuests ? defaultGuests : prev.guests,
+
         }));
-    }
 
-    const [wasFixedCompact, setWasFixedCompact] = useState(fixedCompactSearch);
+    }, [defaultLocation, defaultDates, defaultGuests]);
 
-    if (fixedCompactSearch !== wasFixedCompact) {
-        setWasFixedCompact(fixedCompactSearch);
-        if (fixedCompactSearch) {
-            isCompactRef.current = true;
-            setIsExpanded(false);
-            setAllowDropdownOverflow(false);
-        }
-    }
 
-    const isScrolled = fixedCompactSearch || scrollCompact;
 
     const setCompactMode = useCallback((compact: boolean) => {
+
         if (isCompactRef.current === compact) return;
+
         isCompactRef.current = compact;
-        setScrollCompact(compact);
+
+        setIsScrolled(compact);
+
         if (compact) setIsExpanded(false);
+
     }, []);
+
+
 
     useEffect(() => {
         if (fixedCompactSearch) {
             isCompactRef.current = true;
+            setIsScrolled(true);
+            setIsExpanded(false);
+            setAllowDropdownOverflow(false);
             return;
         }
 
-        const updateSticky = () => {
+        if (isMobile && showSearch) {
+            const updateSticky = () => {
+                const sticky = window.scrollY >= SCROLL_COMPACT_AT;
+                if (isCompactRef.current === sticky) return;
+                isCompactRef.current = sticky;
+                setIsScrolled(sticky);
+            };
+
+            updateSticky();
+            setAllowDropdownOverflow(true);
+
+            window.addEventListener('scroll', updateSticky, { passive: true });
+            return () => window.removeEventListener('scroll', updateSticky);
+        }
+
+        const initialCompact = window.scrollY >= SCROLL_COMPACT_AT;
+        isCompactRef.current = initialCompact;
+        setIsScrolled(initialCompact);
+        setAllowDropdownOverflow(!initialCompact);
+
+        const handleScroll = () => {
             setCompactMode(window.scrollY >= SCROLL_COMPACT_AT);
         };
 
-        window.addEventListener('scroll', updateSticky, { passive: true });
-        const frame = window.requestAnimationFrame(updateSticky);
-        return () => {
-            window.cancelAnimationFrame(frame);
-            window.removeEventListener('scroll', updateSticky);
-        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
     }, [fixedCompactSearch, isMobile, isHomePage, showSearch, setCompactMode]);
 
 
@@ -151,16 +167,18 @@ export const Header: React.FC<HeaderProps> = ({ showSearch = true }) => {
 
     const expandedSlotOpen = showBigSearch && (isExpanded || allowDropdownOverflow);
 
-    if (!showBigSearch && allowDropdownOverflow) {
-        setAllowDropdownOverflow(false);
-    }
 
-    if (showBigSearch && (isExpanded || isMobile) && !allowDropdownOverflow) {
-        setAllowDropdownOverflow(true);
-    }
 
     useEffect(() => {
-        if (!showBigSearch || isExpanded || isMobile) return;
+        if (!showBigSearch) {
+            setAllowDropdownOverflow(false);
+            return;
+        }
+
+        if (isExpanded || isMobile) {
+            setAllowDropdownOverflow(true);
+            return;
+        }
 
         const timer = window.setTimeout(() => {
             setAllowDropdownOverflow(true);
@@ -206,28 +224,19 @@ export const Header: React.FC<HeaderProps> = ({ showSearch = true }) => {
         setAllowDropdownOverflow(true);
     }, [showSearch, isMobile, navigate, openMobileSearch]);
 
-    const navState = locationState as { openSearch?: boolean } | null;
-    const wantsOpenSearch = Boolean(navState?.openSearch && showSearch);
-    const [openSearchHandled, setOpenSearchHandled] = useState(false);
+    useEffect(() => {
+        const state = locationState as { openSearch?: boolean } | null;
+        if (!state?.openSearch || !showSearch) return;
 
-    if (wantsOpenSearch && !openSearchHandled) {
-        setOpenSearchHandled(true);
         if (isMobile) {
-            setMobileSearch({ isOpen: true, step: 'location' });
+            openMobileSearch('location');
         } else {
             setIsExpanded(true);
             setAllowDropdownOverflow(true);
         }
-    }
 
-    if (!wantsOpenSearch && openSearchHandled) {
-        setOpenSearchHandled(false);
-    }
-
-    useEffect(() => {
-        if (!navState?.openSearch || !showSearch) return;
         navigate(pathname, { replace: true, state: null });
-    }, [locationState, showSearch, navigate, pathname, navState?.openSearch]);
+    }, [locationState, showSearch, isMobile, navigate, pathname, openMobileSearch]);
 
 
 

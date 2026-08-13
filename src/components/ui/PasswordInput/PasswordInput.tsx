@@ -4,7 +4,7 @@ import { EyeIcon } from '../icons/EyeIcon';
 import { EyeOffIcon } from '../icons/EyeOffIcon';
 import styles from './PasswordInput.module.scss';
 
-type PasswordInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'type'>;
+interface PasswordInputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type'> {}
 
 export const PasswordInput: React.FC<PasswordInputProps> = ({
     disabled,

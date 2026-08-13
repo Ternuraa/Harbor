@@ -1,5 +1,5 @@
-@use '../../../styles/variables.scss' as *;
-@use '../../../mixins.scss' as *;
+@import '../../../styles/variables.scss';
+@import '../../../mixins.scss';
 
 .field {
     width: 100%;

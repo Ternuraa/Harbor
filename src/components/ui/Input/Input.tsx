@@ -1,5 +1,4 @@
 ﻿import React, { useState, useRef, useEffect, type InputHTMLAttributes } from 'react';
-// Исправлен импорт: теперь он точно ссылается на ваш SCSS файл
 import styles from './Input.module.scss';
 
 export interface SearchItem {
@@ -8,7 +7,6 @@ export interface SearchItem {
     dates?: string;
 }
 
-// Интерфейс InputProps теперь используется ниже
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     variant?: 'default' | 'search';
     recentSearches?: SearchItem[];
@@ -18,7 +16,6 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     dropdownClassName?: string;
 }
 
-// Вот здесь мы применяем InputProps (React.FC<InputProps>), поэтому ошибка TS6196 уйдет
 export const Input: React.FC<InputProps> = ({
     variant = 'default',
     recentSearches,
@@ -53,7 +50,6 @@ export const Input: React.FC<InputProps> = ({
     const hasInputValue = value && String(value).trim().length > 0;
 
     return (
-        // Здесь мы применяем styles (styles.wrapper, styles.input и т.д.), поэтому ошибка TS6133 уйдет
         <div
             className={`${styles.wrapper} ${dropdownClassName ? styles.wrapperAnchored : ''} ${className || ''}`}
             ref={wrapperRef}

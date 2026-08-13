@@ -50,7 +50,6 @@ const readStoredFavoriteIds = (): number[] => {
 
 export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const { isAuthenticated, user } = useAuth();
-    const userId = user?.id ?? null;
     const [favoriteIds, setFavoriteIds] = useState<number[]>(readStoredFavoriteIds);
     const [modal, setModal] = useState<FavoritesModalState>(CLOSED_MODAL);
     const syncQueueRef = useRef(Promise.resolve());
@@ -86,7 +85,6 @@ export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children 
     }, []);
 
     const syncFavoritesFromServer = useCallback(async (userId: number) => {
-        await Promise.resolve();
         const normalizedUserId = normalizeUserId(userId);
         if (normalizedUserId === null) return;
 
@@ -123,10 +121,10 @@ export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children 
         }
     }, []);
 
-    const addFavorite = useCallback(async (propertyId: number) => {
-        if (userId === null) return;
+    const addFavorite = useCallback(async (propertyId: number, _meta: FavoritePropertyMeta) => {
+        if (!user?.id) return;
 
-        updateFavoriteIds(userId, (prev) => {
+        updateFavoriteIds(user.id, (prev) => {
             if (prev.includes(propertyId)) return prev;
             return [...prev, propertyId];
         });
@@ -137,17 +135,17 @@ export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children 
         await enqueueFavoriteSync(async () => {
             try {
                 const synced = await addFavoriteOnServer(token, propertyId);
-                updateFavoriteIds(userId, (prev) => mergeFavoriteIds(prev, synced));
+                updateFavoriteIds(user.id, (prev) => mergeFavoriteIds(prev, synced));
             } catch {
                 // оставляем локальное состояние
             }
         });
-    }, [userId, updateFavoriteIds, enqueueFavoriteSync]);
+    }, [user?.id, updateFavoriteIds, enqueueFavoriteSync]);
 
     const removeFavorite = useCallback(async (propertyId: number) => {
-        if (userId === null) return;
+        if (!user?.id) return;
 
-        updateFavoriteIds(userId, (prev) => prev.filter((id) => id !== propertyId));
+        updateFavoriteIds(user.id, (prev) => prev.filter((id) => id !== propertyId));
 
         const token = getAuthToken();
         if (!token) return;
@@ -155,41 +153,45 @@ export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children 
         await enqueueFavoriteSync(async () => {
             try {
                 const synced = await removeFavoriteOnServer(token, propertyId);
-                updateFavoriteIds(userId, synced);
+                updateFavoriteIds(user.id, synced);
             } catch {
                 // оставляем локальное состояние
             }
         });
-    }, [userId, updateFavoriteIds, enqueueFavoriteSync]);
+    }, [user?.id, updateFavoriteIds, enqueueFavoriteSync]);
 
     useEffect(() => {
-        if (!isAuthenticated || userId === null) return;
+        if (!isAuthenticated || !user?.id) {
+            if (!getAuthSession()) {
+                setFavoriteIds([]);
+            }
+            return;
+        }
 
-        const normalizedUserId = normalizeUserId(userId);
+        const normalizedUserId = normalizeUserId(user.id);
         if (normalizedUserId === null) return;
 
+        const local = getFavorites(normalizedUserId);
+        setFavoriteIds(local);
         void syncFavoritesFromServer(normalizedUserId);
-    }, [isAuthenticated, userId, syncFavoritesFromServer]);
+    }, [isAuthenticated, user?.id, syncFavoritesFromServer]);
 
     useEffect(() => {
-        if (!isAuthenticated || userId === null) return;
+        if (!isAuthenticated || !user?.id) return;
 
         const pending = getPendingFavorite();
         if (!pending) return;
 
-        const timer = window.setTimeout(() => {
-            clearPendingFavorite();
-            void addFavorite(pending.propertyId);
-        }, 0);
-
-        return () => window.clearTimeout(timer);
-    }, [isAuthenticated, userId, addFavorite]);
-
-    const visibleFavoriteIds = isAuthenticated && userId !== null ? favoriteIds : [];
+        clearPendingFavorite();
+        void addFavorite(pending.propertyId, {
+            title: pending.title,
+            imageUrl: pending.imageUrl,
+        });
+    }, [isAuthenticated, user?.id, addFavorite]);
 
     const isFavorite = useCallback(
-        (propertyId: number) => visibleFavoriteIds.includes(propertyId),
-        [visibleFavoriteIds],
+        (propertyId: number) => favoriteIds.includes(propertyId),
+        [favoriteIds],
     );
 
     const requestFavorite = useCallback(
@@ -204,21 +206,21 @@ export const FavoritesProvider: React.FC<{ children: ReactNode }> = ({ children 
                 return;
             }
 
-            void addFavorite(propertyId);
+            void addFavorite(propertyId, meta);
         },
         [isAuthenticated, isFavorite, openLoginModal, addFavorite, removeFavorite],
     );
 
     const value = useMemo(
         () => ({
-            favoriteIds: visibleFavoriteIds,
-            count: visibleFavoriteIds.length,
+            favoriteIds,
+            count: favoriteIds.length,
             modal,
             isFavorite,
             requestFavorite,
             closeModal,
         }),
-        [visibleFavoriteIds, modal, isFavorite, requestFavorite, closeModal],
+        [favoriteIds, modal, isFavorite, requestFavorite, closeModal],
     );
 
     return (

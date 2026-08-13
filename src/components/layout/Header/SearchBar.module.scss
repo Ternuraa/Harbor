@@ -1,5 +1,5 @@
-@use '../../../variables.scss' as *;
-@use '../../../mixins.scss' as *;
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
 
 $search-segment-font-size: $fs-base;
 $search-segment-line-height: 1.25;

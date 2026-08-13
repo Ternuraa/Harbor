@@ -1,5 +1,5 @@
-@use '../../../variables.scss' as *;
-@use '../../../mixins.scss' as *;
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
 
 $calendar-day-size: 48px;
 $calendar-day-size-modal: 40px;
