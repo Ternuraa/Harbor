@@ -160,8 +160,7 @@ export const PaymentsTab: React.FC = () => {
                 </div>
 
                 <button type="button" className={styles.demoBtn} onClick={simulateBooking}>
-                    {/* Приводим labels к any, чтобы обойти ошибку TS2339 */}
-                    {(labels as any).demoBooking || 'Демо бронирование'}
+                    Демо бронирование
                 </button>
             </div>
 

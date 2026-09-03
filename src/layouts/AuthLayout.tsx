@@ -1,6 +1,12 @@
 import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
 
-const AuthContext = createContext<any>(null);
+type AuthContextValue = {
+    isAuthenticated: boolean;
+    login: (token: string) => void;
+    logout: () => void;
+};
+
+const AuthContext = createContext<AuthContextValue | null>(null);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
