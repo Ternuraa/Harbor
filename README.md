@@ -1,8 +1,6 @@
 # Harbor (Харбор)
 
-Платформа для поиска и бронирования жилья для путешествий – SPA на React с Express API и PostgreSQL.
-
-README ориентирован на **Senior Frontend**: здесь архитектура, ключевые решения и то, как устроены основные потоки.
+Платформа для поиска и бронирования жилья для путешествий — SPA на React с Express API и PostgreSQL.
 
 ---
 
@@ -26,7 +24,7 @@ README ориентирован на **Senior Frontend**: здесь архит�
 
 ## Обзор
 
-Harbor – полнофункциональный frontend pet-project уровня production MVP:
+Harbor — полнофункциональный frontend pet-project уровня production MVP:
 
 | Область | Реализация |
 |---------|------------|
@@ -34,10 +32,10 @@ Harbor – полнофункциональный frontend pet-project уров�
 | Поиск | Виджет + URL sync + фильтры + мобильный step-flow |
 | Бронирование | 4-шаговый checkout с валидацией дат и конфликтов |
 | Пользователь | JWT auth, профиль с табами, поездки, избранное |
-| i18n | ru (default) / en – UI + overlay локализации объектов |
+| i18n | ru (default) / en — UI + overlay локализации объектов |
 | Backend | Express + PostgreSQL для auth, favorites, bookings, host applications |
 
-**Гибридная модель данных:** каталог объектов живёт в JSON и бандлится на сборке; пользовательские данные – через REST API.
+**Гибридная модель данных:** каталог объектов живёт в JSON и бандлится на сборке; пользовательские данные — через REST API.
 
 ---
 
@@ -54,7 +52,7 @@ Harbor – полнофункциональный frontend pet-project уров�
 | **date-fns** 4 | Календари, диапазоны дат |
 | **lucide-react** + **vite-plugin-svgr** | Иконки и inline SVG |
 
-> `axios` и `json-server` есть в `package.json`, но в коде не используются – все запросы через native `fetch`.
+> `axios` и `json-server` есть в `package.json`, но в коде не используются — все запросы через native `fetch`.
 
 ### Backend (monorepo внутри `src/harbor-backend/`)
 
@@ -73,15 +71,15 @@ Harbor – полнофункциональный frontend pet-project уров�
 │  Providers (Language → Auth → Search → Favorites)       │
 │  └── AppShell (skip link, document title)               │
 │       └── Routes / MainLayout / AuthLayout              │
-│            ├── pages/          – route-level screens    │
+│            ├── pages/          — route-level screens    │
 │            ├── components/                              │
-│            │   ├── layout/     – Header, Footer, Shell  │
-│            │   ├── features/   – search, profile, auth  │
-│            │   ├── blocks/     – секции HomePage        │
-│            │   └── ui/         – design system          │
-│            ├── context/        – React Context            │
-│            ├── hooks/          – media, debounce, etc.  │
-│            └── utils/          – API clients, filters   │
+│            │   ├── layout/     — Header, Footer, Shell  │
+│            │   ├── features/   — search, profile, auth  │
+│            │   ├── blocks/     — секции HomePage        │
+│            │   └── ui/         — design system          │
+│            ├── context/        — React Context            │
+│            ├── hooks/          — media, debounce, etc.  │
+│            └── utils/          — API clients, filters   │
 └─────────────────────────────────────────────────────────┘
          │                              │
          ▼                              ▼
@@ -91,11 +89,11 @@ Harbor – полнофункциональный frontend pet-project уров�
 
 ### Принципы организации
 
-- **Feature slices** – доменная логика в `components/features/` (search, profile)
-- **UI kit** – переиспользуемые компоненты в `components/ui/` + страница `/ui-kit`
-- **Page containers** – `PageLayout` с вариантами контейнера (`default | narrow | flush | none`)
-- **Context + localStorage** – cross-page state без Redux/Zustand
-- **Optimistic UI** – избранное обновляется локально, синхронизируется с сервером
+- **Feature slices** — доменная логика в `components/features/` (search, profile)
+- **UI kit** — переиспользуемые компоненты в `components/ui/` + страница `/ui-kit`
+- **Page containers** — `PageLayout` с вариантами контейнера (`default | narrow | flush | none`)
+- **Context + localStorage** — cross-page state без Redux/Zustand
+- **Optimistic UI** — избранное обновляется локально, синхронизируется с сервером
 
 ---
 
@@ -131,25 +129,25 @@ Harbor/
 
 ### Поиск
 
-- Виджет: город, даты, гости – состояние в `SearchContext`
+- Виджет: город, даты, гости — состояние в `SearchContext`
 - Синхронизация с URL: `?city=&checkIn=&checkOut=&adults=&children=&infants=&pets=`
 - Фильтры: цена, тип жилья, amenities, рейтинг (`FilterSidebar`, `searchFilters.ts`)
-- **MobileSearchFlow** – полноэкранный step-by-step flow на `< 768px`
+- **MobileSearchFlow** — полноэкранный step-by-step flow на `< 768px`
 - Debounced autocomplete городов (`useDebounce`, 300ms)
 
 ### Property Details + Booking
 
 - Галерея с модальным просмотром (`ImageGallery`, `GalleryModal`)
-- `ReservationCard` – выбор дат, расчёт цены, переход на `/property/:id/book`
-- **BookingRequestPage** – 4 шага: срок оплаты → карта → сообщение хосту → review
+- `ReservationCard` — выбор дат, расчёт цены, переход на `/property/:id/book`
+- **BookingRequestPage** — 4 шага: срок оплаты → карта → сообщение хосту → review
 - Проверка доступности: `bookedDates` в db.json + серверная проверка конфликтов
-- Платежи **симулированы** (saved cards, promo codes – localStorage)
+- Платежи **симулированы** (saved cards, promo codes — localStorage)
 
 ### Auth & Profile
 
 - Login / Register с `remember me` и redirect param
 - JWT в `localStorage` или `sessionStorage` (`authStorage.ts`)
-- **ProfilePage** – табы: поездки, прошлые, личные данные, платежи, безопасность
+- **ProfilePage** — табы: поездки, прошлые, личные данные, платежи, безопасность
 - Поездки и отмена бронирований через `bookingsApi.ts`
 
 ### Избранное
@@ -184,7 +182,7 @@ Redux/Zustand **не используются**. Четыре React Context пр
 | `FavoritesContext` | favorite IDs, modal, server sync | localStorage per user |
 
 ```tsx
-// App.tsx – порядок провайдеров
+// App.tsx — порядок провайдеров
 <LanguageProvider>
   <AuthProvider>
     <SearchProvider>
@@ -199,7 +197,7 @@ Redux/Zustand **не используются**. Четыре React Context пр
 ### Пример: очередь синхронизации избранного
 
 ```ts
-// FavoritesContext.tsx – сериализованная очередь без гонок
+// FavoritesContext.tsx — сериализованная очередь без гонок
 const syncQueueRef = useRef(Promise.resolve());
 
 const enqueueFavoriteSync = useCallback((task: () => Promise<void>) => {
@@ -214,7 +212,7 @@ const enqueueFavoriteSync = useCallback((task: () => Promise<void>) => {
 
 ### Статический каталог (`db.json`)
 
-Каталог импортируется на этапе сборки. В dev – HMR через `useSyncExternalStore`:
+Каталог импортируется на этапе сборки. В dev — HMR через `useSyncExternalStore`:
 
 ```ts
 // loadProperties.ts
@@ -242,14 +240,14 @@ export const API_URL = import.meta.env.VITE_API_URL ?? '/api';
 | `profileApi.ts` | `PUT /users/me/password` |
 | Login/Register | `POST /login`, `POST /register` |
 
-Все запросы – native `fetch` с Bearer JWT. Ошибки – `apiError.ts` (`readApiJson`, 502/503 detection).
+Все запросы — native `fetch` с Bearer JWT. Ошибки — `apiError.ts` (`readApiJson`, 502/503 detection).
 
 **Локально:** Vite proxy `/api` → `http://localhost:5001` (см. `vite.config.ts`).
 
 ### ResponsiveImage + retina pipeline
 
 ```tsx
-// ResponsiveImage – auto @2x WebP через <picture>
+// ResponsiveImage — auto @2x WebP через <picture>
 <ResponsiveImage src="/images/properties/1/card.webp" alt="..." />
 ```
 
@@ -282,11 +280,11 @@ Routes
 
 ## Стилизация
 
-- **SCSS Modules** – `Component.module.scss` рядом с компонентом
-- **Design tokens** – `src/styles/variables.scss` (цвета, spacing, размеры header/search)
-- **Responsive mixins** – `respond-to(mobile|tablet|tablet-down|desktop|wide)` в `mixins.scss`
-- **Brand color** – `#2CB2FA`
-- **Tailwind CSS не используется** – только `cn()` (clsx + tailwind-merge) для условных классов
+- **SCSS Modules** — `Component.module.scss` рядом с компонентом
+- **Design tokens** — `src/styles/variables.scss` (цвета, spacing, размеры header/search)
+- **Responsive mixins** — `respond-to(mobile|tablet|tablet-down|desktop|wide)` в `mixins.scss`
+- **Brand color** — `#2CB2FA`
+- **Tailwind CSS не используется** — только `cn()` (clsx + tailwind-merge) для условных классов
 
 Breakpoints (hooks):
 
@@ -313,7 +311,7 @@ npm start          # = npm run dev:all
 
 `dev:all` выполняет:
 
-1. `docker-compose up -d` – Postgres на порту **5433**
+1. `docker-compose up -d` — Postgres на порту **5433**
 2. Backend на **5001** (`tsx watch`)
 3. Ожидание `/health` (`scripts/wait-for-backend.mjs`)
 4. Vite dev server на **5173**
@@ -332,7 +330,7 @@ npm run dev         # только frontend (нужен запущенный bac
 cp src/harbor-backend/.env.example src/harbor-backend/.env
 ```
 
-Frontend env для локальной разработки **не нужен** – proxy работает из коробки.
+Frontend env для локальной разработки **не нужен** — proxy работает из коробки.
 
 ---
 
@@ -394,23 +392,10 @@ npm run check:deploy:frontend
 
 ---
 
-## Что стоит посмотреть в коде
-
-| Файл | Почему интересно |
-|------|------------------|
-| `src/context/FavoritesContext.tsx` | Optimistic UI + sync queue + pending favorite after login |
-| `src/utils/loadProperties.ts` | HMR для db.json через `useSyncExternalStore` |
-| `src/components/features/search/MobileSearchFlow/` | Mobile-first search UX |
-| `src/pages/BookingRequestPage/` | Multi-step form с валидацией |
-| `src/components/ui/ResponsiveImage/` | Retina-ready `<picture>` |
-| `src/utils/searchFilters.ts` | Client-side filtering + date availability |
-| `src/i18n/` | Структура i18n + property localization overlay |
-
----
 
 ## Ограничения (осознанные)
 
-- Платежи – client-side mock, без реального payment gateway
-- Каталог объектов – статический JSON, не CRUD через API
-- `axios` / `json-server` в dependencies – legacy, не используются
-- Часть компонентов дублируется (старые `components/Header/` vs `components/layout/Header/`) – активные импорты идут из `layout/` и `features/`
+- Платежи — client-side mock, без реального payment gateway
+- Каталог объектов — статический JSON, не CRUD через API
+- `axios` / `json-server` в dependencies — legacy, не используются
+- Часть компонентов дублируется (старые `components/Header/` vs `components/layout/Header/`) — активные импорты идут из `layout/` и `features/`
