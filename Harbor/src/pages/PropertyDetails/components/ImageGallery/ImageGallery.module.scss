@@ -1,0 +1,331 @@
+@import '../../../../variables.scss';
+@import '../../../../mixins.scss';
+
+.galleryWrapper {
+    width: 100%;
+    min-width: 0;
+    margin-bottom: 48px;
+    overflow: hidden;
+}
+
+.mobileCarousel {
+    display: none;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: $radius-lg;
+    overflow: hidden;
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: 1.52fr 1fr;
+    gap: 8px;
+    width: 100%;
+    aspect-ratio: 1330 / 524;
+    max-height: 524px;
+    border-radius: $radius-lg;
+    overflow: hidden;
+}
+
+.mainPhotoWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: none;
+    text-align: left;
+
+    .mainPhoto {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.sidePhotos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+
+    .sidePhotoWrapper {
+        position: relative;
+        flex: 1;
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        overflow: hidden;
+        cursor: pointer;
+        border: none;
+        padding: 0;
+        background: none;
+        text-align: left;
+
+        .sidePhoto {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 24px;
+        }
+    }
+
+    .photoButton {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 0;
+        background: none;
+        cursor: pointer;
+    }
+}
+
+// --- Модальная галерея (просмотр всех фото) ---
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: $color-white;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid $color-border;
+    box-shadow: none;
+}
+
+.backBtn {
+    background: none;
+    border: none;
+    font-size: $fs-h3;
+    line-height: $lh-h3;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    flex-shrink: 0;
+}
+
+.modalTitle {
+    margin: 0;
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    font-weight: $fw-semibold;
+    text-align: center;
+    flex: 1;
+    min-width: 0;
+    padding: 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bookBtn {
+    background-color: $color-main;
+    color: $color-white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: $radius-sm;
+    font-weight: $fw-bold;
+    cursor: pointer;
+    box-shadow: none;
+
+    @include primary-cta-hover;
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.modalBody {
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 24px 80px;
+    overflow: hidden;
+    background: $color-background;
+}
+
+.mainImageContainer {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: min(920px, 100%);
+    height: min(58vh, 560px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.modalImage {
+    display: block;
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: min(58vh, 560px);
+    object-fit: contain;
+    object-position: center;
+}
+
+.modalArrowLeft,
+.modalArrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.modalArrowLeft {
+    left: 32px;
+}
+
+.modalArrowRight {
+    right: 32px;
+}
+
+.thumbnailsContainer {
+    flex-shrink: 0;
+    display: flex;
+    gap: 8px;
+    padding: 16px 24px 24px;
+    overflow-x: auto;
+    justify-content: center;
+    box-shadow: none;
+}
+
+.thumbnailButton {
+    border: none;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 80px;
+    height: 60px;
+    border-radius: $radius-sm;
+    overflow: hidden;
+    opacity: 0.5;
+    box-sizing: border-box;
+
+    picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.thumbnailButtonActive {
+    opacity: 1;
+    outline: 2px solid $color-main;
+    outline-offset: -2px;
+}
+
+.thumbnailImage {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@include respond-to(tablet-down) {
+    .mobileCarousel {
+        display: block;
+    }
+
+    .galleryGrid {
+        display: none;
+    }
+
+    .galleryWrapper {
+        margin-bottom: 32px;
+    }
+
+    .modalBody {
+        padding: 16px 48px;
+    }
+
+    .mainImageContainer {
+        height: min(52vh, 480px);
+    }
+
+    .modalImage {
+        max-height: min(52vh, 480px);
+    }
+
+    .modalArrowLeft {
+        left: 8px;
+    }
+
+    .modalArrowRight {
+        right: 8px;
+    }
+}
+
+@include respond-to(mobile) {
+    .galleryWrapper {
+        margin-bottom: 24px;
+    }
+
+    .mobileCarousel {
+        aspect-ratio: 4 / 3;
+        max-height: none;
+        border-radius: $radius-md;
+    }
+
+    .modalHeader {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .modalBody {
+        padding: 12px 40px;
+    }
+
+    .mainImageContainer {
+        height: min(48vh, 400px);
+    }
+
+    .modalImage {
+        max-height: min(48vh, 400px);
+    }
+
+    .thumbnailsContainer {
+        justify-content: flex-start;
+        padding: 12px 16px 16px;
+    }
+}

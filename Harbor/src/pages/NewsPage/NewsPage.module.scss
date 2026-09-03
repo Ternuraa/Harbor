@@ -1,0 +1,49 @@
+@import '../../variables.scss';
+
+.card {
+    margin: 0;
+}
+
+.date {
+    display: block;
+    margin: 0 0 $gap-sm 0;
+    font-size: $fs-base;
+    color: $color-text-main;
+}
+
+.cardTitle {
+    margin: 0 0 $gap-md 0;
+    font-size: $fs-h3;
+    line-height: $lh-h3;
+    font-weight: $fw-semibold;
+}
+
+.cardLink {
+    color: $color-text-black;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-text-main;
+    }
+}
+
+.excerpt {
+    margin: 0;
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    color: $color-text;
+}
+
+.backToNews {
+    display: inline-block;
+    margin-top: $gap-section;
+    font-size: $fs-lg;
+    color: $color-text-main;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+        color: $color-text-black;
+    }
+}

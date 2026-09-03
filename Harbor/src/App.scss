@@ -1,0 +1,45 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: $padding-md;
+    z-index: 2000;
+    padding: $padding-sm $padding-md;
+    background: $color-text-black;
+    color: $color-white;
+    border-radius: $radius-sm;
+    font-size: $fs-base;
+    text-decoration: none;
+
+    &:focus {
+        top: $padding-md;
+    }
+}
+
+.main-screen {    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: clip;
+}
+
+.home-main {
+    @include page-stack;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    @include page-padding-x;
+    margin-top: $home-gap-desktop;
+    padding-bottom: $home-gap-desktop;
+
+    @include respond-to(tablet-down) {
+        margin-top: $home-gap-tablet;
+        padding-bottom: $home-gap-tablet;
+    }
+
+    @include respond-to(mobile) {
+        margin-top: $home-gap-mobile;
+        padding-bottom: $home-gap-mobile;
+    }
+}

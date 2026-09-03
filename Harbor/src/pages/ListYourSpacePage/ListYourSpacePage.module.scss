@@ -1,0 +1,323 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.pageCentered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backButton {
+    margin-bottom: $gap-xl;
+    align-self: flex-start;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 400px) minmax(0, 1fr);
+    gap: $gap-subsection;
+    align-items: start;
+    width: 100%;
+
+    @include respond-to(tablet-down) {
+        grid-template-columns: 1fr;
+        gap: $gap-block;
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xl;
+
+    @include respond-to(desktop) {
+        @include sticky-below-header;
+    }
+}
+
+.heroImage {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: $radius-lg;
+    display: block;
+
+    @include respond-to(mobile) {
+        height: 180px;
+    }
+}
+
+.header {
+    margin: 0;
+}
+
+.title {
+    margin: 0 0 $gap-md 0;
+    font-size: $fs-h1;
+    line-height: $lh-h1;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+
+    @include respond-to(mobile) {
+        font-size: $fs-h2;
+        line-height: $lh-h2;
+    }
+}
+
+.meta {
+    margin: 0 0 $gap-md 0;
+    font-size: $fs-base;
+    color: $color-text-main;
+}
+
+.lead {
+    margin: 0;
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    color: $color-text;
+}
+
+.stepsCard {
+    padding: $padding-lg;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+}
+
+.stepsTitle {
+    margin: 0 0 $gap-lg 0;
+    font-size: $fs-h3;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.stepsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+}
+
+.stepItem {
+    display: flex;
+    gap: $gap-md;
+    align-items: flex-start;
+}
+
+.stepNumber {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: $radius-circle;
+    background-color: $color-background;
+    color: $color-text-black;
+    font-size: $fs-caption;
+    font-weight: $fw-semibold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepContent {
+    min-width: 0;
+    padding-top: 2px;
+}
+
+.stepTitle {
+    margin: 0 0 $gap-xxs 0;
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    line-height: $lh-base;
+    color: $color-text-black;
+}
+
+.stepText {
+    margin: 0;
+    font-size: $fs-caption;
+    line-height: $lh-base;
+    color: $color-text-main;
+}
+
+.helpBox {
+    padding: $padding-md $padding-lg;
+    background-color: $color-background;
+    border-radius: $radius-md;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-text;
+
+    strong {
+        display: block;
+        margin-bottom: $gap-xxs;
+        color: $color-text-black;
+        font-weight: $fw-semibold;
+    }
+
+    a {
+        color: $color-main;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.formColumn {
+    width: 100%;
+    min-width: 0;
+}
+
+.formCard {
+    width: 100%;
+    padding: $padding-xl $padding-section;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    animation: fadeIn 0.3s ease;
+
+    @include respond-to(tablet-down) {
+        padding: $padding-xl;
+    }
+
+    @include respond-to(mobile) {
+        padding: $padding-lg;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-lg;
+}
+
+.row {
+    display: flex;
+    gap: $gap-lg;
+
+    @include respond-to(mobile) {
+        flex-direction: column;
+        gap: $gap-lg;
+    }
+}
+
+.field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+}
+
+.label {
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.select,
+.textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: $radius-sm;
+    background-color: $input-bg;
+    font-family: 'Inter', sans-serif;
+    font-size: $fs-base;
+    color: $color-text-black;
+    outline: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+
+    &:focus {
+        border-color: $color-main;
+        background-color: $color-white;
+    }
+}
+
+.select {
+    height: 49px;
+    padding: 0 $padding-md;
+    cursor: pointer;
+}
+
+.textarea {
+    min-height: 120px;
+    padding: $padding-md;
+    resize: vertical;
+    line-height: $lh-base;
+}
+
+.termsLabel {
+    display: flex;
+    align-items: flex-start;
+    gap: $gap-md;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-text-main;
+    cursor: pointer;
+
+    input {
+        margin-top: 3px;
+        flex-shrink: 0;
+    }
+}
+
+.error {
+    margin: 0;
+    font-size: $fs-base;
+    color: $color-danger;
+}
+
+.successCard {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: $padding-xl;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.successIcon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto $gap-xl;
+    border-radius: $radius-circle;
+    background: $bg-success;
+    color: $text-on-success-subtle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: $fw-bold;
+}
+
+.successTitle {
+    margin: 0 0 $gap-md 0;
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+}
+
+.successText {
+    margin: 0 0 $gap-xl 0;
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    color: $color-text-main;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,108 @@
+@import '../../../variables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-md;
+}
+
+.values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.sliderTrack {
+    position: relative;
+    height: 24px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: $color-border;
+        border-radius: $radius-pill;
+    }
+}
+
+.sliderRange {
+    position: absolute;
+    height: 4px;
+    background: $color-main;
+    border-radius: $radius-pill;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sliderInput {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    appearance: none;
+    background: transparent;
+    pointer-events: none;
+    z-index: 2;
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border-radius: $radius-circle;
+        background: $color-main;
+        border: 2px solid $color-white;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    &::-moz-range-thumb {
+        width: 18px;
+        height: 18px;
+        border-radius: $radius-circle;
+        background: $color-main;
+        border: 2px solid $color-white;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        pointer-events: auto;
+    }
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap-sm;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xxs;
+}
+
+.fieldLabel {
+    font-size: $fs-caption;
+    color: $color-text-main;
+}
+
+.field input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: $padding-xs $padding-sm;
+    border: 1px solid $color-border;
+    border-radius: $radius-sm;
+    font-size: $fs-base;
+    color: $color-text-black;
+    background: $color-white;
+
+    &:focus {
+        outline: none;
+        border-color: $color-main;
+    }
+}

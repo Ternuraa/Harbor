@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+
+.button {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.icon {
+    color: #22222280;
+    transition: color 0.2s ease-in-out;
+}
+.button:hover {
+    transform: scale(1.15);
+}
+
+.button:hover .icon {
+    color: #FF4848;
+}
+
+.liked .icon {
+    color: #FF385C;
+}

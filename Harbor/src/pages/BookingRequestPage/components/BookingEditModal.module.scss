@@ -1,0 +1,202 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2100;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-lg;
+    box-sizing: border-box;
+}
+
+.modal {
+    width: 100%;
+    max-width: 480px;
+    background: $color-white;
+    border-radius: $radius-xl;
+    border: 1px solid $color-border;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.modalWide {
+    max-width: 820px;
+    max-height: min(calc(100dvh - #{$padding-lg * 2}), 820px);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.modalInfo {
+    max-width: 640px;
+    max-height: min(calc(100dvh - #{$padding-lg * 2}), 720px);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-color: $color-border-subtle;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.bodyInfo {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: $padding-lg;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gap-md;
+    padding: $padding-lg $padding-lg $gap-md;
+    border-bottom: 1px solid $color-border-subtle;
+}
+
+.modalInfo .header {
+    flex-shrink: 0;
+    padding: $padding-lg $padding-lg $gap-md;
+}
+
+.modalInfo .title {
+    font-size: $fs-h3;
+    line-height: $lh-h3;
+}
+
+.modalInfo .footerInfo {
+    flex-shrink: 0;
+}
+
+.title {
+    margin: 0;
+    font-size: $fs-h3;
+    line-height: $lh-h3;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.closeBtn {
+    width: $icon-btn-size;
+    height: $icon-btn-size;
+    border: none;
+    border-radius: $radius-circle;
+    background: transparent;
+    color: $color-text-black;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &:hover {
+        background: $color-background;
+    }
+}
+
+.body {
+    padding: $padding-md $padding-lg $padding-lg;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $gap-md;
+    padding: $padding-lg;
+    border-top: 1px solid $color-border;
+}
+
+.textAction {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.saveBtn {
+    border: none;
+    border-radius: $radius-md;
+    background: $color-text-black;
+    color: $color-white;
+    padding: 12px 20px;
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.footerInfo {
+    display: flex;
+    justify-content: flex-end;
+    padding: $padding-lg;
+    border-top: 1px solid $color-border-subtle;
+}
+
+@include respond-to(mobile) {
+    .overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .modal {
+        max-width: 100%;
+        width: 100%;
+        max-height: min(92dvh, 100%);
+        border-radius: $radius-xl $radius-xl 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modalWide {
+        max-width: 100%;
+    }
+
+    .header {
+        padding: $padding-md $padding-md $gap-sm;
+    }
+
+    .body {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        padding: 0 $padding-md $padding-md;
+    }
+
+    .modalInfo {
+        max-width: 100%;
+        max-height: min(92dvh, 100%);
+        border-radius: $radius-xl $radius-xl 0 0;
+        box-shadow: none;
+    }
+
+    .bodyInfo {
+        padding: 0 $padding-md $padding-md;
+    }
+
+    .footer {
+        flex-shrink: 0;
+        padding: $padding-md;
+    }
+
+    .footerInfo {
+        flex-shrink: 0;
+        padding: $padding-md;
+
+        .saveBtn {
+            width: 100%;
+        }
+    }
+}

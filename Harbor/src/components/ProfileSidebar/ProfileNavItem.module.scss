@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.navItem {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 12px $padding-md;
+    border-radius: $radius-sm;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: $color-text-main;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+
+    &:hover {
+        background-color: $hover-button;
+        color: $color-text-black;
+    }
+
+    &.active {
+        background-color: $color-background;
+        color: $color-text-black;
+        font-weight: $fw-semibold;
+    }
+}
+
+@include respond-to(tablet-down) {
+    .navItem {
+        width: auto;
+        white-space: nowrap;
+        padding: 10px 14px;
+    }
+}

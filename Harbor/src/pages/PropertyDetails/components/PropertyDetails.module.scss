@@ -1,0 +1,215 @@
+﻿@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.backButton {
+    margin-bottom: $gap-block;
+}
+
+.pageHeader {
+    margin-bottom: $gap-xl;
+}
+
+.title {
+    font-size: $fs-h1;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+    margin: 0 0 $gap-sm 0;
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: $gap-sm;
+    font-size: $fs-base;
+    margin-top: $gap-sm;
+    font-family: 'Inter', sans-serif;
+}
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px $padding-xs;
+    border-radius: $radius-sm;
+    background: $color-success-bg;
+    color: $color-success;
+    font-size: 13px;
+    font-weight: $fw-semibold;
+    line-height: 1.3;
+}
+
+.reviewsCount {
+    color: $color-text-secondary;
+    line-height: 1;
+}
+
+.divider {
+    color: $color-text-secondary;
+    font-size: $fs-caption;
+    padding: 0 $gap-xxs;
+    line-height: 1;
+}
+
+.locationLink {
+    color: $color-main;
+    text-decoration: none;
+    font-weight: $fw-medium;
+    line-height: 1;
+    transition: text-decoration 0.2s ease;
+
+    &:visited {
+        color: $color-main;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.grid {
+    @include layout-grid-main-sidebar($layout-booking-sidebar-width);
+    margin-top: $gap-subsection;
+}
+
+.mainContent {
+    width: 100%;
+    min-width: 0;
+}
+
+.sidebar {
+    width: 100%;
+    @include sticky-below-header;
+    max-height: calc(100vh - var(--sticky-offset) - #{$gap-lg});
+    overflow-y: auto;
+}
+
+.hostSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roomType {
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+    margin: 0 0 $gap-sm 0;
+}
+
+.roomDetails {
+    font-size: $fs-base;
+    color: $color-text-secondary;
+    margin: 0;
+}
+
+.hostAvatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.dividerLine {
+    border: none;
+    border-top: 2px solid $color-border;
+    margin: $gap-block 0;
+}
+
+.descriptionText {
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    color: $color-text;
+    margin: 0;
+}
+
+.sectionTitle {
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+    margin: 0 0 $gap-xl 0;
+}
+
+.amenitiesSection {
+    width: 100%;
+}
+
+.amenitiesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap-lg;
+}
+
+.amenityItem {
+    display: flex;
+    align-items: center;
+    gap: $gap-md;
+    font-size: $fs-lg;
+    color: $color-text;
+
+    .icon {
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+    }
+}
+
+.aboutHostSection {
+    width: 100%;
+}
+
+.notFound {
+    text-align: center;
+}
+
+@include respond-to(tablet-down) {
+    .title {
+        font-size: $fs-h2;
+        line-height: $lh-h2;
+    }
+
+    .meta {
+        flex-wrap: wrap;
+        row-gap: $gap-xxs;
+    }
+
+    .grid {
+        margin-top: $gap-block;
+    }
+
+    .sidebar {
+        position: static;
+        top: auto;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .hostSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $gap-lg;
+    }
+
+    .amenitiesGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@include respond-to(mobile) {
+    .title {
+        font-size: $fs-h3;
+        line-height: $lh-h3;
+    }
+
+    .roomType {
+        font-size: $fs-h3;
+    }
+
+    .sectionTitle {
+        font-size: $fs-h3;
+    }
+
+    .dividerLine {
+        margin: $gap-xl 0;
+    }
+}

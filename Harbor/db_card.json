@@ -1,0 +1,74 @@
+﻿{
+  "properties": [
+    {
+      "id": "spb-1",
+      "city": "Санкт-Петербург",
+      "title": "Квартира у Анны",
+      "location": "Центральный район, Санкт-Петербург",
+      "description": "Светлая квартира с современным ремонтом. Идеально подходит для пары или соло-путешественника. В пешей доступности метро и главные достопримечательности.",
+      "pricePerNight": 7000,
+      "totalPrice": "Всего 14 000 ₽ за 2 ночи",
+      "rating": 4.89,
+      "reviewsCount": 102,
+      "imageUrl": "https://images.unsplash.com/photo-1502672260266-1c1de2d9d0cb?q=80&w=800",
+      "isVerified": true,
+      "noCommission": true
+    },
+    {
+      "id": "spb-2",
+      "city": "Санкт-Петербург",
+      "title": "Комната в гостевом доме «У реки»",
+      "location": "Фрунзенский район, Санкт-Петербург",
+      "description": "Светлая комната в моей квартире с современным ремонтом. Делала все как для себя, чтобы вам было комфортно. До метро всего 5 минут пешком.",
+      "pricePerNight": 8200,
+      "totalPrice": "Всего 16 400 ₽ за 2 ночи",
+      "rating": 4.54,
+      "reviewsCount": 14,
+      "imageUrl": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800",
+      "isVerified": false,
+      "noCommission": false
+    },
+    {
+      "id": "spb-3",
+      "city": "Санкт-Петербург",
+      "title": "Уютный уголок на Петроградке",
+      "location": "Петроградский район, Санкт-Петербург",
+      "description": "Сдаю комнату в своей квартире. Петроградка это про архитектуру и лучшие кофейни. Очень ценю чистоту, поэтому жду аккуратных и приятных людей.",
+      "pricePerNight": 4400,
+      "totalPrice": "Всего 8 800 ₽ за 2 ночи",
+      "rating": 5.00,
+      "reviewsCount": 2,
+      "imageUrl": "https://images.unsplash.com/photo-1502672023488-70e25813eb80?q=80&w=800",
+      "isVerified": false,
+      "noCommission": true
+    },
+    {
+      "id": "msk-1",
+      "city": "Москва",
+      "title": "Апартаменты в Москва-Сити",
+      "location": "Пресненский район, Москва",
+      "description": "Шикарный вид на город с 65 этажа. Панорамные окна, дизайнерский ремонт, джакузи.",
+      "pricePerNight": 15000,
+      "totalPrice": "Всего 30 000 ₽ за 2 ночи",
+      "rating": 4.95,
+      "reviewsCount: 340,: null,
+      "imageUrl": "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=800",
+      "isVerified": true,
+      "noCommission": true
+    },
+    {
+      "id": "msk-2",
+      "city": "Москва",
+      "title": "Студия на Арбате",
+      "location": "Арбат, Москва",
+      "description": "Тихая студия в историческом центре. Идеально для туристов, которые хотят жить в самом сердце столицы.",
+      "pricePerNight": 5500,
+      "totalPrice": "Всего 11 000 ₽ за 2 ночи",
+      "rating": 4.70,
+      "reviewsCount": 88,
+      "imageUrl": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=800",
+      "isVerified": false,
+      "noCommission": true
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+﻿@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    padding: $padding-lg;
+    background-color: $color-white;
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 164px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-border;
+        border-radius: $radius-pill;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $gap-lg;
+    gap: $gap-md;
+}
+
+.headerActions {
+    display: flex;
+    align-items: center;
+    gap: $gap-md;
+    flex-shrink: 0;
+}
+
+.title {
+    font-size: $fs-h3;
+    font-weight: $fw-bold;
+    line-height: $lh-h3;
+    color: $color-text-black;
+    margin: 0;
+}
+
+.resetButton {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: $fs-caption;
+    font-weight: $fw-medium;
+    color: $color-main;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.closeButton {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: $radius-circle;
+    background: transparent;
+    color: $color-text-black;
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: $color-background;
+    }
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    padding-top: $padding-md;
+    border-top: 1px solid $color-border;
+    margin-top: $padding-md;
+}
+
+.doneButton {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: $radius-sm;
+    background-color: $color-main;
+    color: $color-white;
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $color-bg-hover;
+    }
+}
+
+.panel {
+    width: 100%;
+    position: static;
+    top: auto;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+}
+
+.panel .body {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: $padding-xs;
+}
+
+.panel .header {
+    flex-shrink: 0;
+    margin-bottom: $gap-md;
+}
+
+.panel .footer {
+    flex-shrink: 0;
+    margin-top: 0;
+    padding-top: $padding-md;
+}
+
+@include respond-to(tablet-down) {
+    .sidebar:not(.panel) {
+        width: 100%;
+        position: static;
+        top: auto;
+    }
+}

@@ -1,0 +1,145 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.wrapper {
+    position: absolute;
+    top: 100%;
+    padding-top: $search-dropdown-gap;
+    pointer-events: none;
+    z-index: 1210;
+
+    .dropdown {
+        pointer-events: auto;
+    }
+}
+
+.wrapperDates {
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: min(850px, calc(100vw - #{$page-padding-desktop * 2}));
+}
+
+.wrapperGuests {
+    right: 0;
+    left: auto;
+    width: max-content;
+    max-width: min(400px, calc(100vw - #{$page-padding-desktop * 2}));
+}
+
+.dropdown {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: 400px;
+    max-width: 100%;
+    background-color: $color-white;
+    border-radius: $radius-xl;
+    padding: 16px 32px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    animation: slideDown 0.2s ease-out forwards;
+}
+
+.dropdownSidebar {
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    width: auto;
+    z-index: 1200;
+    animation: slideDownSidebar 0.2s ease-out forwards;
+}
+
+@keyframes slideDownSidebar {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    border-bottom: 1px solid $color-border;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.textBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.title {
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.subtitle {
+    font-size: $fs-caption;
+    color: #717171;
+}
+
+.modalContent {
+    width: 100%;
+    padding-bottom: $padding-xs;
+}
+
+@include respond-to(tablet-down) {
+    .wrapperGuests {
+        right: 0;
+        left: auto;
+        transform: none;
+        max-width: min(400px, calc(100vw - #{$page-padding-tablet * 2}));
+    }
+
+    .dropdown {
+        width: 100%;
+        max-height: min(70vh, 520px);
+        overflow-y: auto;
+        z-index: 1210;
+    }
+}
+
+@include respond-to(mobile) {
+    .wrapperGuests,
+    .wrapperDates {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        max-width: calc(100vw - #{$page-padding-mobile * 2});
+    }
+
+    .dropdown {
+        padding: 12px 20px;
+    }
+
+    .row {
+        padding: 16px 0;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

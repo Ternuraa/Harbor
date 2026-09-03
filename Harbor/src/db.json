@@ -1,0 +1,2464 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Уютная студия у Эрмитажа",
+      "location": "Санкт-Петербург • Центральный район",
+      "pricePerNight": 4500,
+      "totalPrice": "9 000 ₽ за 2 ночи",
+      "rating": 4.9,
+      "reviewsCount": 128,
+      "imageUrl": "/images/properties/1/card.webp",
+      "images": [
+        "/images/properties/1/card.webp",
+        "/images/properties/1/card2.webp",
+        "/images/properties/1/card3.webp",
+        "/images/properties/1/card4.webp",
+        "/images/properties/1/card5.webp"
+      ],
+      "description": "Светлая и невероятно уютная студия всего в двух минутах от Дворцовой площади. Внутри есть всё необходимое для комфортного проживания: мягкая двуспальная кровать, современная кухня, скоростной Wi-Fi. Окна выходят в тихий петербургский дворик, поэтому шум города вас не потревожит.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Высокоскоростной Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня с посудой"
+        },
+        {
+          "icon": "📺",
+          "name": "Smart TV"
+        },
+        {
+          "icon": "❄️",
+          "name": "Кондиционер"
+        },
+        {
+          "icon": "🧺",
+          "name": "Стиральная машина"
+        }
+      ],
+      "host": {
+        "name": "Анна",
+        "avatar": "/images/avatar/1/avatar.webp",
+        "about": "Привет! Обожаю долгие прогулки по ночному Петербургу и увлекаюсь пленочной фотографией. С удовольствием подскажу вам самые живописные крыши для фотосессий и помогу составить нестандартный маршрут по секретным дворикам."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, набережная реки Мойки, 42",
+        "neighborhood": "Центральный район, Санкт-Петербург",
+        "description": "Само сердце Петербурга. В пешей доступности Эрмитаж, Исаакиевский собор и Невский проспект. Идеальное место для туристов.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Адмиралтейская»",
+            "time": "4 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🚎",
+            "name": "Остановка «Дворцовая площадь»",
+            "time": "2 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "ВкусВилл",
+            "time": "3 мин"
+          },
+          {
+            "id": 2,
+            "icon": "☕",
+            "name": "Булочная Ф. Вольчека",
+            "time": "1 мин"
+          },
+          {
+            "id": 3,
+            "icon": "🍽",
+            "name": "Ресторан «Гости»",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-06-28",
+          "end": "2026-06-30"
+        },
+        {
+          "start": "2026-07-10",
+          "end": "2026-07-15"
+        },
+        {
+          "start": "2026-07-22",
+          "end": "2026-07-25"
+        },
+        {
+          "start": "2026-08-03",
+          "end": "2026-08-06"
+        },
+        {
+          "start": "2026-08-19",
+          "end": "2026-08-22"
+        }
+      ],
+      "propertyType": "studio",
+      "amenityIds": [
+        "wifi",
+        "kitchen",
+        "washer",
+        "ac"
+      ],
+      "roomType": "Студия целиком",
+      "roomDetails": "2 гостя · 1 кровать · 1 ванная"
+    },
+    {
+      "id": 2,
+      "title": "Лофт на Петроградке",
+      "location": "Санкт-Петербург • Петроградский район",
+      "pricePerNight": 6200,
+      "totalPrice": "12 400 ₽ за 2 ночи",
+      "rating": 4.75,
+      "reviewsCount": 89,
+      "imageUrl": "/images/properties/2/card.webp",
+      "images": [
+        "/images/properties/2/card.webp",
+        "/images/properties/2/card2.webp",
+        "/images/properties/2/card3.webp",
+        "/images/properties/2/card4.webp",
+        "/images/properties/2/card5.webp",
+        "/images/properties/2/card6.webp"
+      ],
+      "description": "Стильный двухуровневый лофт с четырехметровыми потолками в историческом здании. Кирпичные стены, винтажная мебель и панорамные окна делают это пространство уникальным. Подходит для тех, кто ценит эстетику.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "☕",
+          "name": "Кофемашина"
+        },
+        {
+          "icon": "🎵",
+          "name": "Умная колонка и винил"
+        },
+        {
+          "icon": "💻",
+          "name": "Удобное рабочее место"
+        }
+      ],
+      "host": {
+        "name": "Дмитрий",
+        "avatar": "/images/avatar/2/avatar.webp",
+        "about": "Рад приветствовать! В свободное время занимаюсь реставрацией мебели и коллекционирую виниловые пластинки. Если захотите, могу провести для вас мини-экскурсию по лучшим парадным Петроградской стороны и посоветовать отличные бары с живой музыкой."
+      },
+      "isVerified": false,
+      "noCommission": false,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, Большой проспект П.С., 45",
+        "neighborhood": "Петроградская сторона, Санкт-Петербург",
+        "description": "Модный и динамичный район. Вокруг множество бутиков, крафтовых пабов, спешелти-кофеен и архитектура модерна.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Петроградская»",
+            "time": "7 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🚇",
+            "name": "Метро «Чкаловская»",
+            "time": "12 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Азбука Вкуса",
+            "time": "5 мин"
+          },
+          {
+            "id": 2,
+            "icon": "☕",
+            "name": "Кофейня Skuratov",
+            "time": "2 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-06-28",
+          "end": "2026-06-30"
+        },
+        {
+          "start": "2026-07-02",
+          "end": "2026-07-04"
+        },
+        {
+          "start": "2026-07-06",
+          "end": "2026-07-08"
+        },
+        {
+          "start": "2026-07-10",
+          "end": "2026-07-15"
+        },
+        {
+          "start": "2026-07-22",
+          "end": "2026-07-25"
+        },
+        {
+          "start": "2026-07-29",
+          "end": "2026-07-30"
+        },
+        {
+          "start": "2026-08-14",
+          "end": "2026-08-18"
+        },
+        {
+          "start": "2026-08-21",
+          "end": "2026-08-25"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "4 гостя · 1 спальня · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 3,
+      "title": "Апартаменты с видом на Неву",
+      "location": "Санкт-Петербург • Адмиралтейский район",
+      "pricePerNight": 8900,
+      "totalPrice": "17 800 ₽ за 2 ночи",
+      "rating": 5,
+      "reviewsCount": 210,
+      "imageUrl": "/images/properties/3/card.webp",
+      "images": [
+        "/images/properties/3/card.webp",
+        "/images/properties/3/card2.webp",
+        "/images/properties/3/card3.webp",
+        "/images/properties/3/card4.webp",
+        "/images/properties/3/card5.webp",
+        "/images/properties/3/card6.webp"
+      ],
+      "description": "Роскошные апартаменты с прямым видом на реку Неву и разводные мосты. Просторная гостиная, премиальное постельное белье и балкон, на котором приятно пить кофе по утрам, наблюдая за проплывающими катерами.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🌅",
+          "name": "Балкон с видом"
+        },
+        {
+          "icon": "❄️",
+          "name": "Кондиционер"
+        },
+        {
+          "icon": "🛁",
+          "name": "Ванна с гидромассажем"
+        },
+        {
+          "icon": "🍾",
+          "name": "Мини-бар"
+        }
+      ],
+      "host": {
+        "name": "Елена",
+        "avatar": "/images/avatar/3/avatar.webp",
+        "about": "Увлекаюсь историей искусств и театром. С радостью помогу вам достать билеты на лучшие постановки в Мариинский театр или подскажу, на какие выставки современного искусства стоит сходить на этой неделе."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, Английская набережная, 24",
+        "neighborhood": "Адмиралтейский район, Санкт-Петербург",
+        "description": "Аристократический район с потрясающими видами. Рядом Медный всадник и Исаакиевская площадь.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚌",
+            "name": "Остановка «Площадь Труда»",
+            "time": "3 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🚇",
+            "name": "Метро «Адмиралтейская»",
+            "time": "15 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🍽",
+            "name": "Ресторан Stroganoff",
+            "time": "5 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🏛",
+            "name": "Новая Голландия",
+            "time": "8 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-04",
+          "end": "2026-07-07"
+        },
+        {
+          "start": "2026-07-18",
+          "end": "2026-07-21"
+        },
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-07"
+        },
+        {
+          "start": "2026-08-23",
+          "end": "2026-08-27"
+        },
+        {
+          "start": "2026-09-10",
+          "end": "2026-09-14"
+        }
+      ],
+      "propertyType": "house",
+      "amenityIds": [
+        "wifi",
+        "ac"
+      ],
+      "roomType": "Дом целиком",
+      "roomDetails": "6 гостей · 3 спальни · 4 кровати · 2 ванные"
+    },
+    {
+      "id": 4,
+      "title": "Скандинавская квартира",
+      "location": "Санкт-Петербург • Василеостровский район",
+      "pricePerNight": 3800,
+      "totalPrice": "7 600 ₽ за 2 ночи",
+      "rating": 4.6,
+      "reviewsCount": 54,
+      "imageUrl": "/images/properties/4/card.webp",
+      "images": [
+        "/images/properties/4/card.webp",
+        "/images/properties/4/card2.webp",
+        "/images/properties/4/card3.webp",
+        "/images/properties/4/card4.webp",
+        "/images/properties/4/card5.webp",
+        "/images/properties/4/card6.webp",
+        "/images/properties/4/card7.webp",
+        "/images/properties/4/card8.webp",
+        "/images/properties/4/card9.webp"
+      ],
+      "description": "Минимализм, дерево и много естественного света. Эта квартира на Васильевском острове отлично подойдет для тех, кто ищет спокойствие. Оборудованное рабочее место у окна позволит комфортно поработать в тишине.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        },
+        {
+          "icon": "💻",
+          "name": "Рабочее место"
+        }
+      ],
+      "host": {
+        "name": "Александра",
+        "avatar": "/images/avatar/4/avatar.webp",
+        "about": "Заядлый велосипедист и любитель кофе. В коридоре стоят два велосипеда — берите их бесплатно и катайтесь по набережным! Также я составил для гостей бумажную карту с моими любимыми нетуристическими кофейнями."
+      },
+      "isVerified": true,
+      "noCommission": false,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, 8-я линия В.О., 15",
+        "neighborhood": "Васильевский остров, Санкт-Петербург",
+        "description": "Академический и размеренный район с прямыми линиями улиц, просторными набережными и студенческим духом.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Василеостровская»",
+            "time": "5 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Супермаркет Перекресток",
+            "time": "2 мин"
+          },
+          {
+            "id": 2,
+            "icon": "☕",
+            "name": "Британские пекарни",
+            "time": "3 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-01",
+          "end": "2026-07-03"
+        },
+        {
+          "start": "2026-07-12",
+          "end": "2026-07-14"
+        },
+        {
+          "start": "2026-07-26",
+          "end": "2026-07-29"
+        },
+        {
+          "start": "2026-08-08",
+          "end": "2026-08-11"
+        },
+        {
+          "start": "2026-09-02",
+          "end": "2026-09-05"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Квартира",
+      "roomDetails": "4 гостя · 2 спальни · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 5,
+      "title": "Дизайнерские апартаменты",
+      "location": "Санкт-Петербург • Московский район",
+      "pricePerNight": 5100,
+      "totalPrice": "10 200 ₽ за 2 ночи",
+      "rating": 4.82,
+      "reviewsCount": 92,
+      "imageUrl": "/images/properties/5/card.webp",
+      "images": [
+        "/images/properties/5/card.webp",
+        "/images/properties/5/card2.webp",
+        "/images/properties/5/card3.webp",
+        "/images/properties/5/card4.webp",
+        "/images/properties/5/card5.webp",
+        "/images/properties/5/card6.webp",
+        "/images/properties/5/card7.webp",
+        "/images/properties/5/card8.webp",
+        "/images/properties/5/card9.webp"
+      ],
+      "description": "Просторные апартаменты в новом жилом комплексе бизнес-класса. Свежий ремонт по авторскому дизайн-проекту, закрытая территория, охрана и своя кофейня прямо на первом этаже.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🚗",
+          "name": "Бесплатная парковка"
+        },
+        {
+          "icon": "🏋️‍♂️",
+          "name": "Спортзал в ЖК"
+        },
+        {
+          "icon": "📺",
+          "name": "Телевизор 4K"
+        },
+        {
+          "icon": "❄️",
+          "name": "Кондиционер"
+        }
+      ],
+      "host": {
+        "name": "Мария",
+        "avatar": "/images/avatar/5/avatar.webp",
+        "about": "Увлекаюсь кулинарией и садоводством. Все растения в квартире живые, надеюсь, они будут радовать ваш глаз. Всегда готова помочь с арендой авто или заказом билетов на мероприятия, обращайтесь в любое время!"
+      },
+      "isVerified": false,
+      "noCommission": true,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, Московский проспект, 183",
+        "neighborhood": "Московский район, Санкт-Петербург",
+        "description": "Престижный район с широкими проспектами и сталинским ампиром. Удобный выезд в аэропорт Пулково.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Московская»",
+            "time": "3 мин"
+          },
+          {
+            "id": 2,
+            "icon": "✈️",
+            "name": "Аэропорт Пулково",
+            "time": "20 мин на такси"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Пятерочка",
+            "time": "1 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🍽",
+            "name": "Ресторан Токио-Сити",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-03",
+          "end": "2026-07-06"
+        },
+        {
+          "start": "2026-07-17",
+          "end": "2026-07-20"
+        },
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-04"
+        },
+        {
+          "start": "2026-08-15",
+          "end": "2026-08-18"
+        },
+        {
+          "start": "2026-09-20",
+          "end": "2026-09-23"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "ac",
+        "parking"
+      ],
+      "roomType": "Комната",
+      "roomDetails": "1 гость · 1 спальня · 1 кровать · 1 ванная"
+    },
+    {
+      "id": 6,
+      "title": "Уют в глубине дворов",
+      "location": "Санкт-Петербург • Центральный район",
+      "pricePerNight": 4000,
+      "totalPrice": "8 000 ₽ за 2 ночи",
+      "rating": 4.5,
+      "reviewsCount": 59,
+      "imageUrl": "/images/properties/6/card.webp",
+      "images": [
+        "/images/properties/6/card.webp",
+        "/images/properties/6/card2.webp",
+        "/images/properties/6/card3.webp",
+        "/images/properties/6/card4.webp",
+        "/images/properties/6/card5.webp",
+        "/images/properties/6/card6.webp",
+        "/images/properties/6/card7.webp",
+        "/images/properties/6/card8.webp"
+      ],
+      "description": "Настоящая петербургская атмосфера. Квартира скрыта в системе проходных дворов-колодцев, поэтому здесь удивительно тихо, несмотря на расположение на главной ресторанной улице города.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "♨️",
+          "name": "Отопление"
+        },
+        {
+          "icon": "🧳",
+          "name": "Место для хранения багажа"
+        },
+        {
+          "icon": "💨",
+          "name": "Фен"
+        }
+      ],
+      "host": {
+        "name": "Сергей",
+        "avatar": "/images/avatar/6/avatar.webp",
+        "about": "Много читаю и коллекционирую старые издания книг. На полках вы найдете классику и путеводители — смело листайте за вечерним чаем. Буду рад составить компанию за ужином и поделиться местными городскими легендами."
+      },
+      "isVerified": false,
+      "noCommission": false,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, ул. Рубинштейна, 23",
+        "neighborhood": "Улица Рубинштейна, Санкт-Петербург",
+        "description": "Главная ресторанная улица России. Сотни баров, кафе и ресторанов на любой вкус буквально за углом.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Достоевская»",
+            "time": "4 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🍻",
+            "name": "Бар Bekitzer",
+            "time": "1 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🍕",
+            "name": "Пиццерия 22 сантиметра",
+            "time": "2 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-06-28",
+          "end": "2026-06-29"
+        },
+        {
+          "start": "2026-07-08",
+          "end": "2026-07-11"
+        },
+        {
+          "start": "2026-07-24",
+          "end": "2026-07-26"
+        },
+        {
+          "start": "2026-08-12",
+          "end": "2026-08-15"
+        },
+        {
+          "start": "2026-09-06",
+          "end": "2026-09-09"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "3 гостя · 1 спальня · 1 кровать · 1 ванная"
+    },
+    {
+      "id": 7,
+      "title": "Классика у Мариинки",
+      "location": "Санкт-Петербург • Адмиралтейский район",
+      "pricePerNight": 7500,
+      "totalPrice": "15 000 ₽ за 2 ночи",
+      "rating": 4.95,
+      "reviewsCount": 156,
+      "imageUrl": "/images/properties/7/card.webp",
+      "images": [
+        "/images/properties/7/card.webp",
+        "/images/properties/7/card2.webp",
+        "/images/properties/7/card3.webp",
+        "/images/properties/7/card4.webp",
+        "/images/properties/7/card5.webp",
+        "/images/properties/7/card6.webp",
+        "/images/properties/7/card7.webp",
+        "/images/properties/7/card8.webp",
+        "/images/properties/7/card9.webp",
+        "/images/properties/7/card10.webp",
+        "/images/properties/7/card11.webp"
+      ],
+      "description": "Просторная трехкомнатная квартира с лепниной на высоких потолках, антикварной мебелью и паркетом ёлочкой. Идеально подойдет для культурных поездок и любителей классической архитектуры.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🎹",
+          "name": "Настоящее фортепиано"
+        },
+        {
+          "icon": "📚",
+          "name": "Библиотека"
+        },
+        {
+          "icon": "🛁",
+          "name": "Ванна"
+        },
+        {
+          "icon": "🍳",
+          "name": "Полная кухня"
+        }
+      ],
+      "host": {
+        "name": "Наталья",
+        "avatar": "/images/avatar/7/avatar.webp",
+        "about": "Увлекаюсь классической музыкой и флористикой. Обожаю встречать гостей лично и угощать их домашней выпечкой. С удовольствием организую для вас индивидуальную экскурсию по закулисью городских театров."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, ул. Декабристов, 34",
+        "neighborhood": "Адмиралтейский район",
+        "description": "Тихий и интеллигентный район, сосредоточенный вокруг Мариинского театра.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚌",
+            "name": "Остановка «Мариинский театр»",
+            "time": "2 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🎭",
+            "name": "Мариинский театр",
+            "time": "3 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🛒",
+            "name": "Супермаркет Дикси",
+            "time": "4 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-02",
+          "end": "2026-07-05"
+        },
+        {
+          "start": "2026-07-14",
+          "end": "2026-07-17"
+        },
+        {
+          "start": "2026-07-28",
+          "end": "2026-07-31"
+        },
+        {
+          "start": "2026-08-16",
+          "end": "2026-08-20"
+        },
+        {
+          "start": "2026-09-12",
+          "end": "2026-09-16"
+        },
+        {
+          "start": "2026-10-03",
+          "end": "2026-10-06"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "5 гостей · 2 спальни · 3 кровати · 1 ванная"
+    },
+    {
+      "id": 8,
+      "title": "Прекрасный вид",
+      "location": "Санкт-Петербург • Петроградский район",
+      "pricePerNight": 12000,
+      "totalPrice": "24 000 ₽ за 2 ночи",
+      "rating": 5,
+      "reviewsCount": 33,
+      "imageUrl": "/images/properties/8/card.webp",
+      "images": [
+        "/images/properties/8/card.webp",
+        "/images/properties/8/card2.webp",
+        "/images/properties/8/card3.webp",
+        "/images/properties/8/card4.webp",
+        "/images/properties/8/card5.webp",
+        "/images/properties/8/card6.webp",
+        "/images/properties/8/card7.webp",
+        "/images/properties/8/card8.webp",
+        "/images/properties/8/card9.webp",
+        "/images/properties/8/card10.webp",
+        "/images/properties/8/card11.webp",
+        "/images/properties/8/card12.webp",
+        "/images/properties/8/card13.webp",
+        "/images/properties/8/card14.webp"
+      ],
+      "description": "Эксклюзивные апартаменты в элитном ЖК на Крестовском острове. Пространство полностью автоматизировано: управление светом, открытием штор, климатом и музыкой осуществляется голосовыми командами или с планшета.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🤖",
+          "name": "Система Умный дом"
+        },
+        {
+          "icon": "❄️",
+          "name": "Климат-контроль"
+        },
+        {
+          "icon": "🚗",
+          "name": "Подземный паркинг"
+        },
+        {
+          "icon": "🛡️",
+          "name": "Круглосуточная охрана"
+        }
+      ],
+      "host": {
+        "name": "Анастасия",
+        "avatar": "/images/avatar/8/avatar.webp",
+        "about": "Моя страсть — гаджеты, яхтинг и бег по утрам. Всегда рад составить компанию для пробежки по паркам Крестовского острова. Также могу помочь с арендой яхты для прогулки по Финскому заливу."
+      },
+      "isVerified": true,
+      "noCommission": false,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, Кирочная улица, 8",
+        "neighborhood": "Горьковская",
+        "description": "Самый зеленый и элитный район города. Парки, яхт-клубы и престижные рестораны на берегу воды.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Горьковская»",
+            "time": "8 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🌳",
+            "name": "Приморский парк Победы",
+            "time": "5 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🍽",
+            "name": "Ресторан Карл и Фридрих",
+            "time": "15 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-05",
+          "end": "2026-07-09"
+        },
+        {
+          "start": "2026-07-20",
+          "end": "2026-07-24"
+        },
+        {
+          "start": "2026-08-05",
+          "end": "2026-08-09"
+        },
+        {
+          "start": "2026-09-12",
+          "end": "2026-09-18"
+        },
+        {
+          "start": "2026-10-01",
+          "end": "2026-10-05"
+        }
+      ],
+      "propertyType": "house",
+      "amenityIds": [
+        "wifi"
+      ],
+      "roomType": "Дом целиком",
+      "roomDetails": "8 гостей · 4 спальни · 5 кроватей · 3 ванные"
+    },
+    {
+      "id": 9,
+      "title": "Светлая студия",
+      "location": "Санкт-Петербург • Выборгский район",
+      "pricePerNight": 2900,
+      "totalPrice": "5 800 ₽ за 2 ночи",
+      "rating": 4.3,
+      "reviewsCount": 27,
+      "imageUrl": "/images/properties/9/card.webp",
+      "images": [
+        "/images/properties/9/card.webp",
+        "/images/properties/9/card2.webp",
+        "/images/properties/9/card3.webp",
+        "/images/properties/9/card4.webp",
+        "/images/properties/9/card5.webp",
+        "/images/properties/9/card6.webp",
+        "/images/properties/9/card7.webp"
+      ],
+      "description": "Небольшая, но очень эргономичная студия недалеко от метро. Отличный бюджетный вариант для студентов, соло-путешественников или пар, приезжающих на выходные.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Мини-кухня"
+        },
+        {
+          "icon": "♨️",
+          "name": "Микроволновка"
+        },
+        {
+          "icon": "🚿",
+          "name": "Душ"
+        }
+      ],
+      "host": {
+        "name": "Денис",
+        "avatar": "/images/avatar/9/avatar.webp",
+        "about": "Обожаю походы, йогу и настольные игры. С удовольствием организую для вас бесконтактное заселение и всегда буду на связи в мессенджерах, чтобы быстро решить любой вопрос."
+      },
+      "isVerified": false,
+      "noCommission": true,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, проспект Энгельса, 111",
+        "neighborhood": "Выборгский район",
+        "description": "Спокойный спальный район с развитой транспортной сетью и крупными зелеными зонами отдыха.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Озерки»",
+            "time": "5 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "О'КЕЙ",
+            "time": "7 мин"
+          },
+          {
+            "id": 2,
+            "icon": "🌲",
+            "name": "Суздальские озера",
+            "time": "10 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-01",
+          "end": "2026-07-02"
+        },
+        {
+          "start": "2026-07-11",
+          "end": "2026-07-13"
+        },
+        {
+          "start": "2026-07-25",
+          "end": "2026-07-27"
+        },
+        {
+          "start": "2026-08-09",
+          "end": "2026-08-12"
+        },
+        {
+          "start": "2026-09-15",
+          "end": "2026-09-17"
+        }
+      ],
+      "propertyType": "studio",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Студия целиком",
+      "roomDetails": "2 гостя · 1 кровать · 1 ванная"
+    },
+    {
+      "id": 10,
+      "title": "Апартаменты в сталинке",
+      "location": "Санкт-Петербург • Московский район",
+      "pricePerNight": 4200,
+      "totalPrice": "8 400 ₽ за 2 ночи",
+      "rating": 4.7,
+      "reviewsCount": 78,
+      "imageUrl": "/images/properties/10/card.webp",
+      "images": [
+        "/images/properties/10/card.webp",
+        "/images/properties/10/card2.webp",
+        "/images/properties/10/card3.webp",
+        "/images/properties/10/card4.webp",
+        "/images/properties/10/card5.webp",
+        "/images/properties/10/card6.webp",
+        "/images/properties/10/card7.webp"
+      ],
+      "description": "Просторная квартира с эркером и толстыми кирпичными стенами, обеспечивающими идеальную звукоизоляцию. Настоящая архитектура сталинского ампира с широкими подоконниками.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🔥",
+          "name": "Газовая плита"
+        },
+        {
+          "icon": "🧺",
+          "name": "Стиральная машина"
+        },
+        {
+          "icon": "🍳",
+          "name": "Большая кухня"
+        }
+      ],
+      "host": {
+        "name": "Валерия",
+        "avatar": "/images/avatar/10/avatar.webp",
+        "about": "Страстный любитель истории и архитектуры. В свободные дни провожу авторские экскурсии по парадным сталинских домов Московского проспекта. Буду рад поделиться с вами историей этого здания!"
+      },
+      "isVerified": true,
+      "noCommission": false,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, Московский проспект, 190",
+        "neighborhood": "Парк Победы",
+        "description": "Зеленый квартал с великолепной монументальной застройкой советского периода.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Парк Победы»",
+            "time": "4 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🌳",
+            "name": "Московский Парк Победы",
+            "time": "3 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-06",
+          "end": "2026-07-09"
+        },
+        {
+          "start": "2026-07-19",
+          "end": "2026-07-22"
+        },
+        {
+          "start": "2026-08-02",
+          "end": "2026-08-05"
+        },
+        {
+          "start": "2026-08-24",
+          "end": "2026-08-28"
+        },
+        {
+          "start": "2026-09-08",
+          "end": "2026-09-11"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen",
+        "washer"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "6 гостей · 3 спальни · 4 кровати · 1 ванная"
+    },
+    {
+      "id": 11,
+      "title": "Ист-Вест",
+      "location": "Москва • Центральный район",
+      "pricePerNight": 7000,
+      "totalPrice": "14 000 ₽ за 2 ночи",
+      "rating": 4.89,
+      "reviewsCount": 102,
+      "imageUrl": "/images/properties/11/card.webp",
+      "images": [
+        "/images/properties/11/card.webp",
+        "/images/properties/11/card2.webp",
+        "/images/properties/11/card3.webp"
+      ],
+      "description": "Светлая квартира в самом центре Москвы. Просторная гостиная, полностью оборудованная кухня и уютная спальня. Рядом Красная площадь, парки и лучшие кафе города.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        },
+        {
+          "icon": "🧺",
+          "name": "Стиральная машина"
+        }
+      ],
+      "host": {
+        "name": "Анна",
+        "avatar": "/images/avatar/11/avatar.webp",
+        "about": "Люблю Москву и с удовольствием делюсь любимыми местами с гостями."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Москва",
+      "locationDetails": {
+        "address": "Москва, Тверской бульвар, 14с4",
+        "neighborhood": "Центральный район, Москва",
+        "description": "Исторический центр столицы с пешей доступностью до главных достопримечательностей.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Охотный ряд»",
+            "time": "5 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "ВкусВилл",
+            "time": "3 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-04",
+          "end": "2026-07-07"
+        },
+        {
+          "start": "2026-07-15",
+          "end": "2026-07-18"
+        },
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-03"
+        },
+        {
+          "start": "2026-08-20",
+          "end": "2026-08-23"
+        },
+        {
+          "start": "2026-09-25",
+          "end": "2026-09-28"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen",
+        "washer"
+      ],
+      "roomType": "Квартира",
+      "roomDetails": "3 гостя · 1 спальня · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 12,
+      "title": "Студия на Патриарших",
+      "location": "Москва • Пресненский район",
+      "pricePerNight": 9189,
+      "totalPrice": "17 000 ₽ за 2 ночи",
+      "rating": 4.92,
+      "reviewsCount": 67,
+      "imageUrl": "/images/properties/12/card.webp",
+      "images": [
+        "/images/properties/12/card.webp",
+        "/images/properties/12/card2.webp",
+        "/images/properties/12/card3.webp",
+        "/images/properties/12/card4.webp",
+        "/images/properties/12/card5.webp"
+      ],
+      "description": "Дизайнерская студия в тихом переулке Патриарших прудов. Панорамные окна, авторская мебель и всё необходимое для комфортного отдыха в центре.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "☕",
+          "name": "Кофемашина"
+        },
+        {
+          "icon": "📺",
+          "name": "Smart TV"
+        }
+      ],
+      "host": {
+        "name": "Дмитрий",
+        "avatar": "/images/avatar/12/avatar.webp",
+        "about": "Коллекционирую винтажную мебель и обожаю утренние прогулки вокруг прудов."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Москва",
+      "locationDetails": {
+        "address": "Москва, Большой Патриарший переулок, 8",
+        "neighborhood": "Пресненский район, Москва",
+        "description": "Один из самых атмосферных районов Москвы с ресторанами и прогулочными зонами.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Маяковская»",
+            "time": "8 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "☕",
+            "name": "Кофейня Double B",
+            "time": "2 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-02",
+          "end": "2026-07-04"
+        },
+        {
+          "start": "2026-07-16",
+          "end": "2026-07-19"
+        },
+        {
+          "start": "2026-08-07",
+          "end": "2026-08-10"
+        },
+        {
+          "start": "2026-08-26",
+          "end": "2026-08-29"
+        },
+        {
+          "start": "2026-09-18",
+          "end": "2026-09-21"
+        }
+      ],
+      "propertyType": "studio",
+      "amenityIds": [
+        "wifi"
+      ],
+      "roomType": "Студия целиком",
+      "roomDetails": "2 гостя · 1 кровать · 1 ванная"
+    },
+    {
+      "id": 13,
+      "title": "Видовые апартаменты с отдельной спальней",
+      "location": "Москва • Якиманка",
+      "pricePerNight": 17440,
+      "totalPrice": "18 400 ₽ за 2 ночи",
+      "rating": 4.85,
+      "reviewsCount": 54,
+      "imageUrl": "/images/properties/13/card.webp",
+      "images": [
+        "/images/properties/13/card.webp",
+        "/images/properties/13/card2.webp",
+        "/images/properties/13/card3.webp",
+        "/images/properties/13/card4.webp",
+        "/images/properties/13/card5.webp"
+      ],
+      "description": "Современные апартаменты с видом на набережную. Две спальни, просторная кухня-гостиная и отдельная рабочая зона. Идеально для семьи или длительной поездки.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🅿️",
+          "name": "Парковка"
+        },
+        {
+          "icon": "❄️",
+          "name": "Кондиционер"
+        }
+      ],
+      "host": {
+        "name": "Елена",
+        "avatar": "/images/avatar/13/avatar.webp",
+        "about": "Помогу спланировать маршрут по набережным и паркам Замоскворечья."
+      },
+      "isVerified": false,
+      "noCommission": true,
+      "city": "Москва",
+      "locationDetails": {
+        "address": "Москва, Кадашёвская набережная, 6",
+        "neighborhood": "Якиманка, Москва",
+        "description": "Тихий район у воды с быстрым доступом к центру и парку «Музеон».",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Третьяковская»",
+            "time": "7 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🌳",
+            "name": "Парк «Музеон»",
+            "time": "6 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-09",
+          "end": "2026-07-12"
+        },
+        {
+          "start": "2026-07-23",
+          "end": "2026-07-26"
+        },
+        {
+          "start": "2026-08-11",
+          "end": "2026-08-14"
+        },
+        {
+          "start": "2026-08-30",
+          "end": "2026-09-02"
+        },
+        {
+          "start": "2026-10-10",
+          "end": "2026-10-13"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "ac",
+        "parking"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "4 гостя · 2 спальни · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 14,
+      "title": "Уютная квартира в лучшем зелёном районе Сокольники",
+      "location": "Москва • Сокольники",
+      "pricePerNight": 7476,
+      "totalPrice": "11 000 ₽ за 2 ночи",
+      "rating": 4.78,
+      "reviewsCount": 41,
+      "imageUrl": "/images/properties/14/card.webp",
+      "images": [
+        "/images/properties/14/card.webp",
+        "/images/properties/14/card2.webp",
+        "/images/properties/14/card3.webp"
+      ],
+      "description": "Уютный дом с террасой и зелёным двором рядом с парком Сокольники. Подходит для спокойного отдыха вдали от центральной суеты, но с удобным метро.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🌿",
+          "name": "Терраса"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        }
+      ],
+      "host": {
+        "name": "Игорь",
+        "avatar": "/images/avatar/14/avatar.webp",
+        "about": "Бегаю по парку каждое утро и знаю лучшие маршруты для прогулок."
+      },
+      "isVerified": true,
+      "noCommission": false,
+      "city": "Москва",
+      "locationDetails": {
+        "address": "Москва, Сокольнический Вал, 1",
+        "neighborhood": "Сокольники, Москва",
+        "description": "Зелёный район с большим парком и развитой инфраструктурой.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро «Сокольники»",
+            "time": "4 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🌳",
+            "name": "Парк Сокольники",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-05",
+          "end": "2026-07-08"
+        },
+        {
+          "start": "2026-07-21",
+          "end": "2026-07-24"
+        },
+        {
+          "start": "2026-08-04",
+          "end": "2026-08-07"
+        },
+        {
+          "start": "2026-08-22",
+          "end": "2026-08-25"
+        },
+        {
+          "start": "2026-09-30",
+          "end": "2026-10-03"
+        }
+      ],
+      "propertyType": "house",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Дом целиком",
+      "roomDetails": "7 гостей · 3 спальни · 4 кровати · 2 ванные"
+    },
+    {
+      "id": 15,
+      "title": "Квартира у Летнего сада с печкой и полатями",
+      "location": "Центральный район, Санкт-Петербург",
+      "pricePerNight": 9411,
+      "totalPrice": "18 822 ₽ за 2 ночи",
+      "rating": 4.9,
+      "reviewsCount": 6,
+      "imageUrl": "/images/properties/15/card.webp",
+      "images": [
+        "/images/properties/15/card.webp",
+        "/images/properties/15/card2.webp",
+        "/images/properties/15/card3.webp",
+        "/images/properties/15/card4.webp",
+        "/images/properties/15/card5.webp",
+        "/images/properties/15/card6.webp",
+        "/images/properties/15/card7.webp"
+      ],
+      "description": "Светлая квартира с современным ремонтом. Идеально подходит для пары или соло-путешественника. В пешей доступности метро и главные достопримечательности.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        }
+      ],
+      "host": {
+        "name": "Никита",
+        "avatar": "/images/avatar/15/avatar.webp",
+        "about": "Рад приветствовать гостей и помочь с советами по городу."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Санкт-Петербург, Чайковского улица, 2/7",
+        "neighborhood": "Центральный район, Санкт-Петербург",
+        "description": "Удобный район с развитой инфраструктурой.",
+        "transport": [],
+        "infrastructure": []
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-01",
+          "end": "2026-07-04"
+        },
+        {
+          "start": "2026-07-13",
+          "end": "2026-07-16"
+        },
+        {
+          "start": "2026-07-27",
+          "end": "2026-07-30"
+        },
+        {
+          "start": "2026-08-13",
+          "end": "2026-08-16"
+        },
+        {
+          "start": "2026-09-05",
+          "end": "2026-09-08"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "1-комнатная квартира",
+      "roomDetails": "5 гостей · 1 спальня · 3 кровати · 1 ванная"
+    },
+    {
+      "id": 16,
+      "title": "«СОФИЯ» — квартира между двух парков для семьи или командированных",
+      "location": "Петроградский район, Санкт-Петербург",
+      "pricePerNight": 4400,
+      "totalPrice": "8 800 ₽ за 2 ночи",
+      "rating": 5,
+      "reviewsCount": 2,
+      "imageUrl": "/images/properties/16/card.webp",
+      "images": [
+        "/images/properties/16/card.webp",
+        "/images/properties/16/card2.webp",
+        "/images/properties/16/card3.webp",
+        "/images/properties/16/card4.webp",
+        "/images/properties/16/card5.webp",
+        "/images/properties/16/card6.webp",
+        "/images/properties/16/card7.webp",
+        "/images/properties/16/card8.webp"
+      ],
+      "description": "Сдаю комнату в своей квартире. Петроградка — это про архитектуру и лучшие кофейни. Очень ценю чистоту, поэтому жду аккуратных и приятных людей.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        }
+      ],
+      "host": {
+        "name": "Хозяин",
+        "avatar": "/images/avatar/16/avatar.webp",
+        "about": "Рад приветствовать гостей и помочь с советами по городу."
+      },
+      "isVerified": false,
+      "noCommission": true,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Пресненский район, Москва",
+        "neighborhood": "Пресненский район, Москва",
+        "description": "Удобный район с развитой инфраструктурой.",
+        "transport": [],
+        "infrastructure": []
+      },
+      "bookedDates": [
+        {
+          "start": "2026-06-28",
+          "end": "2026-06-30"
+        },
+        {
+          "start": "2026-07-07",
+          "end": "2026-07-10"
+        },
+        {
+          "start": "2026-07-22",
+          "end": "2026-07-24"
+        },
+        {
+          "start": "2026-08-06",
+          "end": "2026-08-09"
+        },
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-04"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Квартира",
+      "roomDetails": "4 гостя · 1 спальня · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 17,
+      "title": "Квартира комфорт класса с джакузи рядом с центром",
+      "location": "Петроградский район, Санкт-Петербург",
+      "pricePerNight": 4400,
+      "totalPrice": "8 800 ₽ за 2 ночи",
+      "rating": 4.89,
+      "reviewsCount": 21,
+      "imageUrl": "/images/properties/17/card.webp",
+      "images": [
+        "/images/properties/17/card.webp",
+        "/images/properties/17/card2.webp",
+        "/images/properties/17/card3.webp",
+        "/images/properties/17/card4.webp",
+        "/images/properties/17/card5.webp",
+        "/images/properties/17/card6.webp"
+      ],
+      "description": "Сдаю комнату в своей квартире. Петроградка — это про архитектуру и лучшие кофейни. Очень ценю чистоту, поэтому жду аккуратных и приятных людей.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        }
+      ],
+      "host": {
+        "name": "Хозяин",
+        "avatar": "/images/avatar/17/avatar.webp",
+        "about": "Рад приветствовать гостей и помочь с советами по городу."
+      },
+      "isVerified": false,
+      "noCommission": true,
+      "city": "Санкт-Петербург",
+      "locationDetails": {
+        "address": "Пресненский район, Москва",
+        "neighborhood": "Пресненский район, Москва",
+        "description": "Удобный район с развитой инфраструктурой.",
+        "transport": [],
+        "infrastructure": []
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-03",
+          "end": "2026-07-06"
+        },
+        {
+          "start": "2026-07-18",
+          "end": "2026-07-22"
+        },
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-05"
+        },
+        {
+          "start": "2026-08-17",
+          "end": "2026-08-21"
+        },
+        {
+          "start": "2026-09-22",
+          "end": "2026-09-26"
+        },
+        {
+          "start": "2026-10-08",
+          "end": "2026-10-11"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Квартира",
+      "roomDetails": "4 гостя · 1 спальня · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 18,
+      "title": "Апартаменты в Москва-Сити",
+      "location": "Пресненский район, Москва",
+      "pricePerNight": 15000,
+      "totalPrice": "30 000 ₽ за 2 ночи",
+      "rating": 4.95,
+      "reviewsCount": 340,
+      "imageUrl": "/images/properties/18/card.webp",
+      "images": [
+        "/images/properties/18/card.webp",
+        "/images/properties/18/card2.webp",
+        "/images/properties/18/card3.webp",
+        "/images/properties/18/card4.webp",
+        "/images/properties/18/card5.webp",
+        "/images/properties/18/card6.webp"
+      ],
+      "description": "Шикарный вид на город с 65 этажа. Панорамные окна, дизайнерский ремонт, джакузи.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        }
+      ],
+      "host": {
+        "name": "Хозяин",
+        "avatar": "/images/avatar/18/avatar.webp",
+        "about": "Рад приветствовать гостей и помочь с советами по городу."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Москва",
+      "locationDetails": {
+        "address": "Пресненский район, Москва",
+        "neighborhood": "Пресненский район, Москва",
+        "description": "Удобный район с развитой инфраструктурой.",
+        "transport": [],
+        "infrastructure": []
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-03",
+          "end": "2026-07-06"
+        },
+        {
+          "start": "2026-07-18",
+          "end": "2026-07-22"
+        },
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-05"
+        },
+        {
+          "start": "2026-08-17",
+          "end": "2026-08-21"
+        },
+        {
+          "start": "2026-09-22",
+          "end": "2026-09-26"
+        },
+        {
+          "start": "2026-10-08",
+          "end": "2026-10-11"
+        }
+      ],
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "4 гостя · 1 спальня · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 19,
+      "title": "Старый арбат, 3 минуты до метро смоленская, центр",
+      "location": "Арбат, Москва",
+      "pricePerNight": 5500,
+      "totalPrice": "11 000 ₽ за 2 ночи",
+      "rating": 4.7,
+      "reviewsCount": 88,
+      "imageUrl": "/images/properties/19/card.webp",
+      "images": [
+        "/images/properties/19/card.webp",
+        "/images/properties/19/card2.webp",
+        "/images/properties/19/card3.webp",
+        "/images/properties/19/card4.webp",
+        "/images/properties/19/card5.webp"
+      ],
+      "description": "Тихая студия в историческом центре. Идеально для туристов, которые хотят жить в самом сердце столицы.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        }
+      ],
+      "host": {
+        "name": "Лейла",
+        "avatar": "/images/avatar/19/avatar.webp",
+        "about": "Рада приветствовать гостей и помочь с советами по городу."
+      },
+      "isVerified": false,
+      "noCommission": true,
+      "city": "Москва",
+      "locationDetails": {
+        "address": "Москва, Карманицкий переулок, 5",
+        "neighborhood": "Арбат, Москва",
+        "description": "Удобный район с развитой инфраструктурой.",
+        "transport": [],
+        "infrastructure": []
+      },
+      "bookedDates": [
+        {
+          "start": "2026-07-02",
+          "end": "2026-07-05"
+        },
+        {
+          "start": "2026-07-14",
+          "end": "2026-07-17"
+        },
+        {
+          "start": "2026-08-03",
+          "end": "2026-08-06"
+        },
+        {
+          "start": "2026-08-18",
+          "end": "2026-08-21"
+        },
+        {
+          "start": "2026-09-09",
+          "end": "2026-09-12"
+        }
+      ],
+      "propertyType": "studio",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Студия целиком",
+      "roomDetails": "2 гостя · 1 кровать · 1 ванная"
+    },
+    {
+      "id": 20,
+      "title": "Уютная стильная квартира рядом с Патриаршими прудами",
+      "location": "Москва • Пресненский район",
+      "pricePerNight": 18000,
+      "totalPrice": "36 000 ₽ за 2 ночи",
+      "rating": 4.97,
+      "reviewsCount": 56,
+      "imageUrl": "/images/properties/20/card.webp",
+      "images": [
+        "/images/properties/20/card.webp",
+        "/images/properties/20/card2.webp",
+        "/images/properties/20/card3.webp",
+        "/images/properties/20/card4.webp",
+        "/images/properties/20/card5.webp"
+      ],
+      "description": "Патриаршие пруды — это не просто локация, это московская легенда, где каждый переулок дышит историей и творчеством. В трёх минутах от знаменитого пруда, на тихом Вспольном переулке, вас ждёт уютная двухкомнатная квартира.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🔥",
+          "name": "Камин"
+        },
+        {
+          "icon": "🛁",
+          "name": "Джакузи"
+        }
+      ],
+      "host": {
+        "name": "Виктор",
+        "avatar": "/images/avatar/20/avatar.webp",
+        "about": "Живу в Москве и с удовольствием делюсь любимыми местами района."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Москва",
+      "bookedDates": [
+        {
+          "start": "2026-07-06",
+          "end": "2026-07-09"
+        },
+        {
+          "start": "2026-07-25",
+          "end": "2026-07-28"
+        },
+        {
+          "start": "2026-08-10",
+          "end": "2026-08-14"
+        },
+        {
+          "start": "2026-08-29",
+          "end": "2026-09-01"
+        },
+        {
+          "start": "2026-09-20",
+          "end": "2026-09-24"
+        }
+      ],
+      "locationDetails": {
+        "address": "Москва, Вспольный переулок, 16с1",
+        "neighborhood": "Пресненский район, Москва",
+        "description": "Удобный район с развитой инфраструктурой и быстрым доступом к метро.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро поблизости",
+            "time": "5–10 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Супермаркет",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "propertyType": "house",
+      "amenityIds": [
+        "wifi"
+      ],
+      "roomType": "Квартира",
+      "roomDetails": "6 гостей · 3 спальни · 3 кровати · 2 ванные"
+    },
+    {
+      "id": 21,
+      "title": "Квартира у Кремля",
+      "location": "Москва • Тверской район",
+      "pricePerNight": 9800,
+      "totalPrice": "19 600 ₽ за 2 ночи",
+      "rating": 4.88,
+      "reviewsCount": 143,
+      "imageUrl": "/images/properties/21/card.webp",
+      "images": [
+        "/images/properties/21/card.webp",
+        "/images/properties/21/card2.webp",
+        "/images/properties/21/card3.webp",
+        "/images/properties/21/card4.webp",
+        "/images/properties/21/card5.webp"
+      ],
+      "description": "Просторная квартира в шаговой доступности от Красной площади. Высокие потолки, паркет и вид на исторический центр.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        },
+        {
+          "icon": "❄️",
+          "name": "Кондиционер"
+        }
+      ],
+      "host": {
+        "name": "Ольга",
+        "avatar": "/images/avatar/21/avatar.webp",
+        "about": "Живу в Москве и с удовольствием делюсь любимыми местами района."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Москва",
+      "bookedDates": [
+        {
+          "start": "2026-06-28",
+          "end": "2026-06-30"
+        },
+        {
+          "start": "2026-07-08",
+          "end": "2026-07-11"
+        },
+        {
+          "start": "2026-07-24",
+          "end": "2026-07-27"
+        },
+        {
+          "start": "2026-08-09",
+          "end": "2026-08-12"
+        },
+        {
+          "start": "2026-09-03",
+          "end": "2026-09-06"
+        }
+      ],
+      "locationDetails": {
+        "address": "Москва, ул. Моховая, 7",
+        "neighborhood": "Тверской район, Москва",
+        "description": "Удобный район с развитой инфраструктурой и быстрым доступом к метро.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро поблизости",
+            "time": "5–10 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Супермаркет",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen",
+        "ac"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "4 гостя · 2 спальни · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 22,
+      "title": "Лофт в Замоскворечье",
+      "location": "Москва • Замоскворечье",
+      "pricePerNight": 6148,
+      "totalPrice": "15 200 ₽ за 2 ночи",
+      "rating": 4.82,
+      "reviewsCount": 37,
+      "imageUrl": "/images/properties/22/card.webp",
+      "images": [
+        "/images/properties/22/card.webp",
+        "/images/properties/22/card2.webp",
+        "/images/properties/22/card3.webp",
+        "/images/properties/22/card4.webp"
+      ],
+      "description": "Просторный лофт в историческом особняке. Кирпичные стены, антресоли и большие окна. Рядом Третьяковская галерея и уютные рестораны.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "💻",
+          "name": "Рабочее место"
+        },
+        {
+          "icon": "☕",
+          "name": "Кофемашина"
+        }
+      ],
+      "host": {
+        "name": "Артём",
+        "avatar": "/images/avatar/22/avatar.webp",
+        "about": "Живу в Москве и с удовольствием делюсь любимыми местами района."
+      },
+      "isVerified": false,
+      "noCommission": true,
+      "city": "Москва",
+      "bookedDates": [
+        {
+          "start": "2026-07-04",
+          "end": "2026-07-07"
+        },
+        {
+          "start": "2026-07-19",
+          "end": "2026-07-22"
+        },
+        {
+          "start": "2026-08-02",
+          "end": "2026-08-05"
+        },
+        {
+          "start": "2026-08-21",
+          "end": "2026-08-24"
+        },
+        {
+          "start": "2026-09-16",
+          "end": "2026-09-19"
+        }
+      ],
+      "locationDetails": {
+        "address": "Москва, Валовая улица, 32/75с2",
+        "neighborhood": "Замоскворечье, Москва",
+        "description": "Удобный район с развитой инфраструктурой и быстрым доступом к метро.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро поблизости",
+            "time": "5–10 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Супермаркет",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "4 гостя · 1 спальня · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 23,
+      "title": "Бизнес студия в ЖК Kаzаkоv Grаnd Lоft",
+      "location": "Москва • Басманный район",
+      "pricePerNight": 6906,
+      "totalPrice": "9 600 ₽ за 2 ночи",
+      "rating": 4.65,
+      "reviewsCount": 29,
+      "imageUrl": "/images/properties/23/card.webp",
+      "images": [
+        "/images/properties/23/card.webp",
+        "/images/properties/23/card2.webp",
+        "/images/properties/23/card3.webp",
+        "/images/properties/23/card4.webp",
+        "/images/properties/23/card5.webp",
+        "/images/properties/23/card6.webp"
+      ],
+      "description": "Компактная студия для одного или пары. Свежий ремонт, удобная кровать и быстрый доступ к центру на метро. Отличный вариант для краткой поездки.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🧺",
+          "name": "Стиральная машина"
+        }
+      ],
+      "host": {
+        "name": "Кирилл",
+        "avatar": "/images/avatar/23/avatar.webp",
+        "about": "Живу в Москве и с удовольствием делюсь любимыми местами района."
+      },
+      "isVerified": false,
+      "noCommission": false,
+      "city": "Москва",
+      "bookedDates": [
+        {
+          "start": "2026-07-05",
+          "end": "2026-07-08"
+        },
+        {
+          "start": "2026-07-17",
+          "end": "2026-07-20"
+        },
+        {
+          "start": "2026-08-01",
+          "end": "2026-08-04"
+        },
+        {
+          "start": "2026-08-15",
+          "end": "2026-08-18"
+        },
+        {
+          "start": "2026-09-07",
+          "end": "2026-09-10"
+        }
+      ],
+      "locationDetails": {
+        "address": "Москва, Казакова улица, 7",
+        "neighborhood": "Басманный район, Москва",
+        "description": "Удобный район с развитой инфраструктурой и быстрым доступом к метро.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро поблизости",
+            "time": "5–10 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Супермаркет",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "propertyType": "studio",
+      "amenityIds": [
+        "wifi",
+        "washer"
+      ],
+      "roomType": "Студия целиком",
+      "roomDetails": "2 гостя · 1 кровать · 1 ванная"
+    },
+    {
+      "id": 24,
+      "title": "Двухкомнатная у ВДНХ",
+      "location": "Москва • Останкинский район",
+      "pricePerNight": 5900,
+      "totalPrice": "11 800 ₽ за 2 ночи",
+      "rating": 4.74,
+      "reviewsCount": 61,
+      "imageUrl": "/images/properties/24/card.webp",
+      "images": [
+        "/images/properties/24/card.webp",
+        "/images/properties/24/card2.webp",
+        "/images/properties/24/card3.webp",
+        "/images/properties/24/card4.webp",
+        "/images/properties/24/card5.webp",
+        "/images/properties/24/card6.webp"
+      ],
+      "description": "Светлая квартира для семьи рядом с ВДНХ и Ботаническим садом. Две спальни, балкон и полностью оборудованная кухня.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        },
+        {
+          "icon": "🅿️",
+          "name": "Парковка"
+        }
+      ],
+      "host": {
+        "name": "Наталья",
+        "avatar": "/images/avatar/24/avatar.webp",
+        "about": "Живу в Москве и с удовольствием делюсь любимыми местами района."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Москва",
+      "bookedDates": [
+        {
+          "start": "2026-07-03",
+          "end": "2026-07-06"
+        },
+        {
+          "start": "2026-07-15",
+          "end": "2026-07-18"
+        },
+        {
+          "start": "2026-08-06",
+          "end": "2026-08-09"
+        },
+        {
+          "start": "2026-08-25",
+          "end": "2026-08-28"
+        },
+        {
+          "start": "2026-09-22",
+          "end": "2026-09-25"
+        }
+      ],
+      "locationDetails": {
+        "address": "Москва, Сельскохозяйственная улица, 17к4",
+        "neighborhood": "Останкинский район, Москва",
+        "description": "Удобный район с развитой инфраструктурой и быстрым доступом к метро.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро поблизости",
+            "time": "5–10 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Супермаркет",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen",
+        "parking"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "4 гостя · 2 спальни · 2 кровати · 1 ванная"
+    },
+    {
+      "id": 25,
+      "title": "Сталинка на Таганке Гостемания с видом на Москва реку",
+      "location": "Москва • Таганский район",
+      "pricePerNight": 10496,
+      "totalPrice": "7 800 ₽ за 2 ночи",
+      "rating": 4.58,
+      "reviewsCount": 18,
+      "imageUrl": "/images/properties/25/card.webp",
+      "images": [
+        "/images/properties/25/card.webp",
+        "/images/properties/25/card2.webp",
+        "/images/properties/25/card3.webp",
+        "/images/properties/25/card4.webp",
+        "/images/properties/25/card5.webp",
+        "/images/properties/25/card6.webp",
+        "/images/properties/25/card7.webp",
+        "/images/properties/25/card8.webp"
+      ],
+      "description": "Отдельная комната в тихой квартире. Атмосферный район с театрами, рынком и пешими маршрутами по набережной Яузы.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Общая кухня"
+        }
+      ],
+      "host": {
+        "name": "Юрий",
+        "avatar": "/images/avatar/26/avatar.webp",
+        "about": "Живу в Москве и с удовольствием делюсь любимыми местами района."
+      },
+      "isVerified": false,
+      "noCommission": true,
+      "city": "Москва",
+      "bookedDates": [
+        {
+          "start": "2026-07-02",
+          "end": "2026-07-05"
+        },
+        {
+          "start": "2026-07-21",
+          "end": "2026-07-24"
+        },
+        {
+          "start": "2026-08-08",
+          "end": "2026-08-11"
+        },
+        {
+          "start": "2026-09-01",
+          "end": "2026-09-04"
+        },
+        {
+          "start": "2026-09-28",
+          "end": "2026-10-01"
+        }
+      ],
+      "locationDetails": {
+        "address": "Москва, Народная улица, 15/1",
+        "neighborhood": "Таганский район, Москва",
+        "description": "Удобный район с развитой инфраструктурой и быстрым доступом к метро.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро Таганская",
+            "time": "10 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Супермаркет",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "propertyType": "room",
+      "amenityIds": [
+        "wifi",
+        "kitchen"
+      ],
+      "roomType": "Отдельная комната",
+      "roomDetails": "1 гость · 1 комната · 1 кровать · общая ванная"
+    },
+    {
+      "id": 26,
+      "title": "Шестикомнатная квартира с видом на Кремль",
+      "location": "Москва • Хамовники",
+      "pricePerNight": 33105,
+      "totalPrice": "22 400 ₽ за 2 ночи",
+      "rating": 4.91,
+      "reviewsCount": 95,
+      "imageUrl": "/images/properties/26/card.webp",
+      "images": [
+        "/images/properties/26/card.webp",
+        "/images/properties/26/card2.webp",
+        "/images/properties/26/card3.webp",
+        "/images/properties/26/card4.webp",
+        "/images/properties/26/card5.webp",
+        "/images/properties/26/card6.webp",
+        "/images/properties/26/card7.webp",
+        "/images/properties/26/card8.webp",
+        "/images/properties/26/card9.webp",
+        "/images/properties/26/card10.webp",
+        "/images/properties/26/card11.webp",
+        "/images/properties/26/card12.webp",
+        "/images/properties/26/card13.webp"
+      ],
+      "description": "Элегантные апартаменты в престижном районе. Рядом Парк Горького, Новодевичий монастырь и лучшие рестораны столицы.",
+      "amenities": [
+        {
+          "icon": "📶",
+          "name": "Wi-fi"
+        },
+        {
+          "icon": "🍳",
+          "name": "Кухня"
+        },
+        {
+          "icon": "📺",
+          "name": "Smart TV"
+        },
+        {
+          "icon": "❄️",
+          "name": "Кондиционер"
+        }
+      ],
+      "host": {
+        "name": "Михаил",
+        "avatar": "/images/avatar/26/avatar.webp",
+        "about": "Живу в Москве и с удовольствием делюсь любимыми местами района."
+      },
+      "isVerified": true,
+      "noCommission": true,
+      "city": "Москва",
+      "bookedDates": [
+        {
+          "start": "2026-07-07",
+          "end": "2026-07-10"
+        },
+        {
+          "start": "2026-07-26",
+          "end": "2026-07-29"
+        },
+        {
+          "start": "2026-08-14",
+          "end": "2026-08-17"
+        },
+        {
+          "start": "2026-09-05",
+          "end": "2026-09-08"
+        },
+        {
+          "start": "2026-10-12",
+          "end": "2026-10-16"
+        }
+      ],
+      "locationDetails": {
+        "address": "Москва, Тверская улица, 15",
+        "neighborhood": "Хамовники, Москва",
+        "description": "Удобный район с развитой инфраструктурой и быстрым доступом к метро.",
+        "transport": [
+          {
+            "id": 1,
+            "icon": "🚇",
+            "name": "Метро поблизости",
+            "time": "5–10 мин"
+          }
+        ],
+        "infrastructure": [
+          {
+            "id": 1,
+            "icon": "🛒",
+            "name": "Супермаркет",
+            "time": "5 мин"
+          }
+        ]
+      },
+      "propertyType": "apartment",
+      "amenityIds": [
+        "wifi",
+        "kitchen",
+        "ac"
+      ],
+      "roomType": "Квартира целиком",
+      "roomDetails": "12 гостей · 5 спальнен · 7 кроватей · 2 ванны"
+    }
+  ]
+}

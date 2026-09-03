@@ -1,0 +1,90 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.header {
+    margin-bottom: $gap-block;
+}
+
+.title {
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+    line-height: $lh-h2;
+    color: $color-text-black;
+    margin: 0 0 $gap-sm 0;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    color: $color-text-main;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-xl;
+    width: 100%;
+
+    > article {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.loadingState {
+    @include loading-state-box;
+    font-size: $fs-lg;
+    font-weight: $fw-medium;
+}
+
+.emptyState {
+    margin-top: $gap-subsection;
+    @include empty-state-box;
+}
+
+.emptyIcon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #FFF0F3;
+    color: #FF385C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: $gap-xl;
+}
+
+.emptyTitle {
+    margin: 0 0 $gap-md 0;
+    font-size: $fs-h3;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.emptyText {
+    margin: 0 0 $gap-xl 0;
+    max-width: 420px;
+    font-size: $fs-lg;
+    line-height: $lh-lg;
+    color: $color-text-main;
+}
+
+.emptyButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-sm $padding-lg;
+    border-radius: $radius-xl;
+    background-color: $color-main;
+    color: $color-white;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+        background-color: $color-bg-hover;
+    }
+}

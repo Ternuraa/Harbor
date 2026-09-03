@@ -1,0 +1,143 @@
+@import '../../../variables.scss';
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.singleImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    touch-action: pan-x;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.fitContain {
+    background: $color-background;
+
+    .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-background;
+    }
+
+    .singleImage,
+    .image {
+        object-fit: contain;
+    }
+}
+
+.navButton {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: $radius-circle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($color-white, 0.88);
+    color: $color-text-black;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+
+    &:hover:not(:disabled) {
+        background: $color-white;
+        transform: translateY(-50%) scale(1.05);
+    }
+
+    &:disabled {
+        opacity: 0.35;
+        cursor: default;
+    }
+}
+
+.navPrev {
+    left: 8px;
+
+    .navIcon {
+        transform: rotate(180deg);
+    }
+}
+
+.navNext {
+    right: 8px;
+}
+
+.navIcon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: $radius-circle;
+    background: rgba($color-white, 0.5);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.dotActive {
+    background: $color-white;
+    transform: scale(1.2);
+}

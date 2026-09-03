@@ -1,0 +1,287 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+$search-segment-font-size: $fs-base;
+$search-segment-line-height: 1.25;
+$search-segment-font-weight: $fw-medium;
+
+.searchBar {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: $search-width;
+    height: $search-height;
+    background-color: $search-bg;
+    border-radius: $search-radius;
+    border: 1px solid $color-border;
+    box-sizing: border-box;
+    padding-left: $search-padding-x;
+    padding-right: 8px;
+    z-index: 1;
+}
+
+.searchBarPickerOpen {
+    z-index: 1200;
+    overflow: visible;
+}
+
+.pickerBackdrop {
+    position: fixed;
+    inset: 0;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    cursor: default;
+    z-index: 1190;
+}
+
+.segmentAnchor {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1201;
+}
+
+.segmentAnchorDates {
+    z-index: 1202;
+}
+
+.segmentAnchorGuests {
+    z-index: 1203;
+}
+
+.inputWrapper {
+    position: relative;
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1204;
+
+    input {
+        font-family: 'Inter', sans-serif;
+        font-size: $search-segment-font-size;
+        font-weight: $search-segment-font-weight;
+        line-height: $search-segment-line-height;
+    }
+}
+
+.locationDropdown {
+    position: absolute;
+    top: calc($search-height + $search-dropdown-gap);
+    left: 0;
+    z-index: 110;
+}
+
+.searchBtn {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: $search-segment-font-size;
+    font-weight: $search-segment-font-weight;
+    line-height: $search-segment-line-height;
+    color: $color-text-main;
+    cursor: pointer;
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:hover {
+        color: $color-text-black;
+    }
+
+    &.hasData {
+        color: $color-text-black;
+    }
+}
+
+.divider {
+    width: 1px;
+    height: 32px;
+    background-color: $color-bg-diveder;
+    flex-shrink: 0;
+}
+
+.searchSubmit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: $color-main;
+    border: none;
+    color: $color-white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+
+    .searchIcon {
+        width: 24px;
+        height: 24px;
+        display: block;
+    }
+
+    &:hover {
+        background-color: $color-bg-hover;
+    }
+}
+
+@mixin search-bar-compact {
+    height: 48px;
+    padding-right: 6px;
+    align-items: center;
+
+    .searchBtn {
+        display: none;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .searchSubmit {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@include respond-to(tablet-down) {
+    .searchBar {
+        width: 100%;
+        max-width: 100%;
+        height: $search-height;
+        padding-left: $padding-lg;
+        padding-right: 6px;
+        overflow: visible;
+    }
+
+    .searchBtn {
+        padding: 0 $padding-sm;
+    }
+
+    .divider {
+        height: 28px;
+    }
+
+    .searchSubmit {
+        width: 44px;
+        height: 44px;
+    }
+
+    .locationDropdown {
+        left: 0;
+        right: 0;
+        width: auto;
+    }
+
+    .searchBar.mobileCompact {
+        @include search-bar-compact;
+    }
+}
+
+@include respond-to(mobile) {
+    .searchBar {
+        width: 100%;
+        max-width: none;
+        height: 48px;
+        padding-left: $padding-md;
+        padding-right: 6px;
+        border-radius: 28px;
+        gap: 0;
+    }
+
+    .inputWrapper {
+        flex: 1.08 1 0;
+
+        input {
+            font-size: 13px;
+            line-height: 1.25;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    .segmentAnchorDates {
+        flex: 0.92 1 0;
+    }
+
+    .segmentAnchorGuests {
+        flex: 0.88 1 0;
+    }
+
+    .searchBtn {
+        display: block;
+        padding: 0 6px;
+        font-size: 13px;
+        line-height: 1.25;
+    }
+
+    .divider {
+        display: block;
+        height: 20px;
+    }
+
+    .searchBarTrigger {
+        cursor: pointer;
+        justify-content: space-between;
+        align-items: center;
+        gap: $gap-sm;
+
+        .triggerText {
+            flex: 1;
+            min-width: 0;
+            padding-left: $gap-xxs;
+            font-family: 'Inter', sans-serif;
+            font-size: $search-segment-font-size;
+            line-height: $search-segment-line-height;
+            font-weight: $search-segment-font-weight;
+            color: $color-text-black;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .searchSubmit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: $radius-circle;
+            background: $color-main;
+            pointer-events: none;
+        }
+    }
+
+    .searchSubmit {
+        width: 36px;
+        height: 36px;
+
+        .searchIcon {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .locationDropdown {
+        left: 0;
+        right: 0;
+        width: auto;
+    }
+}

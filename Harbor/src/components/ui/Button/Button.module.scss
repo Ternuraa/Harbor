@@ -1,0 +1,90 @@
+﻿@import '../../../variables.scss';
+@import '../../../styles/mixins.scss';
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: $radius-sm;
+    font-family: 'Inter', sans-serif;
+    font-weight: $fw-semibold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
+    text-decoration: none;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.md {
+    height: 37px;
+    padding: 0 $padding-md;
+    font-size: $fs-base;
+    line-height: $lh-base;
+}
+
+.sm {
+    height: 32px;
+    padding: 0 $padding-sm;
+    font-size: $fs-caption;
+    line-height: $lh-caption;
+}
+
+.primary {
+    background-color: $color-main;
+    color: $color-white;
+
+    @include primary-cta-hover;
+
+    &:disabled {
+        background-color: $color-border;
+        color: $color-text-main;
+        cursor: not-allowed;
+    }
+}
+
+.secondary {
+    background-color: $color-background;
+    color: $color-text-black;
+
+    &:hover:not(:disabled) {
+        background-color: $hover-button;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.outline {
+    background-color: transparent;
+    color: $color-text-black;
+    border: 1px solid $color-border;
+
+    &:hover:not(:disabled) {
+        background-color: $color-background;
+        border-color: $color-border-subtle;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.danger {
+    background-color: $color-danger;
+    color: $color-white;
+
+    &:hover:not(:disabled) {
+        background-color: #e63e3e;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}

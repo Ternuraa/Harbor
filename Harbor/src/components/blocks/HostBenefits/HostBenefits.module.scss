@@ -1,0 +1,116 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.section {
+    width: 100%;
+    margin: 0;
+}
+
+.title {
+    font-size: $fs-h2;
+    font-weight: $fw-semibold;
+    line-height: $lh-h2;
+    color: $color-text-black;
+    margin: 0 0 $gap-xl 0;
+    @include home-section-title-mobile;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat($host-benefit-columns, 1fr);
+    gap: $gap-lg;
+}
+
+.card {
+    height: $host-benefit-card-height;
+    padding: $padding-lg;
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.icon {
+    width: $host-benefit-icon-size;
+    height: $host-benefit-icon-size;
+    color: $color-text-main;
+    margin-bottom: $gap-lg;
+    flex-shrink: 0;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.cardTitle {
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    line-height: $lh-lg;
+    color: $color-text-black;
+    margin: 0 0 $gap-sm 0;
+}
+
+.cardText {
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-text-main;
+    margin: 0;
+}
+
+@include respond-to(tablet-down) {
+    .title {
+        margin-bottom: $gap-lg;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $gap-md;
+    }
+
+    .card {
+        height: auto;
+        min-height: 160px;
+        padding: $padding-md;
+    }
+
+    .icon {
+        margin-bottom: $gap-md;
+    }
+}
+
+@include respond-to(mobile) {
+    .title {
+        margin-bottom: $home-mobile-block-gap;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: $home-mobile-block-gap;
+    }
+
+    .card {
+        min-height: 0;
+        height: auto;
+        padding: $padding-lg;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        margin-bottom: $home-mobile-element-gap;
+    }
+
+    .cardTitle {
+        font-size: $fs-base;
+        line-height: $lh-base;
+        margin-bottom: $home-mobile-element-gap;
+    }
+
+    .cardText {
+        font-size: $fs-caption;
+        line-height: $lh-base;
+    }
+}

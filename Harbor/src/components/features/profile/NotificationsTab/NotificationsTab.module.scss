@@ -1,0 +1,74 @@
+@import '../../../../variables.scss';
+
+.tabContainer {
+    animation: fadeIn 0.3s ease;
+}
+
+.sectionTitle {
+    font-size: $fs-h1;
+    line-height: $lh-h1;
+    font-weight: $fw-bold;
+    margin-bottom: 40px;
+    color: $color-text-black;
+}
+
+.cardBlock {
+    padding: $padding-lg;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    margin-bottom: $gap-xl;
+    background-color: $color-white;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $gap-lg;
+
+    h3 {
+        font-size: $fs-lg;
+        font-weight: $fw-semibold;
+        margin: 0;
+    }
+}
+
+.toggleRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding-md 0;
+    border-bottom: 1px solid $color-bg-diveder;
+
+    &:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
+
+.toggleInfo {
+    h4 {
+        font-size: $fs-base;
+        font-weight: $fw-semibold;
+        margin: 0 0 4px 0;
+        color: $color-text-black;
+    }
+
+    p {
+        font-size: $fs-base;
+        color: $color-text-main;
+        margin: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

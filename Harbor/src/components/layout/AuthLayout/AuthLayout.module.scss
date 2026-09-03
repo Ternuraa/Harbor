@@ -1,0 +1,192 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    background-color: $color-white;
+
+    @include respond-to(mobile) {
+        flex-direction: column;
+        min-height: 100dvh;
+    }
+}
+
+.imageBlock {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+
+    @include respond-to(mobile) {
+        display: block;
+        flex: none;
+        width: 100%;
+        height: 38vh;
+        min-height: 240px;
+        max-height: 320px;
+    }
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.formBlock {
+    width: 567px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-white;
+    flex-shrink: 0;
+    position: relative;
+
+    @include respond-to(mobile) {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+        flex: 1;
+        margin-top: -28px;
+        border-radius: 28px 28px 0 0;
+        padding: 28px 20px 40px;
+        justify-content: flex-start;
+        align-items: stretch;
+        z-index: 1;
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.06);
+    }
+}
+
+.formContainer {
+    width: 467px;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to(mobile) {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 48px;
+    left: 52px;
+    font-family: 'Liberation Sans', sans-serif;
+    font-size: $fs-h2;
+    font-weight: $fw-bold;
+    color: $color-text-black;
+    margin: 0;
+    text-decoration: none;
+
+    @include respond-to(mobile) {
+        position: static;
+        display: block;
+        margin-bottom: 36px;
+        font-size: $fs-h2;
+    }
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: $lh-base;
+    font-weight: $fw-semibold;
+    line-height: $lh-h3;
+    margin: 0 0 32px;
+    color: $color-black;
+
+    @include respond-to(mobile) {
+        font-size: 22px;
+        font-weight: $fw-bold;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+}
+
+.subtitle {
+    margin: -16px 0 24px;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-text-secondary;
+
+    @include respond-to(mobile) {
+        display: block;
+        margin: -16px 0 24px;
+    }
+}
+
+.divider {
+    height: 1px;
+    background-color: $color-border-muted;
+    margin: 24px 0;
+    width: 100%;
+
+    @include respond-to(mobile) {
+        margin: 20px 0;
+    }
+}
+
+.footer {
+    text-align: center;
+    font-size: $fs-base;
+    color: $color-text-disabled;
+
+    @include respond-to(mobile) {
+        font-size: $fs-caption;
+    }
+}
+
+.footerLink {
+    color: $color-link;
+    text-decoration: none;
+    margin-left: 4px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    @include respond-to(mobile) {
+        color: $color-main;
+        font-weight: $fw-semibold;
+    }
+}
+
+@include respond-to(tablet-down) {
+    .imageBlock {
+        display: none;
+    }
+
+    .formBlock {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 100px $page-padding-tablet 48px;
+    }
+
+    .formContainer {
+        width: 100%;
+        max-width: 467px;
+    }
+
+    .logo {
+        left: $page-padding-tablet;
+        top: 32px;
+    }
+}
+
+@include respond-to(mobile) {
+    .imageBlock {
+        display: block;
+    }
+
+    .formBlock {
+        padding: 28px 20px 40px;
+        min-height: auto;
+    }
+
+    .formContainer {
+        max-width: none;
+    }
+}

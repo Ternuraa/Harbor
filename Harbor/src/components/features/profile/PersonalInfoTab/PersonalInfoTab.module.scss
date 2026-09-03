@@ -1,0 +1,162 @@
+﻿@import '../../../../variables.scss';
+@import '../../../../mixins.scss';
+
+.tabContainer {
+    animation: fadeIn 0.3s ease;
+}
+
+.sectionTitle {
+    font-size: $fs-h1;
+    line-height: $lh-h1;
+    font-weight: $fw-bold;
+    margin-bottom: 40px;
+    color: $color-text-black;
+}
+
+.cardBlock {
+    padding: $padding-lg;
+    border: 1px solid $color-border;
+    border-radius: $radius-lg;
+    background-color: $color-white;
+}
+
+.avatarSection {
+    display: flex;
+    align-items: center;
+    gap: $gap-xl;
+    padding-bottom: $gap-xl;
+    margin-bottom: $gap-xl;
+    border-bottom: 1px solid $color-border;
+}
+
+.avatarControls {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-sm;
+    min-width: 0;
+}
+
+.avatarTitle {
+    margin: 0;
+    font-size: $fs-lg;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.avatarHint {
+    margin: 0;
+    font-size: $fs-caption;
+    line-height: $lh-base;
+    color: $color-text-main;
+}
+
+.avatarActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $gap-md;
+    margin-top: $gap-sm;
+}
+
+.removePhotoButton {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: $fs-base;
+    line-height: $lh-base;
+    color: $color-text-main;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover:not(:disabled) {
+        color: $color-text-black;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+}
+
+.avatarError {
+    margin: 0;
+    font-size: $fs-caption;
+    line-height: $lh-base;
+    color: $color-danger;
+}
+
+.hiddenFileInput {
+    display: none;
+}
+
+.formRow {
+    display: flex;
+    gap: $gap-lg;
+    margin-bottom: $gap-lg;
+}
+
+.formGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: $gap-lg;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.label {
+    font-size: $fs-base;
+    font-weight: $fw-semibold;
+    color: $color-text-black;
+}
+
+.buttonWrapper {
+    width: 220px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@include respond-to(mobile) {
+    .sectionTitle {
+        font-size: $fs-h2;
+        line-height: $lh-h2;
+        margin-bottom: 24px;
+    }
+
+    .formRow {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .cardBlock {
+        max-width: none;
+    }
+
+    .avatarSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $gap-lg;
+    }
+
+    .avatarActions {
+        width: 100%;
+    }
+
+    .buttonWrapper {
+        width: 100%;
+    }
+}

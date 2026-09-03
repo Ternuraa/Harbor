@@ -1,0 +1,40 @@
+@import '../../../variables.scss';
+
+.stepper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #B0B0B0; // Серый цвет бордера как на скрине
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #717171;
+    transition: all 0.2s ease;
+
+    &:hover:not(.disabled) {
+        border-color: $color-text-black;
+        color: $color-text-black;
+    }
+
+    &.disabled {
+        border-color: #EBEBEB;
+        color: #EBEBEB;
+        cursor: not-allowed;
+    }
+}
+
+.value {
+    width: 20px;
+    text-align: center;
+    font-size: $fs-base;
+    font-weight: $fw-medium;
+    color: $color-text-black;
+}

@@ -1,0 +1,71 @@
+@import '../../variables.scss';
+
+// Контейнер, в котором живут оба варианта поиска
+.searchContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; // Должно быть выше оверлея
+}
+
+// --- КОМПАКТНЫЙ ПОИСК ---
+.compactWrapper {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 1;
+    transform: scale(1) translateY(0);
+
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.95) translateY(-10px);
+        position: absolute;
+    }
+}
+
+// --- БОЛЬШОЙ РАСКРЫТЫЙ ПОИСК ---
+.expandedWrapper {
+    position: absolute;
+    top: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95) translateY(10px);
+
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1) translateY(0);
+    }
+}
+
+// Заглушка для большой строки (уберем, когда добавим настоящий SearchBar)
+.bigSearchBarPlaceholder {
+    background: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 40px;
+    padding: 16px 32px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    font-weight: bold;
+    width: 800px;
+    text-align: center;
+}
+
+// --- ТЕМНЫЙ ФОН (ОВЕРЛЕЙ) ---
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 999; // Ниже поиска, но выше остального сайта
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    &.overlayVisible {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
